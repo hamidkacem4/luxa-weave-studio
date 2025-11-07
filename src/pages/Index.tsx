@@ -1,12 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Hero from "@/components/Hero";
+import Collections from "@/components/Collections";
+import About from "@/components/About";
+import Sustainability from "@/components/Sustainability";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      <Collections />
+      <About />
+      <Sustainability />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="border-t bg-cream py-12">
+        <div className="container">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-sm text-muted-foreground">
+              © 2024 Luxe Textile Co. All rights reserved.
+            </p>
+            <div className="flex gap-6 text-sm text-muted-foreground">
+              <a href="#" className="transition-colors hover:text-foreground">
+                Privacy Policy
+              </a>
+              <a href="#" className="transition-colors hover:text-foreground">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
