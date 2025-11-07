@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
 import About from "@/components/About";
@@ -8,12 +9,15 @@ import Contact from "@/components/Contact";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Hero />
-      <Collections />
-      <About />
-      <AboutFactory />
-      <Sustainability />
-      <Contact />
+      <Navigation />
+      <div className="pt-16">
+        <Hero />
+        <Collections />
+        <About />
+        <AboutFactory />
+        <Sustainability />
+        <Contact />
+      </div>
       
       {/* Footer */}
       <footer className="border-t bg-cream py-12">
