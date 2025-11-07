@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
+import Products from "@/components/Products";
 import About from "@/components/About";
 import AboutFactory from "@/components/AboutFactory";
 import Sustainability from "@/components/Sustainability";
@@ -13,6 +14,7 @@ const Index = () => {
       <div className="pt-16">
         <Hero />
         <Collections />
+        <Products />
         <About />
         <AboutFactory />
         <Sustainability />
