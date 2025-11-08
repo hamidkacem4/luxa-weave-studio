@@ -18,20 +18,23 @@ const Hero = () => {
           playsInline
           className="min-h-full min-w-full object-cover absolute top-0 left-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 flex h-full items-center">
-        <div className="max-w-2xl fade-in-up">
+      <div className="container relative z-10 flex h-full items-center justify-center">
+        <div className="text-center fade-in-up">
           <h1 className="mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl">
-            Crafting Excellence in Every Thread
+            MagTexco
           </h1>
           <p className="mb-8 text-xl text-muted-foreground font-light">
+            Crafting Excellence in Every Thread
+          </p>
+          <p className="mb-8 text-lg text-muted-foreground/80 font-light max-w-2xl mx-auto">
             Premium textile manufacturing for fashion brands worldwide. 
             Where tradition meets innovation, quality meets sustainability.
           </p>
-          <div className="flex gap-4">
+          <div className="flex gap-4 justify-center">
             <Button variant="gold" size="lg">
               Explore Collections
             </Button>
