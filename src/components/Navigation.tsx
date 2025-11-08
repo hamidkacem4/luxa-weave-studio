@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold tracking-tight">Luxe Textile Co.</h1>
+            <h1 className="text-xl font-bold tracking-tight">MagTexco</h1>
           </div>
 
           {/* Language Switcher */}
