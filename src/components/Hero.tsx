@@ -7,16 +7,16 @@ const Hero = () => {
   const [currentSlide] = useState(0);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden -mt-16">
       {/* Hero Video */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-screen h-screen">
         <video
           src={heroVideo}
           autoPlay
           loop
           muted
           playsInline
-          className="h-full w-full object-cover"
+          className="min-h-full min-w-full object-cover absolute top-0 left-0"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
       </div>
