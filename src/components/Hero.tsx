@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroImage from "@/assets/hero-textile.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -8,11 +8,14 @@ const Hero = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Hero Image */}
+      {/* Hero Video */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Luxurious textile manufacturing"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
