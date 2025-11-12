@@ -6,6 +6,8 @@ import productMenCotton from "@/assets/product-men-cotton.jpg";
 import productWomenViscose from "@/assets/product-women-viscose.jpg";
 import productWomenSilk from "@/assets/product-women-silk.jpg";
 import productWomenCotton from "@/assets/product-women-cotton.jpg";
+import fashionTexture1 from "@/assets/fashion-texture-1.jpg";
+import fashionTexture2 from "@/assets/fashion-texture-2.jpg";
 
 const menProducts = [
   {
@@ -62,19 +64,39 @@ const Products = () => {
 
   return (
     <section className="py-24 bg-background relative overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-dark rounded-full blur-3xl" />
+      {/* Fashion texture backgrounds */}
+      <div className="absolute inset-0 opacity-10">
+        <img 
+          src={activeTab === "women" ? fashionTexture1 : fashionTexture2} 
+          alt="" 
+          className="absolute top-0 right-0 w-1/2 h-96 object-cover animate-fade-in"
+        />
+        <img 
+          src={activeTab === "women" ? fashionTexture2 : fashionTexture1} 
+          alt="" 
+          className="absolute bottom-0 left-0 w-1/2 h-96 object-cover animate-fade-in"
+        />
+      </div>
+      
+      {/* Decorative fashion elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-40 left-0 w-px h-64 bg-gradient-to-b from-transparent via-gold-dark to-transparent opacity-20" />
+        <div className="absolute top-40 right-0 w-px h-64 bg-gradient-to-b from-transparent via-gold-dark to-transparent opacity-20" />
+        <div className="absolute top-20 left-10 w-32 h-32 border border-gold-dark/20 rotate-45" />
+        <div className="absolute bottom-20 right-10 w-40 h-40 border border-gold-dark/20 rounded-full" />
       </div>
       
       <div className="container relative z-10">
         {/* Section Header */}
-        <div className="mb-16 text-center fade-in-up">
-          <h2 className="mb-4 text-5xl font-bold tracking-tight">Our Products</h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+        <div className="mb-16 text-center fade-in-up relative">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-gold-dark to-transparent mb-8" />
+          <h2 className="mb-4 text-6xl font-bold tracking-tight bg-gradient-to-r from-foreground via-gold-dark to-foreground bg-clip-text text-transparent">
+            Our Products
+          </h2>
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground italic">
             Explore our curated collections of fashion pieces crafted from the finest fabrics
           </p>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-gold-dark to-transparent mt-8" />
         </div>
 
         {/* Category Tabs */}
