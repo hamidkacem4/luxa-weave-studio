@@ -4,23 +4,23 @@ import sustainabilityImage from "@/assets/sustainability.jpg";
 const features = [
   {
     icon: Leaf,
-    title: "Organic Materials",
-    description: "We source certified organic cotton and natural fibers from sustainable farms",
+    title: "Premium Sourcing",
+    description: "We partner with certified sustainable suppliers for the finest quality fabrics",
   },
   {
     icon: Recycle,
-    title: "Zero Waste",
-    description: "Our production process is designed to minimize waste and maximize efficiency",
+    title: "Eco-Conscious Production",
+    description: "Our garment production minimizes waste and maximizes resource efficiency",
   },
   {
     icon: Heart,
-    title: "Ethical Production",
-    description: "Fair wages, safe working conditions, and respect for human rights",
+    title: "Ethical Practices",
+    description: "Fair wages, safe working conditions, and respect for every team member",
   },
   {
     icon: Award,
-    title: "Certified Excellence",
-    description: "GOTS, OEKO-TEX, and Fair Trade certified manufacturing",
+    title: "Quality Assurance",
+    description: "Rigorous quality control ensures every garment meets the highest standards",
   },
 ];
 
@@ -31,10 +31,10 @@ const Sustainability = () => {
         {/* Header */}
         <div className="mb-16 text-center fade-in-up">
           <h2 className="mb-4 text-5xl font-bold tracking-tight">
-            Sustainable by Design
+            Responsible Sourcing & Production
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Our commitment to the planet is woven into every fabric we create
+            Our commitment to excellence extends beyond quality—we prioritize ethical practices and sustainability
           </p>
         </div>
 
