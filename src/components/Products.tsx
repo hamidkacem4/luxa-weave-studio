@@ -105,20 +105,27 @@ const Products = () => {
               className="group fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted rounded-sm">
+              <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted rounded-sm border border-border/50 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:border-gold-dark/30">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold">{product.title}</h3>
-                  <span className="text-sm text-gold-dark font-medium">{product.fabric}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/30 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                
+                {/* Fashion tag overlay */}
+                <div className="absolute top-4 right-4 bg-gold-dark/90 backdrop-blur-sm text-white px-3 py-1 text-xs font-medium tracking-wider opacity-0 transition-all duration-300 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
+                  {product.fabric}
                 </div>
-                <p className="text-muted-foreground">{product.description}</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-start justify-between gap-2">
+                  <h3 className="text-2xl font-semibold tracking-tight group-hover:text-gold-dark transition-colors duration-300">{product.title}</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{product.description}</p>
+                <div className="pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-sm text-gold-dark font-medium tracking-wide">Explore Collection →</span>
+                </div>
               </div>
             </div>
           ))}
