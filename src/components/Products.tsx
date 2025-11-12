@@ -61,8 +61,14 @@ const Products = () => {
   const currentProducts = activeTab === "men" ? menProducts : womenProducts;
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container">
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-gold-dark rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container relative z-10">
         {/* Section Header */}
         <div className="mb-16 text-center fade-in-up">
           <h2 className="mb-4 text-5xl font-bold tracking-tight">Our Products</h2>

@@ -3,6 +3,7 @@ const PartnerBrands = () => {
     "BERENICE",
     "MANOUSH",
     "THE FACTORY",
+    "THE FACTORY ON",
     "ZARA",
     "H&M",
     "MASSIMO DUTTI"
