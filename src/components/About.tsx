@@ -23,17 +23,17 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                For over three decades, we've been at the forefront of textile manufacturing, 
+                For over three decades, we've been at the forefront of textile trading and garment production, 
                 combining time-honored craftsmanship with cutting-edge technology.
               </p>
               <p>
-                Our journey began with a simple vision: to create fabrics that inspire designers 
+                Our journey began with a simple vision: to source the finest fabrics and create garments that inspire designers 
                 and delight end consumers. Today, we partner with leading fashion brands worldwide, 
-                delivering premium textiles that set new standards in quality and innovation.
+                delivering premium textiles and finished products that set new standards in quality and innovation.
               </p>
               <p>
-                Every thread we weave carries our commitment to excellence. From the selection 
-                of raw materials to the final quality check, we ensure that each fabric meets 
+                Every garment we produce carries our commitment to excellence. From the selection 
+                of premium fabrics to the final quality check, we ensure that each product meets 
                 our exacting standards.
               </p>
             </div>

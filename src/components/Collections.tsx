@@ -38,7 +38,7 @@ const Collections = () => {
         <div className="mb-16 text-center fade-in-up">
           <h2 className="mb-4 text-5xl font-bold tracking-tight">Our Collections</h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Discover our curated selection of premium fabrics, each crafted with meticulous attention to detail
+            Discover our curated selection of premium fabrics, sourced with meticulous attention to detail
           </p>
         </div>
 

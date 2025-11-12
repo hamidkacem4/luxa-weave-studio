@@ -31,7 +31,7 @@ const Hero = () => {
             Crafting Excellence in Every Thread
           </p>
           <p className="mb-8 text-lg text-muted-foreground/80 font-light max-w-2xl mx-auto">
-            Premium textile manufacturing for fashion brands worldwide. 
+            Premium textile sourcing and garment production for fashion brands worldwide. 
             Where tradition meets innovation, quality meets sustainability.
           </p>
           <div className="flex gap-4 justify-center">
