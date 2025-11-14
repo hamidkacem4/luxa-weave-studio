@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden -mt-16">
       {/* Hero Video */}
-      <div className="absolute inset-0 w-screen h-screen">
+      <div className="absolute inset-0 w-screen h-screen z-10">
         <video
           src={heroVideo}
           autoPlay
@@ -22,7 +22,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 flex h-full items-center justify-center">
+      <div className="container relative z-20 flex h-full items-center justify-center">
         <div className="text-center fade-in-up">
           <h1 className="mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl">
             MagTexco
@@ -46,7 +46,7 @@ const Hero = () => {
       </div>
 
       {/* Carousel Controls (for future implementation) */}
-      <div className="absolute bottom-8 right-8 z-20 flex gap-2">
+      <div className="absolute bottom-8 right-8 z-30 flex gap-2">
         <button className="flex h-12 w-12 items-center justify-center rounded-full bg-background/80 backdrop-blur-sm transition-all hover:bg-background">
           <ChevronLeft className="h-5 w-5" />
         </button>
