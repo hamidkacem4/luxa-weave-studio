@@ -22,7 +22,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-0 bg-background border-b border-border/20">
+    <nav className="sticky top-0 left-0 right-0 z-50 bg-background border-b border-border/20">
       <div className="container">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
