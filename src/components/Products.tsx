@@ -145,9 +145,6 @@ const Products = () => {
                   <h3 className="text-2xl font-semibold tracking-tight group-hover:text-gold-dark transition-colors duration-300">{product.title}</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">{product.description}</p>
-                <div className="pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm text-gold-dark font-medium tracking-wide">Explore Collection →</span>
-                </div>
               </div>
             </div>
           ))}
