@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, MessageCircle, PlayCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -9,6 +9,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import factoryImage from "@/assets/about-craftsmanship.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -93,11 +94,11 @@ const Contact = () => {
                   />
                   <div className="absolute inset-0 hover:bg-black/5 transition-colors cursor-pointer" />
                 </a>
-                <DialogTrigger asChild>
+                {/* <DialogTrigger asChild>
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer">
                     <MapPin className="w-10 h-10 text-red-500 animate-pulse" />
                   </div>
-                </DialogTrigger>
+                </DialogTrigger> */}
               </div>
               <DialogContent className="max-w-3xl">
                 <DialogHeader>
@@ -108,6 +109,19 @@ const Contact = () => {
               <p className="text-center text-sm text-muted-foreground mt-3">
                 {t('contact.map_instruction')}
               </p>
+              <div className="fade-in-up text-center mt-3">
+                <Button variant="gold" size="lg" asChild>
+                  <a
+                    href={heroVideo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <PlayCircle className="h-5 w-5" />
+                    {t('contact.watch_video_button')}
+                  </a>
+                </Button>
+              </div>
             </Dialog>
           </div>
 
@@ -135,10 +149,8 @@ const Contact = () => {
                     <Textarea id="message" placeholder={t('contact.form_message_placeholder')} />
                   </div>
                   <div className="justify-self-center mt-4 ">
-                    <Button type="submit" variant="gold" size="lg" asChild>
-                      <span className="inline-flex items-center gap-3">
-                        {t('contact.form_submit_button')}
-                      </span>
+                    <Button type="submit" variant="gold" size="lg">
+                      {t('contact.form_submit_button')}
                     </Button>
                   </div>
                 </form>
