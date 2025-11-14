@@ -1,10 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import Products from "@/components/Products";
 import About from "@/components/About";
 import AboutFactory from "@/components/AboutFactory";
-
 import Sustainability from "@/components/Sustainability";
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -14,12 +14,15 @@ const Index = () => {
     <div className="min-h-screen">
       <Hero />
       <Navigation />
-      <Collections />
-      <Products />
-      <About />
-      <AboutFactory />
-      <Sustainability />
-      <Contact />
+      <div>
+        <WhyChooseUs />
+        <Collections />
+        <Products />
+        <About />
+        <AboutFactory />
+        <Sustainability />
+        <Contact />
+      </div>
       
       {/* Footer */}
       <footer className="border-t bg-cream py-12">

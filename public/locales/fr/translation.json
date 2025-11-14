@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "title": "MagTexco",
+    "subtitle": "L'Excellence Tissée dans Chaque Fil",
+    "description": "Fabrication textile de première qualité pour les marques de mode du monde entier. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
+    "explore_collections": "Explorer les Collections",
+    "contact_us": "Contactez-nous"
+  },
+  "top_contact_bar": {
+    "address": "Pôle technologique et industriel, Sahline, Tunisie"
+  },
+  "nav": {
+    "logo": "MagTexco",
+    "address": "Pôle technologique et industriel, Sahline, Tunisie"
+  },
+  "collections": {
+    "title": "Nos Collections",
+    "subtitle": "Découvrez notre sélection de tissus haut de gamme, chacun fabriqué avec une attention méticuleuse aux détails",
+    "items": [
+      {
+        "title": "Lin Premium",
+        "description": "Excellence naturelle et respirante"
+      },
+      {
+        "title": "Collection Soie",
+        "description": "Douceur luxueuse"
+      },
+      {
+        "title": "Essentiels en Coton",
+        "description": "Le confort redéfini"
+      },
+      {
+        "title": "Mélanges de Laine",
+        "description": "La chaleur rencontre l'élégance"
+      }
+    ]
+  },
+  "products": {
+    "title": "Nos Produits",
+    "subtitle": "Explorez nos collections de pièces de mode confectionnées dans les plus beaux tissus",
+    "women_tab": "Femmes",
+    "men_tab": "Hommes",
+    "women": [
+      {
+        "title": "Robe en Viscose",
+        "fabric": "Viscose de Qualité Supérieure",
+        "description": "Silhouette fluide avec un mouvement élégant"
+      },
+      {
+        "title": "Robe en Soie",
+        "fabric": "Soie Pure",
+        "description": "Sophistication et luxe intemporels"
+      },
+      {
+        "title": "Robe en Coton",
+        "fabric": "Coton de Qualité Supérieure",
+        "description": "Simplicité et confort raffinés"
+      }
+    ],
+    "men": [
+      {
+        "title": "Chemise en Viscose",
+        "fabric": "Viscose de Qualité Supérieure",
+        "description": "Tombé luxueux avec une respirabilité naturelle"
+      },
+      {
+        "title": "Chemise en Soie",
+        "fabric": "Soie Pure",
+        "description": "Élégance ultime et texture lisse"
+      },
+      {
+        "title": "Chemise en Coton",
+        "fabric": "Coton Égyptien",
+        "description": "Confort classique avec une finition impeccable"
+      }
+    ]
+  },
+  "why_choose_us": {
+    "title": "Pourquoi Nous Choisir ?",
+    "subtitle": "Découvrez les valeurs fondamentales qui nous distinguent et font de nous le partenaire privilégié des grandes marques de mode.",
+    "features": [
+      {
+        "title": "Qualité Sans Compromis",
+        "description": "Nous sélectionnons méticuleusement les meilleures matières premières et appliquons un contrôle qualité rigoureux à chaque étape de la production."
+      },
+      {
+        "title": "Designs Innovants",
+        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des motifs et des finitions textiles frais et uniques."
+      },
+      {
+        "title": "Pratiques Durables",
+        "description": "Engagés dans une fabrication respectueuse de l'environnement, nous minimisons les déchets et utilisons des ressources durables."
+      },
+      {
+        "title": "Partenariat Fiable",
+        "description": "Nous sommes fiers de notre communication transparente, de nos livraisons ponctuelles et de la construction de relations durables avec nos clients."
+      }
+    ]
+  },
+  "sustainability": {
+    "title": "Approvisionnement et Production Responsables",
+    "subtitle": "Notre engagement envers l'excellence va au-delà de la qualité—nous privilégions les pratiques éthiques et la durabilité",
+    "features": [
+      {
+        "title": "Matériaux Organiques",
+        "description": "Nous nous approvisionnons en coton biologique certifié et en fibres naturelles auprès de fermes durables"
+      },
+      {
+        "title": "Zéro Déchet",
+        "description": "Notre processus de production est conçu pour minimiser les déchets et maximiser l'efficacité"
+      },
+      {
+        "title": "Production Éthique",
+        "description": "Salaires équitables, conditions de travail sûres et respect des droits de l'homme"
+      },
+      {
+        "title": "Excellence Certifiée",
+        "description": "Fabrication certifiée GOTS, OEKO-TEX et Commerce Équitable"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Créons Ensemble",
+    "subtitle": "Prêt à commencer votre prochaine collection ? Contactez notre équipe",
+    "contact_info": [
+      {
+        "title": "Rendez-nous Visite",
+        "details": ["MAGTEXCO"],
+        "link": "https://www.google.com/maps/dir/?api=1&destination=35.72344296183206,10.744451113821503"
+      },
+      {
+        "title": "Appelez-nous",
+        "details": ["+216 52 049 969"]
+      },
+      {
+        "title": "Envoyez-nous un Email",
+        "details": ["hamidkacem4@gmail.com"]
+      }
+    ],
+    "map_title": "Carte de Localisation",
+    "map_dialog_title": "Notre Usine",
+    "map_instruction": "Cliquez sur le repère pour voir notre usine, ou cliquez sur la carte pour obtenir l'itinéraire.",
+    "form_title": "Envoyez-nous un Message",
+    "form_subtitle": "Nous vous répondrons dans les plus brefs délais.",
+    "form_name_label": "Nom",
+    "form_name_placeholder": "Votre Nom",
+    "form_email_label": "Email",
+    "form_email_placeholder": "Votre Email",
+    "form_message_label": "Message",
+    "form_message_placeholder": "Votre Message",
+    "form_submit_button": "Envoyer le Message",
+    "whatsapp_title": "Réponse Rapide sur WhatsApp",
+    "whatsapp_subtitle": "Obtenez des réponses instantanées à vos questions. Nous sommes là pour vous aider.",
+    "whatsapp_button": "Discuter sur WhatsApp"
+  },
+  "about": {
+    "title": "La Tradition Rencontre l'Innovation",
+    "image_alt": "Savoir-faire dans la fabrication textile",
+    "paragraph1": "Depuis plus de trois décennies, nous sommes à la pointe de la fabrication textile, alliant un savoir-faire ancestral à une technologie de pointe.",
+    "paragraph2": "Notre aventure a commencé avec une vision simple : créer des tissus qui inspirent les designers et ravissent les consommateurs finaux. Aujourd'hui, nous collaborons avec les plus grandes marques de mode du monde entier, fournissant des textiles de première qualité qui établissent de nouvelles normes en matière de qualité et d'innovation.",
+    "paragraph3": "Chaque fil que nous tissons porte notre engagement envers l'excellence. De la sélection des matières premières au contrôle qualité final, nous nous assurons que chaque tissu répond à nos normes rigoureuses.",
+    "stats": {
+      "experience": "Années d'Expérience",
+      "partners": "Marques Partenaires",
+      "quality": "Qualité Assurée"
+    }
+  },
+  "about_factory": {
+    "title": "🏭 À propos de notre usine",
+    "intro": "Notre processus de production est divisé en deux étapes principales : la Phase de Collection et la Phase de Production, chacune gérée avec soin pour garantir qualité et précision.",
+    "certifications": "Notre usine est fière d'être certifiée ISO 9001, ISO 14001, GOTS et GRS, ce qui reflète notre engagement envers la qualité, la responsabilité environnementale et la production durable.",
+    "collection_phase_title": "🧵 Phase de Collection",
+    "collection_phase": {
+      "phase1": "PHASE 1 — Réception du dossier technique et création du patron.",
+      "phase2": "PHASE 2 — Sourcing des tissus et accessoires, confection des prototypes.",
+      "phase3": "PHASE 3 — Mise au point technique et répétitions (SMS) avant production."
+    },
+    "production_phase_title": "⚙️ Phase de Production",
+    "production_phase": {
+      "phase1": "PHASE 1 — Préparation technique et têtes de série (TDS).",
+      "phase2": "PHASE 2 — Coupe, confection, lavage et finitions.",
+      "phase3": "PHASE 3 — Exportation et livraison des produits finis."
+    }
+  }
+}

@@ -1,58 +1,37 @@
+import { useTranslation } from "react-i18next";
 import collection1 from "@/assets/collection-1.jpg";
 import collection2 from "@/assets/collection-2.jpg";
 import collection3 from "@/assets/collection-3.jpg";
 import collection4 from "@/assets/collection-4.jpg";
 
-const collections = [
-  {
-    id: 1,
-    title: "Premium Linen",
-    description: "Natural, breathable excellence",
-    image: collection1,
-  },
-  {
-    id: 2,
-    title: "Silk Collection",
-    description: "Luxurious softness",
-    image: collection2,
-  },
-  {
-    id: 3,
-    title: "Cotton Essentials",
-    description: "Comfort redefined",
-    image: collection3,
-  },
-  {
-    id: 4,
-    title: "Wool Blends",
-    description: "Warmth meets elegance",
-    image: collection4,
-  },
-];
+const collectionImages = [collection1, collection2, collection3, collection4];
 
 const Collections = () => {
+  const { t } = useTranslation();
+  const collections = t('collections.items', { returnObjects: true }) as Array<{ title: string; description: string }>;
+
   return (
-    <section className="py-24 bg-cream">
+    <section id="collections" className="py-24 bg-cream">
       <div className="container">
         {/* Section Header */}
         <div className="mb-16 text-center fade-in-up">
-          <h2 className="mb-4 text-5xl font-bold tracking-tight">Our Collections</h2>
+          <h2 className="mb-4 text-5xl font-bold tracking-tight">{t('collections.title')}</h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Discover our curated selection of premium fabrics, sourced with meticulous attention to detail
+            {t('collections.subtitle')}
           </p>
         </div>
 
         {/* Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {collections.map((item, index) => (
+          {Array.isArray(collections) && collections.map((item, index) => (
             <div
-              key={item.id}
+              key={index}
               className="group fade-in-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative mb-4 aspect-square overflow-hidden bg-muted">
                 <img
-                  src={item.image}
+                  src={collectionImages[index]}
                   alt={item.title}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />

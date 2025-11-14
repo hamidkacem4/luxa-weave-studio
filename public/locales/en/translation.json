@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "title": "MagTexco",
+    "subtitle": "Crafting Excellence in Every Thread",
+    "description": "Premium textile manufacturing for fashion brands worldwide. Where tradition meets innovation, quality meets sustainability.",
+    "explore_collections": "Explore Collections",
+    "contact_us": "Contact Us"
+  },
+  "top_contact_bar": {
+    "address": "Technological and industrial pole, Sahline, Tunisia"
+  },
+  "nav": {
+    "logo": "MagTexco",
+    "address": "Technological and industrial pole, Sahline, Tunisia"
+  },
+  "collections": {
+    "title": "Our Collections",
+    "subtitle": "Discover our curated selection of premium fabrics, each crafted with meticulous attention to detail",
+    "items": [
+      {
+        "title": "Premium Linen",
+        "description": "Natural, breathable excellence"
+      },
+      {
+        "title": "Silk Collection",
+        "description": "Luxurious softness"
+      },
+      {
+        "title": "Cotton Essentials",
+        "description": "Comfort redefined"
+      },
+      {
+        "title": "Wool Blends",
+        "description": "Warmth meets elegance"
+      }
+    ]
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Explore our curated collections of fashion pieces crafted from the finest fabrics",
+    "women_tab": "Women",
+    "men_tab": "Men",
+    "women": [
+      {
+        "title": "Viscose Dress",
+        "fabric": "Premium Viscose",
+        "description": "Flowing silhouette with elegant movement"
+      },
+      {
+        "title": "Silk Dress",
+        "fabric": "Pure Silk",
+        "description": "Timeless sophistication and luxury"
+      },
+      {
+        "title": "Cotton Dress",
+        "fabric": "Premium Cotton",
+        "description": "Refined simplicity and comfort"
+      }
+    ],
+    "men": [
+      {
+        "title": "Viscose Shirt",
+        "fabric": "Premium Viscose",
+        "description": "Luxurious drape with natural breathability"
+      },
+      {
+        "title": "Silk Shirt",
+        "fabric": "Pure Silk",
+        "description": "Ultimate elegance and smooth texture"
+      },
+      {
+        "title": "Cotton Shirt",
+        "fabric": "Egyptian Cotton",
+        "description": "Classic comfort with crisp finish"
+      }
+    ]
+  },
+  "why_choose_us": {
+    "title": "Why Choose Us?",
+    "subtitle": "Discover the core values that set us apart and make us the preferred partner for leading fashion brands.",
+    "features": [
+      {
+        "title": "Uncompromising Quality",
+        "description": "We meticulously source the finest raw materials and employ rigorous quality control at every stage of production."
+      },
+      {
+        "title": "Innovative Designs",
+        "description": "Our team of expert designers stays ahead of trends, offering fresh and unique textile patterns and finishes."
+      },
+      {
+        "title": "Sustainable Practices",
+        "description": "Committed to eco-friendly manufacturing, we minimize waste and utilize sustainable resources."
+      },
+      {
+        "title": "Reliable Partnership",
+        "description": "We pride ourselves on transparent communication, timely delivery, and building lasting relationships with our clients."
+      }
+    ]
+  },
+  "sustainability": {
+    "title": "Responsible Sourcing & Production",
+    "subtitle": "Our commitment to excellence extends beyond quality—we prioritize ethical practices and sustainability",
+    "features": [
+      {
+        "title": "Organic Materials",
+        "description": "We source certified organic cotton and natural fibers from sustainable farms"
+      },
+      {
+        "title": "Zero Waste",
+        "description": "Our production process is designed to minimize waste and maximize efficiency"
+      },
+      {
+        "title": "Ethical Production",
+        "description": "Fair wages, safe working conditions, and respect for human rights"
+      },
+      {
+        "title": "Certified Excellence",
+        "description": "GOTS, OEKO-TEX, and Fair Trade certified manufacturing"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's Create Together",
+    "subtitle": "Ready to start your next collection? Get in touch with our team",
+    "contact_info": [
+      {
+        "title": "Visit Us",
+        "details": ["MAGTEXCO"],
+        "link": "https://www.google.com/maps/dir/?api=1&destination=35.72344296183206,10.744451113821503"
+      },
+      {
+        "title": "Call Us",
+        "details": ["+216 52 049 969"]
+      },
+      {
+        "title": "Email Us",
+        "details": ["hamidkacem4@gmail.com"]
+      }
+    ],
+    "map_title": "Location Map",
+    "map_dialog_title": "Our Factory",
+    "map_instruction": "Click the pin to see our factory, or click the map for directions.",
+    "form_title": "Send us a Message",
+    "form_subtitle": "We'll get back to you as soon as possible.",
+    "form_name_label": "Name",
+    "form_name_placeholder": "Your Name",
+    "form_email_label": "Email",
+    "form_email_placeholder": "Your Email",
+    "form_message_label": "Message",
+    "form_message_placeholder": "Your Message",
+    "form_submit_button": "Send Message",
+    "whatsapp_title": "Quick Response on WhatsApp",
+    "whatsapp_subtitle": "Get instant answers to your questions. We're here to help.",
+    "whatsapp_button": "Chat on WhatsApp"
+  },
+  "about": {
+    "title": "Tradition Meets Innovation",
+    "image_alt": "Craftsmanship in textile manufacturing",
+    "paragraph1": "For over three decades, we've been at the forefront of textile manufacturing, combining time-honored craftsmanship with cutting-edge technology.",
+    "paragraph2": "Our journey began with a simple vision: to create fabrics that inspire designers and delight end consumers. Today, we partner with leading fashion brands worldwide, delivering premium textiles that set new standards in quality and innovation.",
+    "paragraph3": "Every thread we weave carries our commitment to excellence. From the selection of raw materials to the final quality check, we ensure that each fabric meets our exacting standards.",
+    "stats": {
+      "experience": "Years Experience",
+      "partners": "Brand Partners",
+      "quality": "Quality Assured"
+    }
+  },
+  "about_factory": {
+    "title": "🏭 About Our Factory",
+    "intro": "Our production process is divided into two main stages: Collection Phase and Production Phase, each carefully managed to ensure quality and precision.",
+    "certifications": "Our factory is proud to be certified with ISO 9001, ISO 14001, GOTS, and GRS, reflecting our commitment to quality, environmental responsibility, and sustainable production.",
+    "collection_phase_title": "🧵 Collection Phase",
+    "collection_phase": {
+      "phase1": "PHASE 1 — Receipt of the technical file and creation of the pattern.",
+      "phase2": "PHASE 2 — Sourcing of fabrics and accessories, prototype making.",
+      "phase3": "PHASE 3 — Technical adjustments and repetitions (SMS) before production."
+    },
+    "production_phase_title": "⚙️ Production Phase",
+    "production_phase": {
+      "phase1": "PHASE 1 — Technical preparation and seeded players (TDS).",
+      "phase2": "PHASE 2 — Cutting, sewing, washing and finishing.",
+      "phase3": "PHASE 3 — Export and delivery of finished products."
+    }
+  }
+}

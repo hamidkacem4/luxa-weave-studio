@@ -1,16 +1,19 @@
+import { useTranslation } from "react-i18next";
 import aboutImage from "@/assets/about-craftsmanship.jpg";
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="py-24">
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           {/* Image */}
           <div className="fade-in order-2 lg:order-1">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-sm">
               <img
                 src={aboutImage}
-                alt="Craftsmanship in textile manufacturing"
+                alt={t('about.image_alt')}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -19,22 +22,17 @@ const About = () => {
           {/* Content */}
           <div className="fade-in-up order-1 lg:order-2">
             <h2 className="mb-6 text-5xl font-bold tracking-tight">
-              Tradition Meets Innovation
+              {t('about.title')}
             </h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                For over three decades, we've been at the forefront of textile trading and garment production, 
-                combining time-honored craftsmanship with cutting-edge technology.
+                {t('about.paragraph1')}
               </p>
               <p>
-                Our journey began with a simple vision: to source the finest fabrics and create garments that inspire designers 
-                and delight end consumers. Today, we partner with leading fashion brands worldwide, 
-                delivering premium textiles and finished products that set new standards in quality and innovation.
+                {t('about.paragraph2')}
               </p>
               <p>
-                Every garment we produce carries our commitment to excellence. From the selection 
-                of premium fabrics to the final quality check, we ensure that each product meets 
-                our exacting standards.
+                {t('about.paragraph3')}
               </p>
             </div>
             
@@ -42,15 +40,15 @@ const About = () => {
             <div className="mt-12 grid grid-cols-3 gap-8">
               <div>
                 <div className="text-4xl font-bold text-gold">30+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-sm text-muted-foreground">{t('about.stats.experience')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-gold">500+</div>
-                <div className="text-sm text-muted-foreground">Brand Partners</div>
+                <div className="text-sm text-muted-foreground">{t('about.stats.partners')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-gold">100%</div>
-                <div className="text-sm text-muted-foreground">Quality Assured</div>
+                <div className="text-sm text-muted-foreground">{t('about.stats.quality')}</div>
               </div>
             </div>
           </div>
