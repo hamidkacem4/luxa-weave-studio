@@ -12,17 +12,15 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <Hero />
       <Navigation />
-      <div className="pt-16">
-        <Hero />
-        <Collections />
-        <Products />
-        <About />
-        <AboutFactory />
-        <PartnerBrands />
-        <Sustainability />
-        <Contact />
-      </div>
+      <Collections />
+      <Products />
+      <About />
+      <AboutFactory />
+      <PartnerBrands />
+      <Sustainability />
+      <Contact />
       
       {/* Footer */}
       <footer className="border-t bg-cream py-12">

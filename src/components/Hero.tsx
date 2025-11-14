@@ -7,7 +7,7 @@ const Hero = () => {
   const [currentSlide] = useState(0);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden -mt-16">
+    <section className="relative h-screen w-full overflow-hidden">
       {/* Hero Video */}
       <div className="absolute inset-0 w-screen h-screen z-10">
         <video
