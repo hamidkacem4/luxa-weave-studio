@@ -4,7 +4,7 @@ import Collections from "@/components/Collections";
 import Products from "@/components/Products";
 import About from "@/components/About";
 import AboutFactory from "@/components/AboutFactory";
-import PartnerBrands from "@/components/PartnerBrands";
+
 import Sustainability from "@/components/Sustainability";
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -18,7 +18,6 @@ const Index = () => {
       <Products />
       <About />
       <AboutFactory />
-      <PartnerBrands />
       <Sustainability />
       <Contact />
       
