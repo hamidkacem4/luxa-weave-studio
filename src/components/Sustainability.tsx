@@ -26,7 +26,7 @@ const Sustainability = () => {
           <div className="relative aspect-[21/9] overflow-hidden rounded-sm">
             <img
               src={sustainabilityImage}
-              alt="Sustainable cotton fields"
+              alt="A view of a sustainable cotton field, which is one of the organic materials we use in our Tunisian textile factory."
               className="h-full w-full object-cover"
             />
           </div>

@@ -71,7 +71,7 @@ const Navigation = () => {
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61570008207516"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

@@ -63,7 +63,7 @@ const Products = () => {
               <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted rounded-sm">
                 <img
                   src={currentProductImages[index]}
-                  alt={product.title}
+                  alt={`A model wearing a ${product.title}`}
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />

@@ -1,8 +1,8 @@
 {
   "hero": {
-    "title": "MagTexco",
-    "subtitle": "L'Excellence Tissée dans Chaque Fil",
-    "description": "Fabrication textile de première qualité pour les marques de mode du monde entier. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
+    "title": "MagTexco : Leader de l'Industrie Textile Tunisienne",
+    "subtitle": "Fabrication de Tissus de Haute Qualité en Tunisie",
+    "description": "Fabrication textile de première qualité pour les marques de mode du monde entier, au cœur de l'industrie textile tunisienne. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
     "explore_collections": "Explorer les Collections",
     "contact_us": "Contactez-nous"
   },
@@ -76,24 +76,24 @@
     ]
   },
   "why_choose_us": {
-    "title": "Pourquoi Nous Choisir ?",
-    "subtitle": "Découvrez les valeurs fondamentales qui nous distinguent et font de nous le partenaire privilégié des grandes marques de mode.",
+    "title": "Pourquoi Choisir MagTexco pour Vos Besoins Textiles en Tunisie ?",
+    "subtitle": "Découvrez les valeurs fondamentales qui font de nous un leader de l'industrie textile tunisienne et le partenaire privilégié des grandes marques de mode.",
     "features": [
       {
         "title": "Qualité Sans Compromis",
-        "description": "Nous sélectionnons méticuleusement les meilleures matières premières et appliquons un contrôle qualité rigoureux à chaque étape de la production."
+        "description": "En tant que fabricant de textile de premier plan en Tunisie, nous sélectionnons méticuleusement les meilleures matières premières et appliquons un contrôle qualité rigoureux à chaque étape de la production."
       },
       {
         "title": "Designs Innovants",
-        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des motifs et des finitions textiles frais et uniques."
+        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des motifs et des finitions textiles frais et uniques pour le marché mondial de la mode."
       },
       {
         "title": "Pratiques Durables",
-        "description": "Engagés dans une fabrication respectueuse de l'environnement, nous minimisons les déchets et utilisons des ressources durables."
+        "description": "Engagés dans une fabrication respectueuse de l'environnement, nous sommes un choix durable dans l'industrie textile tunisienne, minimisant les déchets et utilisant des ressources durables."
       },
       {
         "title": "Partenariat Fiable",
-        "description": "Nous sommes fiers de notre communication transparente, de nos livraisons ponctuelles et de la construction de relations durables avec nos clients."
+        "description": "Nous sommes fiers de notre communication transparente, de nos livraisons ponctuelles et de la construction de relations durables avec nos clients de l'industrie textile."
       }
     ]
   },
@@ -152,11 +152,11 @@
     "whatsapp_title": "Réponse Rapide sur WhatsApp",
     "whatsapp_subtitle": "Obtenez des réponses instantanées à vos questions. Nous sommes là pour vous aider.",
     "whatsapp_button": "Discuter sur WhatsApp",
-    "watch_video_button": "Découvrir Notre Histoire"
+    "watch_video_button": "Surveillez notre usine"
   },
   "about": {
     "title": "La Tradition Rencontre l'Innovation",
-    "image_alt": "Savoir-faire dans la fabrication textile",
+    "image_alt": "Un artisan qualifié travaillant sur une machine textile dans notre usine tunisienne, mettant en valeur notre savoir-faire dans la fabrication textile",
     "paragraph1": "Depuis plus de trois décennies, nous sommes à la pointe de la fabrication textile, alliant un savoir-faire ancestral à une technologie de pointe.",
     "paragraph2": "Notre aventure a commencé avec une vision simple : créer des tissus qui inspirent les designers et ravissent les consommateurs finaux. Aujourd'hui, nous collaborons avec les plus grandes marques de mode du monde entier, fournissant des textiles de première qualité qui établissent de nouvelles normes en matière de qualité et d'innovation.",
     "paragraph3": "Chaque fil que nous tissons porte notre engagement envers l'excellence. De la sélection des matières premières au contrôle qualité final, nous nous assurons que chaque tissu répond à nos normes rigoureuses.",
