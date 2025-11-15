@@ -13,7 +13,7 @@ const Sustainability = () => {
       <div className="container">
         {/* Header */}
         <div className="mb-16 text-center fade-in-up">
-          <h2 className="mb-4 text-5xl font-bold tracking-tight">
+          <h2 className="mb-4 text-4xl md:text-5xl font-bold tracking-tight">
             {t('sustainability.title')}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
