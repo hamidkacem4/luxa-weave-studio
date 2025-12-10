@@ -1,3 +1,5 @@
+import Meta from "@/components/Meta";
+import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Collections from "@/components/Collections";
@@ -10,8 +12,15 @@ import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
+      <Meta 
+        title={t("meta.title")}
+        description={t("meta.description")}
+        keywords={t("meta.keywords")}
+      />
       <Hero />
       <Navigation />
       <div>

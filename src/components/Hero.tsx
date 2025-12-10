@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 import { Button } from "@/components/ui/button";
+import clsx from "clsx";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const [showTitle, setShowTitle] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowTitle(false);
+    }, 5000); // 10 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -24,9 +35,16 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 flex h-full items-center justify-center">
         <div className="text-center fade-in-up">
-          <h1 className="mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl">
-            {t('hero.title')}
-          </h1>
+          <div className="overflow-hidden">
+            <h1
+              className={clsx(
+                "mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl transition-all duration-1000 ease-in-out",
+                showTitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
+              )}
+            >
+              {t('hero.title')}
+            </h1>
+          </div>
           <p className="mb-8 text-xl text-muted-foreground font-light">
             {t('hero.subtitle')}
           </p>

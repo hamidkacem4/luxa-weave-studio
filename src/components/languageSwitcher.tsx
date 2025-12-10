@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
@@ -10,12 +10,6 @@ const languages = [
 ];
 
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -25,8 +19,8 @@ const LanguageSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => changeLanguage(lang.code)}>
-            {lang.name}
+          <DropdownMenuItem key={lang.code} asChild>
+            <Link to={`/${lang.code}`}>{lang.name}</Link>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

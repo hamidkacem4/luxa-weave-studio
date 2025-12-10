@@ -34,16 +34,18 @@ const About = () => {
               <p>
                 {t('about.paragraph3')}
               </p>
+              <p>
+  {t('about.stats.experience')}
+           
+              </p>
+              
             </div>
             
             {/* Stats */}
-            <div className="mt-12 grid grid-cols-3 gap-8">
+            <div className="mt-12 grid grid-cols-2 gap-4'">
+           
               <div>
-                <div className="text-4xl font-bold text-gold">30+</div>
-                <div className="text-sm text-muted-foreground">{t('about.stats.experience')}</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-gold">500+</div>
+                <div className="text-4xl font-bold text-gold">50+</div>
                 <div className="text-sm text-muted-foreground">{t('about.stats.partners')}</div>
               </div>
               <div>

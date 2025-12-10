@@ -45,18 +45,18 @@ const Navigation = () => {
           {/* Contact Info */}
           <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
             <a
-              href="tel:21652049969"
+              href="tel:+21695518870"
               className="flex items-center gap-2 hover:text-foreground"
             >
               <Phone className="h-4 w-4" />
-              <span>+216 52 049 969</span>
+              <span>+216 95 518 870</span>
             </a>
             <a
-              href="mailto:info@luxetextile.com"
+              href="mailto:walid.horchani@thefactory.com.tn"
               className="flex items-center gap-2 hover:text-foreground"
             >
               <Mail className="h-4 w-4" />
-              <span>info@luxetextile.com</span>
+              <span>walid.horchani@thefactory.com.tn</span>
             </a>
             <a
               href="#contact"

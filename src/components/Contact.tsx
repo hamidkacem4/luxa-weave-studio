@@ -1,12 +1,13 @@
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail, MessageCircle, PlayCircle } from "lucide-react";
+import { useForm } from "@formspree/react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import factoryImage from "@/assets/about-craftsmanship.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
@@ -14,12 +15,99 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const contactInfoIcons = [MapPin, Phone, Mail];
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   const contactInfo = t('contact.contact_info', { returnObjects: true }) as Array<{ title: string; details: string[], link?: string }>;
+  const [state, handleSubmit] = useForm("mzznvvrw");
+  const { toast } = useToast();
+
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const messageInputRef = useRef<HTMLTextAreaElement>(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: t('contact.form_success_title'),
+        description: t('contact.form_success_message'),
+      });
+      // Clear input fields
+      if (nameInputRef.current) nameInputRef.current.value = '';
+      if (emailInputRef.current) emailInputRef.current.value = '';
+      if (messageInputRef.current) messageInputRef.current.value = '';
+    } else if (state.errors) {
+      toast({
+        title: t('contact.form_error_title'),
+        description: t('contact.form_error_message'),
+        variant: "destructive",
+      });
+    }
+  }, [state.succeeded, state.errors, t, toast]);
+
+  if (!ready) {
+    return (
+      <section id="contact" className="py-24">
+        <div className="container">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-16 text-center">
+              <Skeleton className="h-12 w-1/2 mx-auto" />
+              <Skeleton className="h-6 w-3/4 mx-auto mt-4" />
+            </div>
+            <div className="mb-12 md:flex md:flex-row md:justify-center md:gap-8">
+              {[...Array(3)].map((_, index) => (
+                <div key={index} className="text-center">
+                  <Skeleton className="h-14 w-14 rounded-full mx-auto mb-4" />
+                  <Skeleton className="h-6 w-24 mx-auto" />
+                  <Skeleton className="h-4 w-32 mx-auto mt-2" />
+                </div>
+              ))}
+            </div>
+            <div className="mb-12">
+              <Skeleton className="h-64 w-full" />
+            </div>
+            <div className="my-12">
+              <Card>
+                <CardHeader>
+                  <Skeleton className="h-8 w-1/2" />
+                  <Skeleton className="h-4 w-3/4 mt-2" />
+                </CardHeader>
+                <CardContent>
+                  <div className="grid gap-4">
+                    <div className="grid gap-2">
+                      <Skeleton className="h-4 w-16" />
+                      <Skeleton className="h-10 w-full" />
+                    </div>
+                    <div className="grid gap-2">
+                      <Skeleton className="h-4 w-16" />
+                      <Skeleton className="h-10 w-full" />
+                    </div>
+                    <div className="grid gap-2">
+                      <Skeleton className="h-4 w-16" />
+                      <Skeleton className="h-24 w-full" />
+                    </div>
+                    <div className="justify-self-center mt-4 ">
+                      <Skeleton className="h-12 w-32" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="text-center bg-gradient-to-br from-cream to-beige rounded-sm p-12">
+              <Skeleton className="h-12 w-12 mx-auto mb-4 rounded-full" />
+              <Skeleton className="h-8 w-1/2 mx-auto" />
+              <Skeleton className="h-4 w-3/4 mx-auto mt-2" />
+              <Skeleton className="h-12 w-40 mx-auto mt-6" />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="contact" className="py-24">
@@ -94,11 +182,6 @@ const Contact = () => {
                   />
                   <div className="absolute inset-0 hover:bg-black/5 transition-colors cursor-pointer" />
                 </a>
-                {/* <DialogTrigger asChild>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer">
-                    <MapPin className="w-10 h-10 text-red-500 animate-pulse" />
-                  </div>
-                </DialogTrigger> */}
               </div>
               <DialogContent className="max-w-3xl">
                 <DialogHeader>
@@ -135,21 +218,21 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="grid gap-4">
+                <form onSubmit={handleSubmit} className="grid gap-4">
                   <div className="grid gap-2">
                     <Label htmlFor="name">{t('contact.form_name_label')}</Label>
-                    <Input id="name" placeholder={t('contact.form_name_placeholder')} />
+                    <Input id="name" name="name" placeholder={t('contact.form_name_placeholder')} ref={nameInputRef} />
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="email">{t('contact.form_email_label')}</Label>
-                    <Input id="email" type="email" placeholder={t('contact.form_email_placeholder')} />
+                    <Input id="email" type="email" name="email" placeholder={t('contact.form_email_placeholder')} ref={emailInputRef} />
                   </div>
                   <div className="grid gap-2">
                     <Label htmlFor="message">{t('contact.form_message_label')}</Label>
-                    <Textarea id="message" placeholder={t('contact.form_message_placeholder')} />
+                    <Textarea id="message" name="message" placeholder={t('contact.form_message_placeholder')} ref={messageInputRef} />
                   </div>
                   <div className="justify-self-center mt-4 ">
-                    <Button type="submit" variant="gold" size="lg">
+                    <Button type="submit" variant="gold" size="lg" disabled={state.submitting}>
                       {t('contact.form_submit_button')}
                     </Button>
                   </div>
@@ -169,7 +252,7 @@ const Contact = () => {
             </p>
             <Button variant="gold" size="lg" asChild>
               <a
-                href="https://wa.me/21652049969"
+                href="https://wa.me/21695518870"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"
@@ -181,6 +264,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
     </section>
   );
 };

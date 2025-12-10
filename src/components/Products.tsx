@@ -15,8 +15,8 @@ const Products = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"men" | "women">("women");
 
-  const menProducts = t('products.men', { returnObjects: true }) as Array<{ title: string; fabric: string; description: string }>;
-  const womenProducts = t('products.women', { returnObjects: true }) as Array<{ title: string; fabric: string; description: string }>;
+  const menProducts = t('products.men', { returnObjects: true }) as Array<{ title: string; material: string; description: string }>;
+  const womenProducts = t('products.women', { returnObjects: true }) as Array<{ title: string; material: string; description: string }>;
 
   const currentProducts = activeTab === "men" ? menProducts : womenProducts;
   const currentProductImages = activeTab === "men" ? menProductImages : womenProductImages;
@@ -71,7 +71,7 @@ const Products = () => {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <h3 className="text-2xl font-semibold">{product.title}</h3>
-                  <span className="text-sm text-gold-dark font-medium">{product.fabric}</span>
+                  <span className="text-sm text-gold-dark font-medium">{product.material}</span>
                 </div>
                 <p className="text-muted-foreground">{product.description}</p>
               </div>

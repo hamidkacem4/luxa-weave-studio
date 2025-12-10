@@ -1,8 +1,13 @@
 {
+  "meta": {
+    "title": "MagTexco - Tunisian Clothing Manufacturer",
+    "description": "MagTexco is a leading clothing manufacturer in Tunisia, offering high-quality garments and sustainable production for fashion brands worldwide.",
+    "keywords": "clothing tunisia, apparel industry tunisia, clothing manufacturer tunisia, garment supplier tunisia, sustainable fashion, magtexco"
+  },
   "hero": {
-    "title": "MagTexco: Leader in the Tunisian Textile Industry",
-    "subtitle": "High-Quality Fabric Manufacturing in Tunisia",
-    "description": "Premium textile manufacturing for fashion brands worldwide, from the heart of the Tunisian textile industry. Where tradition meets innovation, quality meets sustainability.",
+    "title": "MagTexco: Leader in the Tunisian Apparel Industry",
+    "subtitle": "High-Quality Garment Manufacturing in Tunisia",
+    "description": "Premium clothing manufacturing for fashion brands worldwide, from the heart of the Tunisian apparel industry. Where tradition meets innovation, quality meets sustainability.",
     "explore_collections": "Explore Collections",
     "contact_us": "Contact Us"
   },
@@ -15,85 +20,85 @@
   },
   "collections": {
     "title": "Our Collections",
-    "subtitle": "Discover our curated selection of premium fabrics, each crafted with meticulous attention to detail",
+    "subtitle": "Discover our curated selection of premium garments, each crafted with meticulous attention to detail",
     "items": [
       {
-        "title": "Premium Linen",
-        "description": "Natural, breathable excellence"
+        "title": "Womenswear",
+        "description": "Elegant and modern styles"
       },
       {
-        "title": "Silk Collection",
-        "description": "Luxurious softness"
+        "title": "Menswear",
+        "description": "Sophisticated and timeless pieces"
       },
       {
-        "title": "Cotton Essentials",
-        "description": "Comfort redefined"
+        "title": "Childrenswear",
+        "description": "Comfortable and durable designs"
       },
       {
-        "title": "Wool Blends",
-        "description": "Warmth meets elegance"
+        "title": "Custom Collections",
+        "description": "Your vision, brought to life"
       }
     ]
   },
   "products": {
     "title": "Our Products",
-    "subtitle": "Explore our curated collections of fashion pieces crafted from the finest fabrics",
+    "subtitle": "Explore our curated collections of fashion pieces crafted from the finest materials",
     "women_tab": "Women",
     "men_tab": "Men",
     "women": [
       {
         "title": "Viscose Dress",
-        "fabric": "Premium Viscose",
+        "material": "Premium Viscose",
         "description": "Flowing silhouette with elegant movement"
       },
       {
         "title": "Silk Dress",
-        "fabric": "Pure Silk",
+        "material": "Pure Silk",
         "description": "Timeless sophistication and luxury"
       },
       {
         "title": "Cotton Dress",
-        "fabric": "Premium Cotton",
+        "material": "Premium Cotton",
         "description": "Refined simplicity and comfort"
       }
     ],
     "men": [
       {
         "title": "Viscose Shirt",
-        "fabric": "Premium Viscose",
+        "material": "Premium Viscose",
         "description": "Luxurious drape with natural breathability"
       },
       {
         "title": "Silk Shirt",
-        "fabric": "Pure Silk",
+        "material": "Pure Silk",
         "description": "Ultimate elegance and smooth texture"
       },
       {
         "title": "Cotton Shirt",
-        "fabric": "Egyptian Cotton",
+        "material": "Egyptian Cotton",
         "description": "Classic comfort with crisp finish"
       }
     ]
   },
   "why_choose_us": {
-    "title": "Why Choose MagTexco for Your Tunisian Textile Needs?",
-    "subtitle": "Discover the core values that make us a leader in the Tunisian textile industry and the preferred partner for leading fashion brands.",
+    "title": "Why Choose MagTexco for Your Tunisian Apparel Needs?",
+    "subtitle": "Discover the core values that make us a leader in the Tunisian apparel industry and the preferred partner for leading fashion brands.",
     "features": [
       {
         "title": "Uncompromising Quality",
-        "description": "As a top textile manufacturer in Tunisia, we meticulously source the finest raw materials and employ rigorous quality control at every stage of production."
+        "description": "As a top apparel manufacturer in Tunisia, we meticulously source the finest materials and employ rigorous quality control at every stage of production."
       },
       {
         "title": "Innovative Designs",
-        "description": "Our team of expert designers stays ahead of trends, offering fresh and unique textile patterns and finishes for the global fashion market."
+        "description": "Our team of expert designers stays ahead of trends, offering fresh and unique clothing designs and finishes for the global fashion market."
       },
       {
         "title": "Sustainable Practices",
-        "description": "Committed to eco-friendly manufacturing, we are a sustainable choice in the Tunisian textile industry, minimizing waste and utilizing sustainable resources."
+        "description": "Committed to eco-friendly manufacturing, we are a sustainable choice in the Tunisian apparel industry, minimizing waste and utilizing sustainable resources."
       },
       {
         "title": "Reliable Partnership",
-        "description": "We pride ourselves on transparent communication, timely delivery, and building lasting relationships with our clients in the textile industry."
+        "description": "We pride ourselves on transparent communication, timely delivery, and building lasting relationships with our clients in the apparel industry."
       }
     ]
   },
@@ -103,7 +108,7 @@
     "features": [
       {
         "title": "Organic Materials",
-        "description": "We source certified organic cotton and natural fibers from sustainable farms"
+        "description": "We source certified organic cotton and other sustainable materials from ethical suppliers."
       },
       {
         "title": "Zero Waste",
@@ -130,11 +135,11 @@
       },
       {
         "title": "Call Us",
-        "details": ["+216 52 049 969"]
+        "details": ["+216 95 518 870"]
       },
       {
         "title": "Email Us",
-        "details": ["hamidkacem4@gmail.com"]
+        "details": ["walid.horchani@thefactory.com.tn"]
       }
     ],
     "map_title": "Location Map",
@@ -149,21 +154,23 @@
     "form_message_label": "Message",
     "form_message_placeholder": "Your Message",
     "form_submit_button": "Send Message",
-    "whatsapp_title": "Quick Response on WhatsApp",
-    "whatsapp_subtitle": "Get instant answers to your questions. We're here to help.",
+    "form_success_title": "Message Sent!",
+    "form_success_message": "Your message has been sent successfully. We'll get back to you soon!",
+    "form_error_title": "Submission Failed",
+    "form_error_message": "There was an error sending your message. Please try again later.",
     "whatsapp_button": "Chat on WhatsApp",
     "watch_video_button": "Watch our factory"
   },
   "about": {
     "title": "Tradition Meets Innovation",
-    "image_alt": "A skilled artisan working on a textile machine in our Tunisian factory, showcasing our craftsmanship in textile manufacturing",
-    "paragraph1": "For over three decades, we've been at the forefront of textile manufacturing, combining time-honored craftsmanship with cutting-edge technology.",
-    "paragraph2": "Our journey began with a simple vision: to create fabrics that inspire designers and delight end consumers. Today, we partner with leading fashion brands worldwide, delivering premium textiles that set new standards in quality and innovation.",
-    "paragraph3": "Every thread we weave carries our commitment to excellence. From the selection of raw materials to the final quality check, we ensure that each fabric meets our exacting standards.",
+    "image_alt": "A skilled artisan working on a sewing machine in our Tunisian factory, showcasing our craftsmanship in clothing manufacturing",
+    "paragraph1": "For over three decades, we've been at the forefront of clothing manufacturing, combining time-honored craftsmanship with cutting-edge technology.",
+    "paragraph2": "Our journey began with a simple vision: to create garments that inspire designers and delight end consumers. Today, we partner with leading fashion brands worldwide, delivering premium clothing that set new standards in quality and innovation.",
+    "paragraph3": "Every garment we create carries our commitment to excellence. From the selection of materials to the final quality check, we ensure that each piece meets our exacting standards.",
     "stats": {
-      "experience": "Years Experience",
+      "experience": "Many years of experience in China, recently expanded to Tunisia",
       "partners": "Brand Partners",
-      "quality": "Quality Assured"
+      "quality": "Excellence in Every Stitch"
     }
   },
   "about_factory": {

@@ -1,8 +1,13 @@
 {
+  "meta": {
+    "title": "MagTexco - Fabricant de Vêtements Tunisien",
+    "description": "MagTexco est un fabricant de vêtements de premier plan en Tunisie, proposant des vêtements de haute qualité et une production durable pour les marques de mode du monde entier.",
+    "keywords": "vêtements tunisie, industrie de l'habillement tunisie, fabricant de vêtements tunisie, fournisseur de vêtements tunisie, mode durable, magtexco"
+  },
   "hero": {
-    "title": "MagTexco : Leader de l'Industrie Textile Tunisienne",
-    "subtitle": "Fabrication de Tissus de Haute Qualité en Tunisie",
-    "description": "Fabrication textile de première qualité pour les marques de mode du monde entier, au cœur de l'industrie textile tunisienne. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
+    "title": "MagTexco : Leader de l'Industrie de l'Habillement Tunisienne",
+    "subtitle": "Fabrication de Vêtements de Haute Qualité en Tunisie",
+    "description": "Fabrication de vêtements de première qualité pour les marques de mode du monde entier, au cœur de l'industrie de l'habillement tunisienne. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
     "explore_collections": "Explorer les Collections",
     "contact_us": "Contactez-nous"
   },
@@ -15,85 +20,85 @@
   },
   "collections": {
     "title": "Nos Collections",
-    "subtitle": "Découvrez notre sélection de tissus haut de gamme, chacun fabriqué avec une attention méticuleuse aux détails",
+    "subtitle": "Découvrez notre sélection de vêtements haut de gamme, chacun fabriqué avec une attention méticuleuse aux détails",
     "items": [
       {
-        "title": "Lin Premium",
-        "description": "Excellence naturelle et respirante"
+        "title": "Prêt-à-porter Féminin",
+        "description": "Styles élégants et modernes"
       },
       {
-        "title": "Collection Soie",
-        "description": "Douceur luxueuse"
+        "title": "Prêt-à-porter Masculin",
+        "description": "Pièces sophistiquées et intemporelles"
       },
       {
-        "title": "Essentiels en Coton",
-        "description": "Le confort redéfini"
+        "title": "Vêtements pour Enfants",
+        "description": "Modèles confortables et durables"
       },
       {
-        "title": "Mélanges de Laine",
-        "description": "La chaleur rencontre l'élégance"
+        "title": "Collections Personnalisées",
+        "description": "Votre vision, concrétisée"
       }
     ]
   },
   "products": {
     "title": "Nos Produits",
-    "subtitle": "Explorez nos collections de pièces de mode confectionnées dans les plus beaux tissus",
+    "subtitle": "Explorez nos collections de pièces de mode confectionnées dans les plus beaux matériaux",
     "women_tab": "Femmes",
     "men_tab": "Hommes",
     "women": [
       {
         "title": "Robe en Viscose",
-        "fabric": "Viscose de Qualité Supérieure",
+        "material": "Viscose de Qualité Supérieure",
         "description": "Silhouette fluide avec un mouvement élégant"
       },
       {
         "title": "Robe en Soie",
-        "fabric": "Soie Pure",
+        "material": "Soie Pure",
         "description": "Sophistication et luxe intemporels"
       },
       {
         "title": "Robe en Coton",
-        "fabric": "Coton de Qualité Supérieure",
+        "material": "Coton de Qualité Supérieure",
         "description": "Simplicité et confort raffinés"
       }
     ],
     "men": [
       {
         "title": "Chemise en Viscose",
-        "fabric": "Viscose de Qualité Supérieure",
+        "material": "Viscose de Qualité Supérieure",
         "description": "Tombé luxueux avec une respirabilité naturelle"
       },
       {
         "title": "Chemise en Soie",
-        "fabric": "Soie Pure",
+        "material": "Soie Pure",
         "description": "Élégance ultime et texture lisse"
       },
       {
         "title": "Chemise en Coton",
-        "fabric": "Coton Égyptien",
+        "material": "Coton Égyptien",
         "description": "Confort classique avec une finition impeccable"
       }
     ]
   },
   "why_choose_us": {
-    "title": "Pourquoi Choisir MagTexco pour Vos Besoins Textiles en Tunisie ?",
-    "subtitle": "Découvrez les valeurs fondamentales qui font de nous un leader de l'industrie textile tunisienne et le partenaire privilégié des grandes marques de mode.",
+    "title": "Pourquoi Choisir MagTexco pour Vos Besoins en Habillement en Tunisie ?",
+    "subtitle": "Découvrez les valeurs fondamentales qui font de nous un leader de l'industrie de l'habillement tunisienne et le partenaire privilégié des grandes marques de mode.",
     "features": [
       {
         "title": "Qualité Sans Compromis",
-        "description": "En tant que fabricant de textile de premier plan en Tunisie, nous sélectionnons méticuleusement les meilleures matières premières et appliquons un contrôle qualité rigoureux à chaque étape de la production."
+        "description": "En tant que fabricant de vêtements de premier plan en Tunisie, nous sélectionnons méticuleusement les meilleurs matériaux et appliquons un contrôle qualité rigoureux à chaque étape de la production."
       },
       {
         "title": "Designs Innovants",
-        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des motifs et des finitions textiles frais et uniques pour le marché mondial de la mode."
+        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des designs et des finitions de vêtements frais et uniques for the global fashion market."
       },
       {
         "title": "Pratiques Durables",
-        "description": "Engagés dans une fabrication respectueuse de l'environnement, nous sommes un choix durable dans l'industrie textile tunisienne, minimisant les déchets et utilisant des ressources durables."
+        "description": "Engagés dans une fabrication respectueuse de l'environnement, nous sommes un choix durable dans l'industrie de l'habillement tunisienne, minimisant les déchets et utilisant des ressources durables."
       },
       {
         "title": "Partenariat Fiable",
-        "description": "Nous sommes fiers de notre communication transparente, de nos livraisons ponctuelles et de la construction de relations durables avec nos clients de l'industrie textile."
+        "description": "Nous sommes fiers de notre communication transparente, de nos livraisons ponctuelles et de la construction de relations durables avec nos clients de l'industrie de l'habillement."
       }
     ]
   },
@@ -103,7 +108,7 @@
     "features": [
       {
         "title": "Matériaux Organiques",
-        "description": "Nous nous approvisionnons en coton biologique certifié et en fibres naturelles auprès de fermes durables"
+        "description": "Nous nous approvisionnons en coton biologique certifié et autres matériaux durables auprès de fournisseurs éthiques."
       },
       {
         "title": "Zéro Déchet",
@@ -130,11 +135,11 @@
       },
       {
         "title": "Appelez-nous",
-        "details": ["+216 52 049 969"]
+        "details": ["+216 95 518 870"]
       },
       {
         "title": "Envoyez-nous un Email",
-        "details": ["hamidkacem4@gmail.com"]
+        "details": ["walid.horchani@thefactory.com.tn"]
       }
     ],
     "map_title": "Carte de Localisation",
@@ -156,14 +161,14 @@
   },
   "about": {
     "title": "La Tradition Rencontre l'Innovation",
-    "image_alt": "Un artisan qualifié travaillant sur une machine textile dans notre usine tunisienne, mettant en valeur notre savoir-faire dans la fabrication textile",
-    "paragraph1": "Depuis plus de trois décennies, nous sommes à la pointe de la fabrication textile, alliant un savoir-faire ancestral à une technologie de pointe.",
-    "paragraph2": "Notre aventure a commencé avec une vision simple : créer des tissus qui inspirent les designers et ravissent les consommateurs finaux. Aujourd'hui, nous collaborons avec les plus grandes marques de mode du monde entier, fournissant des textiles de première qualité qui établissent de nouvelles normes en matière de qualité et d'innovation.",
-    "paragraph3": "Chaque fil que nous tissons porte notre engagement envers l'excellence. De la sélection des matières premières au contrôle qualité final, nous nous assurons que chaque tissu répond à nos normes rigoureuses.",
+    "image_alt": "Un artisan qualifié travaillant sur une machine à coudre dans notre usine tunisienne, mettant en valeur notre savoir-faire dans la confection de vêtements",
+    "paragraph1": "Depuis plus de trois décennies, nous sommes à la pointe de la confection de vêtements, alliant un savoir-faire ancestral à une technologie de pointe.",
+    "paragraph2": "Notre aventure a commencé avec une vision simple : créer des vêtements qui inspirent les designers et ravissent les consommateurs finaux. Aujourd'hui, nous collaborons avec les plus grandes marques de mode du monde entier, fournissant des vêtements de première qualité qui établissent de nouvelles normes en matière de qualité et d'innovation.",
+    "paragraph3": "Chaque vêtement que nous créons porte notre engagement envers l'excellence. De la sélection des matériaux au contrôle qualité final, nous nous assurons que chaque pièce répond à nos normes rigoureuses.",
     "stats": {
-      "experience": "Années d'Expérience",
+      "experience": "Plusieurs années d'expérience en Chine, récemment étendue à la Tunisie",
       "partners": "Marques Partenaires",
-      "quality": "Qualité Assurée"
+      "quality": "L'excellence à chaque point"
     }
   },
   "about_factory": {
