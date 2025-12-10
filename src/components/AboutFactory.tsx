@@ -8,32 +8,32 @@ const AboutFactory = () => {
       <div className="container mx-auto">
         <div className="text-center">
           <h2 className="mb-12 text-5xl font-bold tracking-tight">
-            🏭 About Our Factory
+            {t('about_factory.title')}
           </h2>
         </div>
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="text-left">
             <p className="text-lg text-gray-600 mb-8">
-            Our factory is proud to be certified with ISO 9001, ISO 14001, GOTS, and GRS, reflecting our commitment to quality, environmental responsibility, and sustainable production.
+              {t('about_factory.certifications')}
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              Our production process is divided into two main stages: Collection Phase and Production Phase, each carefully managed to ensure quality and precision.
+              {t('about_factory.intro')}
             </p>
             <div className="grid gap-8 md:grid-cols-1">
               <div>
-                <h3 className="mb-4 text-3xl font-bold tracking-tight">🧵 Collection Phase</h3>
+                <h3 className="mb-4 text-3xl font-bold tracking-tight">{t('about_factory.collection_phase_title')}</h3>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>PHASE 1 — Receipt of the technical file and creation of the pattern.</li>
-                  <li>PHASE 2 — Sourcing of fabrics and accessories, prototype making.</li>
-                  <li>PHASE 3 — Technical adjustments and repetitions (SMS) before production.</li>
+                  <li>{t('about_factory.collection_phase.phase1')}</li>
+                  <li>{t('about_factory.collection_phase.phase2')}</li>
+                  <li>{t('about_factory.collection_phase.phase3')}</li>
                 </ul>
               </div>
               <div>
-                <h3 className="mb-4 text-3xl font-bold tracking-tight">⚙️ Production Phase</h3>
+                <h3 className="mb-4 text-3xl font-bold tracking-tight">{t('about_factory.production_phase_title')}</h3>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                  <li>PHASE 1 — Technical preparation and seeded players (TDS).</li>
-                  <li>PHASE 2 — Cutting, sewing, washing and finishing.</li>
-                  <li>PHASE 3 — Export and delivery of finished products.</li>
+                  <li>{t('about_factory.production_phase.phase1')}</li>
+                  <li>{t('about_factory.production_phase.phase2')}</li>
+                  <li>{t('about_factory.production_phase.phase3')}</li>
                 </ul>
               </div>
             </div>
