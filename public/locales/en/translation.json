@@ -158,8 +158,10 @@
     "form_success_message": "Your message has been sent successfully. We'll get back to you soon!",
     "form_error_title": "Submission Failed",
     "form_error_message": "There was an error sending your message. Please try again later.",
+    "whatsapp_title": "Quick Response on WhatsApp",
+    "whatsapp_subtitle": "Get instant answers to your questions. We're here to help.",
     "whatsapp_button": "Chat on WhatsApp",
-    "watch_video_button": "Watch our factory"
+    "watch_video_button": "Watch Video"
   },
   "about": {
     "title": "Tradition Meets Innovation",
