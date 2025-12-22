@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const languages = [
   { code: "en", name: "English", flag: "🇬🇧" },
@@ -39,7 +40,20 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold tracking-tight">{t('nav.logo')}</h1>
+            <Link to={`/${i18n.language}/`}>
+              <h1 className="text-xl font-bold tracking-tight">{t('nav.logo')}</h1>
+            </Link>
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link to={`/${i18n.language}/`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                {t('nav.home')}
+              </Link>
+              <Link to={`/${i18n.language}/contact`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                {t('nav.contact')}
+              </Link>
+              <Link to={`/${i18n.language}/recruitment`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                {t('nav.recruitment')}
+              </Link>
+            </div>
           </div>
 
           {/* Contact Info */}

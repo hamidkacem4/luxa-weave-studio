@@ -15,8 +15,10 @@
     "address": "Technological and industrial pole, Sahline, Tunisia"
   },
   "nav": {
-    "logo": "MagTexco",
-    "address": "Technological and industrial pole, Sahline, Tunisia"
+    "address": "Technological and industrial pole, Sahline, Tunisia",
+    "contact": "Contact",
+    "home": "Home",
+    "recruitment": "Recruitment"
   },
   "collections": {
     "title": "Our Collections",
@@ -162,6 +164,10 @@
     "whatsapp_subtitle": "Get instant answers to your questions. We're here to help.",
     "whatsapp_button": "Chat on WhatsApp",
     "watch_video_button": "Watch Video"
+  },
+  "recruitment": {
+    "title": "Join Our Team",
+    "message": "We are always looking for talented individuals to join our team. Please check back later for open positions."
   },
   "about": {
     "title": "Tradition Meets Innovation",

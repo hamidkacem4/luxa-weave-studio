@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useParams, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ContactPage from "./pages/ContactPage";
+import RecruitmentPage from "./pages/RecruitmentPage";
 import { useEffect } from "react";
 import i18n from "./i18n";
 
@@ -29,6 +31,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Navigate to="/en" />} />
           <Route path="/:lang" element={<LangHandler><Index /></LangHandler>} />
+          <Route path="/:lang/contact" element={<LangHandler><ContactPage /></LangHandler>} />
+          <Route path="/:lang/recruitment" element={<LangHandler><RecruitmentPage /></LangHandler>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 
 const Hero = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [showTitle, setShowTitle] = useState(true);
 
   useEffect(() => {
@@ -55,9 +56,11 @@ const Hero = () => {
             <Button variant="gold" size="lg" onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}>
               {t('hero.explore_collections')}
             </Button>
-            <Button variant="outline" size="lg" className="bg-background/80 backdrop-blur-sm" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-              {t('hero.contact_us')}
-            </Button>
+            <Link to={`/${i18n.language}/contact`}>
+              <Button variant="outline" size="lg" className="bg-background/80 backdrop-blur-sm">
+                {t('hero.contact_us')}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
