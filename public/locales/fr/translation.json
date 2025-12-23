@@ -197,7 +197,15 @@
       "cv": {
         "label": "CV / Curriculum Vitae"
       },
-      "submit": "Soumettre la candidature"
+      "submit": "Soumettre la candidature",
+      "success": {
+        "title": "Candidature envoyée !",
+        "message": "Votre candidature a été envoyée avec succès. Nous vous recontacterons bientôt !"
+      },
+      "error": {
+        "title": "Échec de la soumission",
+        "message": "Une erreur s'est produite lors de l'envoi de votre candidature. Veuillez réessayer plus tard."
+      }
     }
   },
   "about": {

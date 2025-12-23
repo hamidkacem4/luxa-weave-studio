@@ -201,7 +201,15 @@
       "cv": {
         "label": "CV / Resume"
       },
-      "submit": "Submit Application"
+      "submit": "Submit Application",
+      "success": {
+        "title": "Application Sent!",
+        "message": "Your application has been sent successfully. We'll get back to you soon!"
+      },
+      "error": {
+        "title": "Submission Failed",
+        "message": "There was an error sending your application. Please try again later."
+      }
     }
   },
   "about": {

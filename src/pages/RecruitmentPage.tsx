@@ -1,70 +1,63 @@
+import { useEffect, useRef } from "react";
 import Meta from "@/components/Meta";
 import Navigation from "@/components/Navigation";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import { useTranslation } from "react-i18next";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useTranslation, Trans } from "react-i18next";
+import { useForm } from "@formspree/react";
 import { Button } from "@/components/ui/button";
-import { Phone } from 'lucide-react';
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
+import { Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useToast } from "@/hooks/use-toast";
 
 const RecruitmentPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [state, handleSubmit] = useForm("mzznvvrw");
+  const { toast } = useToast();
 
-  const formSchema = z.object({
-    fullName: z.string().min(2, {
-      message: t("recruitment.form.fullName.min"),
-    }),
-    email: z.string().email({
-      message: t("recruitment.form.email.invalid"),
-    }),
-    phone: z.string().min(10, {
-      message: t("recruitment.form.phone.min"),
-    }),
-    positionApplied: z.string().min(2, {
-      message: t("recruitment.form.positionApplied.min"),
-    }),
-    yearsOfExperience: z.string().min(1, {
-      message: t("recruitment.form.yearsOfExperience.min"),
-    }),
-    cv: z.any(),
-  });
+  const fullNameInputRef = useRef<HTMLInputElement>(null);
+  const emailInputRef = useRef<HTMLInputElement>(null);
+  const phoneInputRef = useRef<HTMLInputElement>(null);
+  const positionAppliedInputRef = useRef<HTMLInputElement>(null);
+  const yearsOfExperienceInputRef = useRef<HTMLInputElement>(null);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullName: "",
-      email: "",
-      phone: "",
-      positionApplied: "",
-      yearsOfExperience: "",
-      cv: undefined,
-    },
-  });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
-    // Here you would typically send the data to a server
-    // For now, we'll just log it
-    alert(JSON.stringify(values, null, 2));
-  }
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: i18n.t("recruitment.form.success.title"),
+        description: i18n.t("recruitment.form.success.message"),
+      });
+      // Clear input fields
+      if (fullNameInputRef.current) fullNameInputRef.current.value = "";
+      if (emailInputRef.current) emailInputRef.current.value = "";
+      if (phoneInputRef.current) phoneInputRef.current.value = "";
+      if (positionAppliedInputRef.current)
+        positionAppliedInputRef.current.value = "";
+      if (yearsOfExperienceInputRef.current)
+        yearsOfExperienceInputRef.current.value = "";
+    } else if (state.errors) {
+      console.error("Formspree errors:", state.errors);
+      let errorMessage = i18n.t("recruitment.form.error.message");
+      if (Array.isArray(state.errors)) {
+        errorMessage +=
+          " " +
+          state.errors.map((error) => error.message).join(", ");
+      } else if (state.errors.message) {
+        errorMessage += " " + state.errors.message;
+      }
+      toast({
+        title: i18n.t("recruitment.form.error.title"),
+        description: errorMessage,
+        variant: "destructive",
+      });
+    }
+  }, [state.succeeded, state.errors, i18n, toast]);
 
   return (
     <div className="min-h-screen">
@@ -76,147 +69,104 @@ const RecruitmentPage = () => {
       <Navigation />
       <div className="container py-24 text-center">
         <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-          {t('recruitment.title')}
+          {t("recruitment.title")}
         </h1>
         <p className="mt-6 text-lg text-muted-foreground">
-          {t('recruitment.message')}
+          {t("recruitment.message")}
         </p>
-        <div className="mx-auto mt-12 max-w-lg">
+        <div className="mx-auto mt-12 w-full max-w-2xl">
           <Card className="bg-white/50 dark:bg-black/50 backdrop-blur-lg">
             <CardHeader>
               <CardTitle>{t("recruitment.form.title")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <Form {...form}>
-                <form
-                  onSubmit={form.handleSubmit(onSubmit)}
-                  className="space-y-8"
-                >
-                  <FormField
-                    control={form.control}
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-8"
+                encType="multipart/form-data"
+              >
+                <div className="grid gap-2">
+                  <Label htmlFor="fullName">
+                    {t("recruitment.form.fullName.label")}
+                  </Label>
+                  <Input
+                    id="fullName"
                     name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t("recruitment.form.fullName.label")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={t(
-                              "recruitment.form.fullName.placeholder"
-                            )}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder={t("recruitment.form.fullName.placeholder")}
+                    ref={fullNameInputRef}
                   />
-                  <FormField
-                    control={form.control}
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="email">
+                    {t("recruitment.form.email.label")}
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
                     name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t("recruitment.form.email.label")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            type="email"
-                            placeholder={t(
-                              "recruitment.form.email.placeholder"
-                            )}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder={t("recruitment.form.email.placeholder")}
+                    ref={emailInputRef}
                   />
-                  <FormField
-                    control={form.control}
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="phone">
+                    {t("recruitment.form.phone.label")}
+                  </Label>
+                  <Input
+                    id="phone"
+                    type="tel"
                     name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t("recruitment.form.phone.label")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            type="tel"
-                            placeholder={t(
-                              "recruitment.form.phone.placeholder"
-                            )}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder={t("recruitment.form.phone.placeholder")}
+                    ref={phoneInputRef}
+                    minLength={9}
                   />
-                  <FormField
-                    control={form.control}
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="positionApplied">
+                    {t("recruitment.form.positionApplied.label")}
+                  </Label>
+                  <Input
+                    id="positionApplied"
                     name="positionApplied"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t("recruitment.form.positionApplied.label")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder={t(
-                              "recruitment.form.positionApplied.placeholder"
-                            )}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
+                    placeholder={t(
+                      "recruitment.form.positionApplied.placeholder"
                     )}
+                    ref={positionAppliedInputRef}
                   />
-                  <FormField
-                    control={form.control}
+                </div>
+                <div className="grid gap-2">
+                  <Label htmlFor="yearsOfExperience">
+                    {t("recruitment.form.yearsOfExperience.label")}
+                  </Label>
+                  <Input
+                    id="yearsOfExperience"
+                    type="number"
                     name="yearsOfExperience"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>
-                          {t("recruitment.form.yearsOfExperience.label")}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            type="number"
-                            placeholder={t(
-                              "recruitment.form.yearsOfExperience.placeholder"
-                            )}
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
+                    placeholder={t(
+                      "recruitment.form.yearsOfExperience.placeholder"
                     )}
+                    ref={yearsOfExperienceInputRef}
                   />
-                  <FormField
-                    control={form.control}
-                    name="cv"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>{t("recruitment.form.cv.label")}</FormLabel>
-                        <FormControl>
-                          <Input
-                            type="file"
-                            onChange={(e) => field.onChange(e.target.files)}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <p className="mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
-                    {t("recruitment.hrContact")} <Phone className="h-4 w-4 inline" /> 55248423
-                  </p>
-                  <Button type="submit" variant="gold" size="lg">{t("recruitment.form.submit")}</Button>
-                </form>
-              </Form>
+                </div>
+                {/* <div className="grid gap-2">
+                  <Label htmlFor="cv">{t("recruitment.form.cv.label")}</Label>
+                  <Input id="cv" type="file" name="cv" ref={cvInputRef} />
+                </div> */}
+                <p className="mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
+                  <Trans i18nKey="recruitment.hrContact" />{" "}
+                  <Phone className="h-4 w-4 inline" />{" "}
+                  <span className="font-bold">21655248423</span>
+                </p>
+
+                <Button
+                  type="submit"
+                  variant="gold"
+                  size="lg"
+                  disabled={state.submitting}
+                >
+                  {t("recruitment.form.submit")}
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
