@@ -2,11 +2,8 @@ import { useTranslation } from "react-i18next";
 import {
   Globe,
   Facebook,
-  Instagram,
-  MessageSquare,
   Phone,
   Mail,
-  MapPin,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -38,52 +35,59 @@ const Navigation = () => {
     <nav className="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border/20 shadow-sm">
       <div className="container">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link to={`/${i18n.language}/`}>
-              <h1 className="text-xl font-bold tracking-tight">{t('nav.logo')}</h1>
-            </Link>
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link to={`/${i18n.language}/`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
-                {t('nav.home')}
-              </Link>
-              <Link to={`/${i18n.language}/contact`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
-                {t('nav.contact')}
-              </Link>
-              <Link to={`/${i18n.language}/recruitment`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
-                {t('nav.recruitment')}
-              </Link>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-            <a
-              href="tel:+21695518870"
-              className="flex items-center gap-2 hover:text-foreground"
-            >
-              <Phone className="h-4 w-4" />
-              <span>+216 95 518 870</span>
-            </a>
-            <a
-              href="mailto:walid.horchani@thefactory.com.tn"
-              className="flex items-center gap-2 hover:text-foreground"
-            >
-              <Mail className="h-4 w-4" />
-              <span>walid.horchani@thefactory.com.tn</span>
-            </a>
-            <a
-              href="#contact"
-              className="flex items-center gap-2 hover:text-foreground"
-            >
-              <MapPin className="h-4 w-4" />
-              <span>{t('nav.address')}</span>
-            </a>
-          </div>
-
-          {/* Social Media Icons and Language Switcher */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
+                    {/* Logo */}
+                    <div className="flex items-center">
+                      <Link to={`/${i18n.language}/`}>
+                        <h1 className="text-xl font-bold tracking-tight">{t('nav.logo')}</h1>
+                      </Link>
+                    </div>
+          
+                    {/* Navigation Links */}
+                    <div className="flex items-center space-x-4">
+                      <Link to={`/${i18n.language}/`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                        {t('nav.home')}
+                      </Link>
+                      <Link to={`/${i18n.language}/contact`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                        {t('nav.contact')}
+                      </Link>
+                      <Link to={`/${i18n.language}/recruitment`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+                        {t('nav.recruitment')}
+                      </Link>
+                    </div>
+          
+                              {/* Social Media Icons and Language Switcher */}
+          
+                              <div className="flex items-center gap-4">
+          
+                                <a
+          
+                                  href="tel:+21695518870"
+          
+                                  className="hidden md:flex items-center gap-2 hover:text-foreground text-sm text-muted-foreground"
+          
+                                >
+          
+                                  <Phone className="h-4 w-4" />
+          
+                                  <span>+216 95 518 870</span>
+          
+                                </a>
+          
+                                <a
+          
+                                  href="mailto:walid.horchani@thefactory.com.tn"
+          
+                                  className="hidden md:flex items-center gap-2 hover:text-foreground text-sm text-muted-foreground"
+          
+                                >
+          
+                                  <Mail className="h-4 w-4" />
+          
+                                  <span>walid.horchani@thefactory.com.tn</span>
+          
+                                </a>
+          
+                                <div className="flex items-center gap-2">
               <a
                 href="https://www.facebook.com/profile.php?id=61570008207516"
                 target="_blank"
@@ -92,22 +96,7 @@ const Navigation = () => {
               >
                 <Facebook className="h-4 w-4 text-muted-foreground hover:text-foreground" />
               </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-4 w-4 text-muted-foreground hover:text-foreground" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-              >
-                <MessageSquare className="h-4 w-4 text-muted-foreground hover:text-foreground" />
-              </a>
+
             </div>
             {/* Language Switcher */}
             <DropdownMenu>

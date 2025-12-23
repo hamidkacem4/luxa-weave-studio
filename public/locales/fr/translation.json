@@ -164,7 +164,41 @@
   },
   "recruitment": {
     "title": "Rejoignez notre équipe",
-    "message": "Nous sommes toujours à la recherche de personnes talentueuses pour rejoindre notre équipe. Veuillez revenir plus tard pour les postes vacants."
+    "message": "Nous sommes toujours à la recherche de personnes talentueuses pour rejoindre notre équipe. Veuillez revenir plus tard pour les postes vacants.",
+    "hrContact": "si vous souhaitez contacter directement les RH, voici son numéro",
+    "form": {
+      "title": "Postuler pour un poste",
+      "description": "Remplissez le formulaire ci-dessous pour postuler à un poste chez MagTexco.",
+      "fullName": {
+        "label": "Nom complet",
+        "placeholder": "Entrez votre nom complet",
+        "min": "Le nom complet doit comporter au moins 2 caractères."
+      },
+      "email": {
+        "label": "E-mail",
+        "placeholder": "Entrez votre adresse e-mail",
+        "invalid": "Veuillez entrer une adresse e-mail valide."
+      },
+      "phone": {
+        "label": "Numéro de téléphone",
+        "placeholder": "Entrez votre numéro de téléphone",
+        "min": "Le numéro de téléphone doit comporter au moins 10 caractères."
+      },
+      "positionApplied": {
+        "label": "Poste souhaité",
+        "placeholder": "Ex: Ingénieur Logiciel, Designer Textile",
+        "min": "Le poste souhaité doit comporter au moins 2 caractères."
+      },
+      "yearsOfExperience": {
+        "label": "Années d'expérience",
+        "placeholder": "Entrez vos années d'expérience",
+        "min": "Veuillez entrer un nombre valide."
+      },
+      "cv": {
+        "label": "CV / Curriculum Vitae"
+      },
+      "submit": "Soumettre la candidature"
+    }
   },
   "about": {
     "title": "La Tradition Rencontre l'Innovation",

@@ -15,6 +15,7 @@
     "address": "Technological and industrial pole, Sahline, Tunisia"
   },
   "nav": {
+    "logo": "MagTexco",
     "address": "Technological and industrial pole, Sahline, Tunisia",
     "contact": "Contact",
     "home": "Home",
@@ -167,7 +168,41 @@
   },
   "recruitment": {
     "title": "Join Our Team",
-    "message": "We are always looking for talented individuals to join our team. Please check back later for open positions."
+    "message": "We are always looking for talented individuals to join our team. Please check back later for open positions.",
+    "hrContact": "if you want to contact HR directly this is her number",
+    "form": {
+      "title": "Apply for a Position",
+      "description": "Fill out the form below to apply for a position at MagTexco.",
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "min": "Full name must be at least 2 characters."
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "invalid": "Please enter a valid email address."
+      },
+      "phone": {
+        "label": "Phone Number",
+        "placeholder": "Enter your phone number",
+        "min": "Phone number must be at least 10 characters."
+      },
+      "positionApplied": {
+        "label": "Position Applied",
+        "placeholder": "e.g., Software Engineer, Textile Designer",
+        "min": "Position applied must be at least 2 characters."
+      },
+      "yearsOfExperience": {
+        "label": "Years of Experience",
+        "placeholder": "Enter your years of experience",
+        "min": "Please enter a valid number."
+      },
+      "cv": {
+        "label": "CV / Resume"
+      },
+      "submit": "Submit Application"
+    }
   },
   "about": {
     "title": "Tradition Meets Innovation",

@@ -164,7 +164,41 @@
   },
   "recruitment": {
     "title": "우리 팀에 합류하세요",
-    "message": "우리는 항상 재능 있는 인재를 찾고 있습니다. 나중에 채용 공고를 확인해주세요."
+    "message": "우리는 항상 재능 있는 인재를 찾고 있습니다. 나중에 채용 공고를 확인해주세요.",
+    "hrContact": "인사 담당자에게 직접 연락하려면 다음 번호로 연락하십시오",
+    "form": {
+      "title": "직책에 지원하기",
+      "description": "MagTexco의 직책에 지원하려면 아래 양식을 작성하십시오.",
+      "fullName": {
+        "label": "성명",
+        "placeholder": "성명을 입력하세요",
+        "min": "성명은 2자 이상이어야 합니다."
+      },
+      "email": {
+        "label": "이메일",
+        "placeholder": "이메일을 입력하세요",
+        "invalid": "유효한 이메일 주소를 입력하세요."
+      },
+      "phone": {
+        "label": "전화번호",
+        "placeholder": "전화번호를 입력하세요",
+        "min": "전화번호는 10자 이상이어야 합니다."
+      },
+      "positionApplied": {
+        "label": "지원 직책",
+        "placeholder": "예: 소프트웨어 엔지니어, 텍스타일 디자이너",
+        "min": "지원 직책은 2자 이상이어야 합니다."
+      },
+      "yearsOfExperience": {
+        "label": "경력 년수",
+        "placeholder": "경력 년수를 입력하세요",
+        "min": "유효한 숫자를 입력하세요."
+      },
+      "cv": {
+        "label": "이력서"
+      },
+      "submit": "지원서 제출"
+    }
   },
   "about": {
     "title": "전통과 혁신의 만남",
