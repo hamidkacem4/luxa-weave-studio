@@ -17,6 +17,7 @@ const collections = [
     title: "Silk Collection",
     description: "Luxurious softness",
     image: collection2,
+    slug: "silk-collection",
   },
   {
     id: 3,
