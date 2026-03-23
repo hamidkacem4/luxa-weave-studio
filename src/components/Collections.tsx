@@ -50,7 +50,8 @@ const Collections = () => {
         {/* Grid */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {collections.map((item, index) => (
-            <div
+            <Link
+              to={`/collection/${item.slug}`}
               key={item.id}
               className="group fade-in-up cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -65,7 +66,7 @@ const Collections = () => {
               </div>
               <h3 className="mb-2 text-2xl font-semibold">{item.title}</h3>
               <p className="text-muted-foreground">{item.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
