@@ -24,6 +24,7 @@ const collections = [
     title: "Cotton Essentials",
     description: "Comfort redefined",
     image: collection3,
+    slug: "cotton-essentials",
   },
   {
     id: 4,
