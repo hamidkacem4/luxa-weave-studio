@@ -31,6 +31,7 @@ const collections = [
     title: "Wool Blends",
     description: "Warmth meets elegance",
     image: collection4,
+    slug: "wool-blends",
   },
 ];
 
