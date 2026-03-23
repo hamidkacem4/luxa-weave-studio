@@ -10,6 +10,7 @@ const collections = [
     title: "Premium Linen",
     description: "Natural, breathable excellence",
     image: collection1,
+    slug: "premium-linen",
   },
   {
     id: 2,
