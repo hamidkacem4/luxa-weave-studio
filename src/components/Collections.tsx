@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import collection1 from "@/assets/collection-1.jpg";
 import collection2 from "@/assets/collection-2.jpg";
 import collection3 from "@/assets/collection-3.jpg";
