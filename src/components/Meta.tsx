@@ -7,7 +7,7 @@ type MetaProps = {
   description: string;
   keywords: string;
   image?: string;
-  customSchema?: any;
+  customSchema?: object | object[];
 };
 
 const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) => {
@@ -142,7 +142,7 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
         }
       },
       breadcrumbList,
-      ...(customSchema ? [customSchema] : [])
+      ...(customSchema ? (Array.isArray(customSchema) ? customSchema : [customSchema]) : [])
     ]
   };
 
@@ -162,7 +162,7 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
       <meta property="og:image" content={displayImage} />
 
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
