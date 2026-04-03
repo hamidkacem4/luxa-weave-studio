@@ -156,12 +156,13 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="MagTexco" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={displayImage} />
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
