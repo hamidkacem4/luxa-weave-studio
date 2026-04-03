@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Globe,
@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Tooltip,
   TooltipContent,
@@ -36,15 +36,62 @@ const languages = [
 const Navigation = () => {
   const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const changeLanguage = (lng: string) => {
+    // When changing language, we want to stay on the same page but with the new language prefix
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    if (pathParts.length > 0) {
+      pathParts[0] = lng;
+      navigate(`/${pathParts.join('/')}${location.hash}`);
+    } else {
+      navigate(`/${lng}`);
+    }
     i18n.changeLanguage(lng);
-    setIsMobileMenuOpen(false); // Close mobile menu on language change
+    setIsMobileMenuOpen(false);
   };
 
   const getCurrentLanguage = () => {
     return languages.find((lang) => lang.code === i18n.language) || languages[0];
   };
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const isAnchor = href.includes('#');
+    const [path, hash] = isAnchor ? href.split('#') : [href, null];
+    
+    // Normalize path comparison (handle trailing slashes if any)
+    const currentPath = location.pathname.endsWith('/') ? location.pathname : `${location.pathname}/`;
+    const targetPath = path.endsWith('/') ? path : `${path}/`;
+
+    if (currentPath === targetPath) {
+      if (isAnchor && hash) {
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // If it's the current page but no hash, just scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  // Handle hash scroll on initial load or navigation from other pages
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        // Small timeout to ensure page content is rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   return (
     <nav className="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border/20 shadow-sm">
@@ -53,19 +100,50 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to={`/${i18n.language}/`} onClick={() => setIsMobileMenuOpen(false)}>
-              <h1 className="text-lg font-bold tracking-tight">{t('nav.logo')}</h1>
+              <div className="text-lg font-bold tracking-tight">{t('nav.logo')}</div>
             </Link>
           </div>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to={`/${i18n.language}/`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+            <Link 
+              to={`/${i18n.language}/`} 
+              onClick={(e) => handleNavClick(e, `/${i18n.language}/`)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
               {t('nav.home')}
             </Link>
-            <Link to={`/${i18n.language}/contact`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+            <Link 
+              to={`/${i18n.language}/#collections`} 
+              onClick={(e) => handleNavClick(e, `/${i18n.language}/#collections`)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
+              {t('collections.title', 'Collections')}
+            </Link>
+            <Link 
+              to={`/${i18n.language}/#team`} 
+              onClick={(e) => handleNavClick(e, `/${i18n.language}/#team`)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
+              {t('nav.team', 'Team')}
+            </Link>
+            <Link 
+              to={`/${i18n.language}/blog`} 
+              onClick={(e) => handleNavClick(e, `/${i18n.language}/blog`)}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
+              {t('nav.blog', 'Blog')}
+            </Link>
+            <Link 
+              to={`/${i18n.language}/contact`} 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
               {t('nav.contact')}
             </Link>
-            <Link to={`/${i18n.language}/recruitment`} className="text-sm font-medium text-muted-foreground hover:text-foreground">
+            <Link 
+              to={`/${i18n.language}/recruitment`} 
+              className="text-sm font-medium text-muted-foreground hover:text-foreground"
+            >
               {t('nav.recruitment')}
             </Link>
           </div>
@@ -80,7 +158,6 @@ const Navigation = () => {
                 className="flex items-center gap-2 hover:text-foreground text-sm text-muted-foreground"
               >
                 <Phone className="h-4 w-4" />
-                <span>+216 95 518 870</span>
               </a>
               <TooltipProvider>
                 <Tooltip>
@@ -90,7 +167,6 @@ const Navigation = () => {
                       className="flex items-center gap-2 hover:text-foreground text-sm text-muted-foreground"
                     >
                       <Mail className="h-4 w-4" />
-                      <span>walid.horchani...</span>
                     </a>
                   </TooltipTrigger>
                   <TooltipContent>
@@ -147,13 +223,46 @@ const Navigation = () => {
                 </SheetTrigger>
                 <SheetContent side="right">
                   <div className="flex flex-col items-start gap-4 p-4">
-                    <Link to={`/${i18n.language}/`} className="text-base font-medium text-foreground hover:text-muted-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link 
+                      to={`/${i18n.language}/`} 
+                      onClick={(e) => handleNavClick(e, `/${i18n.language}/`)}
+                      className="text-base font-medium text-foreground hover:text-muted-foreground" 
+                    >
                       {t('nav.home')}
                     </Link>
-                    <Link to={`/${i18n.language}/contact`} className="text-base font-medium text-foreground hover:text-muted-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link 
+                      to={`/${i18n.language}/#collections`} 
+                      onClick={(e) => handleNavClick(e, `/${i18n.language}/#collections`)}
+                      className="text-base font-medium text-foreground hover:text-muted-foreground"
+                    >
+                      {t('collections.title', 'Collections')}
+                    </Link>
+                    <Link 
+                      to={`/${i18n.language}/#team`} 
+                      onClick={(e) => handleNavClick(e, `/${i18n.language}/#team`)}
+                      className="text-base font-medium text-foreground hover:text-muted-foreground"
+                    >
+                      {t('nav.team', 'Team')}
+                    </Link>
+                    <Link 
+                      to={`/${i18n.language}/blog`} 
+                      onClick={(e) => handleNavClick(e, `/${i18n.language}/blog`)}
+                      className="text-base font-medium text-foreground hover:text-muted-foreground"
+                    >
+                      {t('nav.blog', 'Blog')}
+                    </Link>
+                    <Link 
+                      to={`/${i18n.language}/contact`} 
+                      className="text-base font-medium text-foreground hover:text-muted-foreground" 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       {t('nav.contact')}
                     </Link>
-                    <Link to={`/${i18n.language}/recruitment`} className="text-base font-medium text-foreground hover:text-muted-foreground" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Link 
+                      to={`/${i18n.language}/recruitment`} 
+                      className="text-base font-medium text-foreground hover:text-muted-foreground" 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
                       {t('nav.recruitment')}
                     </Link>
                     <a

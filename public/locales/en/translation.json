@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "MagTexco - Tunisian Clothing Manufacturer",
-    "description": "MagTexco is a leading clothing manufacturer in Tunisia, offering high-quality garments and sustainable production for fashion brands worldwide.",
-    "keywords": "clothing tunisia, apparel industry tunisia, clothing manufacturer tunisia, garment supplier tunisia, sustainable fashion, magtexco"
+    "title": "MagTexco – Textile Manufacturer Tunisia | Textile Tunisie & Premium Fabrics",
+    "description": "Leading clothing manufacturers in Tunisia offering high-quality textile production, private label services, and sustainable garment manufacturing for EU and global brands.",
+    "keywords": "textile Tunisie, textile manufacturing Tunisia, clothing manufacturers Tunisia, manufacture Tunisie, high quality clothing manufacturers, Tunisian garment factory, apparel sourcing Tunisia, fashion manufacturing Tunisia, premium clothing production Tunisia, textile supplier Tunisia, bulk clothing manufacturers Tunisia, custom garment manufacturing Tunisia, private label clothing Tunisia, wholesale clothing manufacturer Tunisia, contract manufacturing Tunisia apparel, EU clothing supplier Tunisia, sustainable textile Tunisia, ethical clothing manufacturer Tunisia, eco-friendly garment factory Tunisia, made in Tunisia clothing"
   },
   "hero": {
-    "title": "MagTexco: Leader in the Tunisian Apparel Industry",
-    "subtitle": "High-Quality Garment Manufacturing in Tunisia",
-    "description": "Premium clothing manufacturing for fashion brands worldwide, from the heart of the Tunisian apparel industry. Where tradition meets innovation, quality meets sustainability.",
+    "title": "Your Strategic Clothing Manufacturer in Tunisia",
+    "subtitle": "Bridging Craftsmanship and Industrial Excellence",
+    "description": "MagTexco is a premier garment factory in Tunisia, delivering high-end apparel production for global brands. Experience the perfect blend of Mediterranean heritage and modern efficiency.",
     "explore_collections": "Explore Collections",
-    "contact_us": "Contact Us"
+    "contact_us": "Start Your Project"
   },
   "top_contact_bar": {
     "address": "Technological and industrial pole, Sahline, Tunisia"
@@ -19,33 +19,153 @@
     "address": "Technological and industrial pole, Sahline, Tunisia",
     "contact": "Contact",
     "home": "Home",
-    "recruitment": "Recruitment"
+    "team": "Our Experts",
+    "blog": "Industry Insights",
+    "recruitment": "Careers"
+  },
+  "team": {
+    "title": "Our Dedicated Team",
+    "description": "Meet the experts behind MagTexco's world-class textile manufacturing, dedicated to quality and innovation.",
+    "badge": "Expertise"
+  },
+  "blog": {
+    "section_title": "Industry Insights & News",
+    "section_subtitle": "Stay updated with the latest trends in Tunisian textile manufacturing and global fashion logistics.",
+    "badge": "Knowledge Hub",
+    "view_all": "View All Articles",
+    "read_more": "Read More",
+    "read_full": "Read Full Article",
+    "page_title": "MagTexco Blog: Industry Excellence",
+    "page_subtitle": "Deep dives into Mediterranean textile craftsmanship, nearshoring benefits, and supply chain innovation.",
+    "meta_title": "Textile & Clothing Manufacturer Tunisia | MagTexco Blog",
+    "meta_description": "Expert insights into the clothing manufacturer Tunisia market, sustainable fashion trends, and why global brands choose Tunisia for garment production.",
+    "meta_keywords": "textile blog, tunisia manufacturing news, clothing manufacturer tunisia, garment factory tunisia",
+    "back_to_list": "Back to Insights",
+    "share": "Share This Insight",
+    "cta_title": "Scale Your Production Today",
+    "cta_subtitle": "Discover how our Tunisian manufacturing expertise can elevate your brand's next collection.",
+    "cta_contact": "Consult Our Specialists",
+    "categories": {
+      "Industry Insights": "Industry Insights",
+      "Craftsmanship": "Craftsmanship",
+      "Trade": "Trade",
+      "Business Strategy": "Business Strategy"
+    },
+    "authors": {
+      "MagTexco Team": "MagTexco Editorial Team",
+      "Artisanal Dept": "Master Craftsmen",
+      "Logistics Expert": "Supply Chain Expert",
+      "Industry Analyst": "Industry Analyst"
+    }
   },
   "collections": {
-    "title": "Our Collections",
-    "subtitle": "Discover our curated selection of premium garments, each crafted with meticulous attention to detail",
+    "title": "Our Expert Collections",
+    "subtitle": "Versatile manufacturing capabilities for the modern fashion landscape",
     "items": [
       {
-        "title": "Womenswear",
-        "description": "Elegant and modern styles"
+        "slug": "shirts",
+        "title": "Premium Shirts",
+        "description": "From precision-tailored business wear to relaxed linen styles, our shirts define modern elegance."
       },
       {
-        "title": "Menswear",
-        "description": "Sophisticated and timeless pieces"
+        "slug": "t-shirts&tops",
+        "title": "Sustainable Tops",
+        "description": "Essential premium t-shirts and luxury basics crafted from the finest organic Egyptian cotton."
       },
       {
-        "title": "Childrenswear",
-        "description": "Comfortable and durable designs"
+        "slug": "shorts-skirts",
+        "title": "Tailored Bottoms",
+        "description": "Versatile shorts and artisanal skirts designed for perfect fit and effortless Mediterranean style."
       },
       {
-        "title": "Custom Collections",
-        "description": "Your vision, brought to life"
+        "slug": "dresses",
+        "title": "Exquisite Dresses",
+        "description": "Sophisticated silhouettes for every occasion, combining traditional hand-finishing with modern design."
+      },
+      {
+        "slug": "jackets-coats",
+        "title": "Luxury Outerwear",
+        "description": "Technical jackets and wool-blend coats featuring sophisticated tailoring and high-performance materials."
       }
     ]
   },
+  "collection_details": {
+    "shirts": {
+      "title": "Shirts",
+      "description": "Meticulously crafted with high-density fabrics and artisanal finishing, our shirts offer the perfect balance of structure and comfort.",
+      "men": [
+        { "name": "Oxford Button-Down", "description": "A premium long-sleeve silk shirt with a subtle sheen, offering a refined and sophisticated look.", "image": "product-men-silk" },
+        { "name": "Linen Summer Shirt", "description": "Soft and lightweight viscose shirt with an excellent drape, perfect for all-day comfort.", "image": "product-men-viscose" },
+        { "name": "Classic Patterned Shirt", "description": "A sharp, well-structured shirt featuring a timeless pattern for a modern professional style.", "image": "SH09" },
+        { "name": "Casual Button-Down", "description": "A versatile cotton-blend shirt with a relaxed fit, ideal for smart-casual occasions.", "image": "menshirt2" },
+        { "name": "Crisp Egyptian Cotton Shirt", "description": "A high-density white cotton shirt with a sharp collar and premium finish.", "image": "product-men-cotton" }
+      ],
+      "women": [
+        { "name": "Silk Blouse", "description": "A refined women's shirt in flowing silk, tailored for a graceful and elegant silhouette.", "image": "shirt3" },
+        { "name": "Poplin Classic Shirt", "description": "Sharp lines in crisp Egyptian cotton, providing a clean and professional look.", "image": "shirt1" },
+        { "name": "Relaxed Linen Shirt", "description": "Effortless style for weekend wear, crafted from premium lightweight linen blend.", "image": "shirt2" },
+        { "name": "Elegant Tailored Shirt", "description": "A beautifully structured shirt that combines traditional craftsmanship with a modern fit.", "image": "shirt4" }
+      ]
+    },
+    "t-shirts&tops": {
+      "title": "T-Shirts & Tops",
+      "description": "Our T-shirts and lightweight tops are more than just basics. We use premium fabrics and refined stitching to create pieces that last and keep their shape.",
+      "men": [
+        { "name": "Essential Crew Neck Tee", "description": "A premium weight cotton T-shirt with a perfect fit and durable neckline for daily wear.", "image": "menshirt1" },
+        { "name": "Relaxed Fit Jersey Tee", "description": "Soft-touch jersey T-shirt designed for maximum comfort and a contemporary urban look.", "image": "menshirt22" },
+        { "name": "Athletic Performance Top", "description": "A moisture-wicking, breathable top suitable for active lifestyles and premium casual wear.", "image": "menshirt3" }
+      ],
+      "women": [
+        { "name": "Classic Fitted Tee", "description": "Perfectly tailored for a sleek silhouette, made from the finest organic cotton.", "image": "tshirt1" },
+        { "name": "Oversized Boyfriend Tee", "description": "Relaxed comfort in soft jersey, offering a modern and effortless style.", "image": "tshirt2" },
+        { "name": "Ribbed Scoop Neck", "description": "Textured finish for a modern look, providing both comfort and sophisticated style.", "image": "tshirt3" }
+      ]
+    },
+    "shorts-skirts": {
+      "title": "Shorts & Skirts",
+      "description": "Discover our range of premium shorts and skirts, from tailored cotton chinos to pleated midi skirts, each designed for comfort and durability.",
+      "men": [
+        { "name": "Tailored Chino Shorts", "description": "Classic knee-length shorts in durable cotton twill with a clean, structured finish.", "image": "short" },
+        { "name": "Casual Walk Shorts", "description": "Lightweight and breathable shorts, perfect for summer outings and relaxed weekends.", "image": "shortman2" },
+        { "name": "Sporty Leisure Shorts", "description": "Flexible and comfortable shorts designed for ease of movement and casual athletic style.", "image": "shortman3" }
+      ],
+      "women": [
+        { "name": "Artisanal Patterned Skirt", "description": "A unique piece showcasing traditional Tunisian weaving influences in a modern, stylish cut.", "image": "manouchstyle1" },
+        { "name": "High-Waisted Tailored Shorts", "description": "Flattering high-rise shorts with a tailored fit, combining Mediterranean elegance with comfort.", "image": "manouchstyle2" },
+        { "name": "Modern Cotton Shorts", "description": "Clean-cut cotton shorts designed for a polished yet relaxed summer look.", "image": "shortWomen2" },
+        { "name": "Flowing A-Line Skirt", "description": "A feminine skirt with graceful movement, crafted from premium lightweight fabric.", "image": "skirt2" }
+      ]
+    },
+    "dresses": {
+      "title": "Dresses",
+      "description": "Our dresses are the heart of our craftsmanship, featuring intricate patterns, premium materials, and silhouettes that celebrate the wearer.",
+      "men": [],
+      "women": [
+        { "name": "Silk Wrap Dress", "description": "Flowing elegance in pure mulberry silk, featuring a sophisticated silhouette for evening wear.", "image": "dress1" },
+        { "name": "Embroidered Summer Dress", "description": "Lightweight cotton with artisanal embroidery, perfect for a refined daytime look.", "image": "dress2" },
+        { "name": "Pleated Evening Gown", "description": "Sophisticated movement and floor-length style, crafted for special occasions.", "image": "dress3" },
+        { "name": "Floral Print Midi", "description": "Vibrant patterns on soft premium fabric, offering a graceful and feminine aesthetic.", "image": "dress4" },
+        { "name": "Refined Cotton Day Dress", "description": "A breathable and stylish cotton dress, perfect for effortless daytime elegance.", "image": "productWomenCotton" },
+        { "name": "Elegant Viscose Gown", "description": "A luxurious dress with a beautiful drape and vibrant finish for formal celebrations.", "image": "productWomenViscose" }
+      ]
+    },
+    "jackets-coats": {
+      "title": "Jackets & Coats",
+      "description": "Expertly tailored outerwear designed to protect and impress, using high-performance fabrics and timeless designs.",
+      "men": [],
+      "women": [
+        { "name": "Structured Fashion Coat", "description": "Sophisticated outerwear featuring clean lines and premium wool-blend materials for winter.", "image": "womenCoats" },
+        { "name": "Tailored Wool Blend Coat", "description": "An elegant coat designed for warmth and a polished silhouette in cooler weather.", "image": "womenCoats2" },
+        { "name": "Heavyweight Winter Coat", "description": "Insulated and stylish coat designed for extreme warmth without compromising on elegance.", "image": "MANTEAU_1" },
+        { "name": "Classic Overcoat", "description": "A timeless layering piece with a refined fit, suitable for professional and formal wear.", "image": "MANTEAU_2" },
+        { "name": "Modern Utility Jacket", "description": "A contemporary jacket with functional details and a sleek, modern structured silhouette.", "image": "H25" },
+        { "name": "Refined Transitional Coat", "description": "A versatile coat with a tailored fit, perfect for transitioning between seasons in style.", "image": "coat1" }
+      ]
+    }
+  },
   "products": {
     "title": "Our Products",
-    "subtitle": "Explore our curated collections of fashion pieces crafted from the finest materials",
+    "subtitle": "Explore our collections of fashion pieces crafted from the finest materials",
     "women_tab": "Women",
     "men_tab": "Men",
     "women": [
@@ -84,30 +204,30 @@
     ]
   },
   "why_choose_us": {
-    "title": "Why Choose MagTexco for Your Tunisian Apparel Needs?",
-    "subtitle": "Discover the core values that make us a leader in the Tunisian apparel industry and the preferred partner for leading fashion brands.",
+    "title": "Why Choose MagTexco for Your Clothing Needs in Tunisia?",
+    "subtitle": "Discover the core values that make us a leader in the Tunisian apparel industry and the preferred partner for global fashion brands.",
     "features": [
       {
         "title": "Uncompromising Quality",
-        "description": "As a top apparel manufacturer in Tunisia, we meticulously source the finest materials and employ rigorous quality control at every stage of production."
+        "description": "As a top-tier clothing manufacturer in Tunisia, we meticulously select the finest materials and apply rigorous quality control at every stage of production."
       },
       {
         "title": "Innovative Designs",
-        "description": "Our team of expert designers stays ahead of trends, offering fresh and unique clothing designs and finishes for the global fashion market."
+        "description": "Our team of expert designers stays ahead of trends, providing fresh and unique garment designs and finishes for the global fashion market."
       },
       {
         "title": "Sustainable Practices",
-        "description": "Committed to eco-friendly manufacturing, we are a sustainable choice in the Tunisian apparel industry, minimizing waste and utilizing sustainable resources."
+        "description": "Committed to eco-friendly manufacturing, we are a sustainable choice in the Tunisian garment industry, minimizing waste and using sustainable resources."
       },
       {
         "title": "Reliable Partnership",
-        "description": "We pride ourselves on transparent communication, timely delivery, and building lasting relationships with our clients in the apparel industry."
+        "description": "We pride ourselves on transparent communication, timely deliveries, and building long-lasting relationships with our clients in the apparel industry."
       }
     ]
   },
   "sustainability": {
-    "title": "Responsible Sourcing & Production",
-    "subtitle": "Our commitment to excellence extends beyond quality—we prioritize ethical practices and sustainability",
+    "title": "Responsible Sourcing and Production",
+    "subtitle": "Our commitment to excellence goes beyond quality—we prioritize ethical practices and sustainability",
     "features": [
       {
         "title": "Organic Materials",
@@ -123,7 +243,7 @@
       },
       {
         "title": "Certified Excellence",
-        "description": "GOTS, OEKO-TEX, and Fair Trade certified manufacturing"
+        "description": "GOTS, GRS, ISO 9001, ISO 14001, BSCI and Fair Trade certified manufacturing"
       }
     ]
   },
@@ -147,9 +267,9 @@
     ],
     "map_title": "Location Map",
     "map_dialog_title": "Our Factory",
-    "map_instruction": "Click the pin to see our factory, or click the map for directions.",
+    "map_instruction": "Click the marker to see our factory, or click the map to get directions.",
     "form_title": "Send us a Message",
-    "form_subtitle": "We'll get back to you as soon as possible.",
+    "form_subtitle": "We will get back to you as soon as possible.",
     "form_name_label": "Name",
     "form_name_placeholder": "Your Name",
     "form_email_label": "Email",
@@ -158,18 +278,18 @@
     "form_message_placeholder": "Your Message",
     "form_submit_button": "Send Message",
     "form_success_title": "Message Sent!",
-    "form_success_message": "Your message has been sent successfully. We'll get back to you soon!",
+    "form_success_message": "Your message has been sent successfully. We will get back to you soon!",
     "form_error_title": "Submission Failed",
-    "form_error_message": "There was an error sending your message. Please try again later.",
-    "whatsapp_title": "Quick Response on WhatsApp",
-    "whatsapp_subtitle": "Get instant answers to your questions. We're here to help.",
+    "form_error_message": "An error occurred while sending your message. Please try again later.",
+    "whatsapp_title": "Quick WhatsApp Response",
+    "whatsapp_subtitle": "Get instant answers to your questions. We are here to help.",
     "whatsapp_button": "Chat on WhatsApp",
     "watch_video_button": "Watch Video"
   },
   "recruitment": {
-    "title": "Join Our Team",
+    "title": "Join our team",
     "message": "We are always looking for talented individuals to join our team. Please check back later for open positions.",
-    "hrContact": "if you want to contact HR directly this is her number",
+    "hrContact": "if you want to contact HR directly, here is her number",
     "form": {
       "title": "Apply for a Position",
       "description": "Fill out the form below to apply for a position at MagTexco.",
@@ -189,9 +309,9 @@
         "min": "Phone number must be at least 10 characters."
       },
       "positionApplied": {
-        "label": "Position Applied",
-        "placeholder": "e.g., Software Engineer, Textile Designer",
-        "min": "Position applied must be at least 2 characters."
+        "label": "Position Applied For",
+        "placeholder": "e.g. Software Engineer, Textile Designer",
+        "min": "Position must be at least 2 characters."
       },
       "yearsOfExperience": {
         "label": "Years of Experience",
@@ -204,34 +324,34 @@
       "submit": "Submit Application",
       "success": {
         "title": "Application Sent!",
-        "message": "Your application has been sent successfully. We'll get back to you soon!"
+        "message": "Your application has been sent successfully. We will get back to you soon!"
       },
       "error": {
         "title": "Submission Failed",
-        "message": "There was an error sending your application. Please try again later."
+        "message": "An error occurred while sending your application. Please try again later."
       }
     }
   },
   "about": {
-    "title": "Tradition Meets Innovation",
-    "image_alt": "A skilled artisan working on a sewing machine in our Tunisian factory, showcasing our craftsmanship in clothing manufacturing",
-    "paragraph1": "For over three decades, we've been at the forefront of clothing manufacturing, combining time-honored craftsmanship with cutting-edge technology.",
-    "paragraph2": "Our journey began with a simple vision: to create garments that inspire designers and delight end consumers. Today, we partner with leading fashion brands worldwide, delivering premium clothing that set new standards in quality and innovation.",
-    "paragraph3": "Every garment we create carries our commitment to excellence. From the selection of materials to the final quality check, we ensure that each piece meets our exacting standards.",
+    "title": "MagTexco: The Future of Textile Tunisia",
+    "image_alt": "Advanced textile manufacturing at our state-of-the-art garment factory in Tunisia",
+    "paragraph1": "With over three decades of industrial heritage, MagTexco has evolved into a cornerstone of the textile Tunisie sector. Originally established with deep roots in global manufacturing, our Sahline facility now serves as a high-tech hub for premium international fashion brands.",
+    "paragraph2": "As a socially responsible clothing manufacturer in Tunisia, we prioritize ethical labor practices and sustainable sourcing. Our state-of-the-art garment factory in Tunisia is designed to handle complex designs—from luxury silk scarves to technical outerwear—while maintaining the highest European quality standards.",
+    "paragraph3": "We don't just manufacture; we co-create. Our team of experts works closely with your designers to streamline the transition from sketch to shelf, ensuring your collections are delivered with precision, agility, and speed.",
     "stats": {
-      "experience": "Many years of experience in China, recently expanded to Tunisia",
-      "partners": "Brand Partners",
-      "quality": "Excellence in Every Stitch"
+      "experience": "30+ Years of Manufacturing Excellence",
+      "partners": "Global Brand Partners",
+      "quality": "Uncompromising Quality Control"
     }
   },
   "about_factory": {
     "title": "🏭 About Our Factory",
-    "intro": "Our production process is divided into two main stages: Collection Phase and Production Phase, each carefully managed to ensure quality and precision.",
-    "certifications": "Our factory is proud to be certified with ISO 9001, ISO 14001, GOTS, and GRS, reflecting our commitment to quality, environmental responsibility, and sustainable production.",
+    "intro": "Our production process is divided into two main stages: the Collection Phase and the Production Phase, each carefully managed to ensure quality and precision.",
+    "certifications": "Our factory is proud to be ISO 9001, ISO 14001, GOTS, and GRS certified, reflecting our commitment to quality, environmental responsibility, and sustainable production.",
     "collection_phase_title": "🧵 Collection Phase",
     "collection_phase": {
-      "phase1": "PHASE 1 — Receipt of the technical file and creation of the pattern.",
-      "phase2": "PHASE 2 — Sourcing of fabrics and accessories, prototype making.",
+      "phase1": "PHASE 1 — Reception of the technical file and pattern creation.",
+      "phase2": "PHASE 2 — Sourcing of fabrics and accessories, prototype manufacturing.",
       "phase3": "PHASE 3 — Technical adjustments and repetitions (SMS) before production."
     },
     "production_phase_title": "⚙️ Production Phase",
@@ -239,6 +359,15 @@
       "phase1": "PHASE 1 — Technical preparation and seeded players (TDS).",
       "phase2": "PHASE 2 — Cutting, sewing, washing and finishing.",
       "phase3": "PHASE 3 — Export and delivery of finished products."
+    },
+    "detailed_expertise": {
+      "title": "Industrial Excellence & Mediterranean Nearshoring",
+      "p1": "MagTexco stands at the forefront of the 'Textile Tunisie' revolution, offering a strategic alternative to far-east manufacturing. Our facility in Sahline is not merely a production site; it is a center of technical innovation where traditional craftsmanship meets Industry 4.0. We specialize in high-complexity garment construction, managing everything from delicate silk blouses to multi-layered technical outerwear with clinical precision.",
+      "p2": "By choosing a clothing manufacturer in Tunisia, global brands benefit from an unparalleled 'Time-to-Market' advantage. Our geographical proximity to Europe allows for door-to-door delivery in under 72 hours, significantly reducing inventory risks and carbon footprints. Our supply chain is built on transparency, utilizing advanced ERP systems to track every stitch from raw material reception to final export.",
+      "p3": "Quality is our core mandate. Every production line is overseen by a dedicated Quality Assurance team that performs inline inspections and final AQL 2.5 audits. Our commitment to sustainability is reflected in our ISO 14001 and GOTS certifications, ensuring that your collections are not only beautiful but also ethically produced and environmentally conscious."
     }
+  },
+  "footer": {
+    "rights": "All rights reserved."
   }
 }

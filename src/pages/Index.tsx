@@ -10,6 +10,9 @@ import AboutFactory from "@/components/AboutFactory";
 import Sustainability from "@/components/Sustainability";
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TeamSection from "@/components/TeamSection";
+import BlogSection from "@/components/BlogSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -21,37 +24,20 @@ const Index = () => {
         description={t("meta.description")}
         keywords={t("meta.keywords")}
       />
-      <Hero />
-      <Navigation />
-      <div>
+      <main>
+        <Hero />
+        <Navigation />
         <WhyChooseUs />
         <Collections />
         <Products />
         <About />
         <AboutFactory />
         <Sustainability />
+        <TeamSection />
+        <BlogSection />
         <Contact />
-      </div>
-      
-      {/* Footer */}
-      <footer className="border-t bg-cream py-12">
-        <div className="container">
-          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-sm text-muted-foreground">
-              © 2024 MagTexco. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm text-muted-foreground">
-              <a href="#" className="transition-colors hover:text-foreground">
-                Privacy Policy
-              </a>
-              <a href="#" className="transition-colors hover:text-foreground">
-                Terms of Service
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      
+      </main>      
+      <Footer />      
       <WhatsAppButton />
     </div>
   );

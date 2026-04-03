@@ -15,7 +15,9 @@ const ContactPage = () => {
         keywords="contact magtexco, tunisia clothing factory contact, apparel manufacturing inquiry"
       />
       <Navigation />
-      <Contact />
+      <main>
+        <Contact isPage={true} />
+      </main>
       <footer className="border-t bg-cream py-12">
         <div className="container">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">

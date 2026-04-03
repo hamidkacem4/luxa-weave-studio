@@ -1,22 +1,11 @@
-import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import clsx from "clsx";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
-  const [showTitle, setShowTitle] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowTitle(false);
-    }, 5000); // 10 seconds
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -38,10 +27,7 @@ const Hero = () => {
         <div className="text-center fade-in-up">
           <div className="overflow-hidden">
             <h1
-              className={clsx(
-                "mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl transition-all duration-1000 ease-in-out",
-                showTitle ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"
-              )}
+              className="mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl"
             >
               {t('hero.title')}
             </h1>
@@ -56,7 +42,7 @@ const Hero = () => {
             <Button variant="gold" size="lg" onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}>
               {t('hero.explore_collections')}
             </Button>
-            <Link to={`/${i18n.language}/contact`}>
+            <Link to={`/${i18n.language}/contact#contact-form`}>
               <Button variant="outline" size="lg" className="bg-background/80 backdrop-blur-sm">
                 {t('hero.contact_us')}
               </Button>

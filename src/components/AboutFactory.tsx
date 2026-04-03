@@ -40,7 +40,7 @@ const AboutFactory = () => {
           </div>
           <div className="relative overflow-hidden rounded-sm shadow-lg">
             <iframe
-              src="https://player.cloudinary.com/embed/?cloud_name=duqbe1hoq&public_id=WhatsApp_Video_2025-11-06_at_11.20.21_AM_nc7fgl&profile=cld-default"
+              src="https://player.cloudinary.com/embed/?cloud_name=duqbe1hoq&public_id=WhatsApp_Video_2025-11-06_at_11.20.21_AM_wvds8y"
               width="640"
               height="360"
               style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
@@ -49,6 +49,32 @@ const AboutFactory = () => {
               frameBorder="0"
               title="Factory Tour Video"
             />
+          </div>
+        </div>
+
+        {/* Detailed Expertise Section (Added for SEO and Information Depth) */}
+        <div className="mt-24 border-t border-cream pt-24">
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-4xl font-bold mb-10 text-charcoal text-center">
+              {t('about_factory.detailed_expertise.title')}
+            </h3>
+            <div className="grid gap-12 md:grid-cols-3">
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {t('about_factory.detailed_expertise.p1')}
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {t('about_factory.detailed_expertise.p2')}
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {t('about_factory.detailed_expertise.p3')}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

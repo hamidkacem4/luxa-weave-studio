@@ -1,15 +1,15 @@
 {
   "meta": {
-    "title": "MagTexco - Fabricant de Vêtements Tunisien",
-    "description": "MagTexco est un fabricant de vêtements de premier plan en Tunisie, proposant des vêtements de haute qualité et une production durable pour les marques de mode du monde entier.",
-    "keywords": "vêtements tunisie, industrie de l'habillement tunisie, fabricant de vêtements tunisie, fournisseur de vêtements tunisie, mode durable, magtexco"
+    "title": "MagTexco | Usine Textile Tunisie & Leader du Textile en Tunisie",
+    "description": "MagTexco est la meilleure usine textile en Tunisie. Nous offrons une fabrication de vêtements de haute qualité et une production textile durable pour les marques de mode mondiales.",
+    "keywords": "usine textile Tunisie, textile Tunisie, fabricant de vêtements Tunisie, industrie textile méditerranée, production textile durable"
   },
   "hero": {
-    "title": "MagTexco : Leader de l'Industrie de l'Habillement Tunisienne",
-    "subtitle": "Fabrication de Vêtements de Haute Qualité en Tunisie",
-    "description": "Fabrication de vêtements de première qualité pour les marques de mode du monde entier, au cœur de l'industrie de l'habillement tunisienne. Là où la tradition rencontre l'innovation, la qualité rencontre la durabilité.",
+    "title": "Votre Usine Textile Stratégique en Tunisie",
+    "subtitle": "L'excellence entre artisanat et performance industrielle",
+    "description": "MagTexco est une usine textile de premier plan en Tunisie, offrant une production de vêtements haut de gamme pour les marques mondiales. Découvrez l'alliance parfaite entre héritage méditerranéen et efficacité moderne.",
     "explore_collections": "Explorer les Collections",
-    "contact_us": "Contactez-nous"
+    "contact_us": "Lancer votre projet"
   },
   "top_contact_bar": {
     "address": "Pôle technologique et industriel, Sahline, Tunisie"
@@ -19,29 +19,149 @@
     "address": "Pôle technologique et industriel, Sahline, Tunisie",
     "contact": "Contact",
     "home": "Accueil",
+    "team": "Nos Experts",
+    "blog": "Veille Industrielle",
     "recruitment": "Recrutement"
   },
+  "team": {
+    "title": "Notre Équipe Dédiée",
+    "description": "Rencontrez les experts derrière la fabrication textile de classe mondiale de MagTexco, dédiés à la qualité et à l'innovation.",
+    "badge": "Expertise"
+  },
+  "blog": {
+    "section_title": "Textile Tunisie : Analyses et Actualités",
+    "section_subtitle": "Gardez une longueur d'avance sur les tendances de la mode mondiale avec l'expertise du cœur de l'industrie textile tunisienne.",
+    "badge": "Centre de Connaissances",
+    "view_all": "Voir toutes les analyses",
+    "read_more": "Lire la suite",
+    "read_full": "Lire l'article complet",
+    "page_title": "Blog MagTexco : L'Excellence Industrielle",
+    "page_subtitle": "Analyses approfondies de l'artisanat textile méditerranéen, des avantages du nearshoring et de l'innovation de la chaîne d'approvisionnement.",
+    "meta_title": "Fabricant Textile & Usine Textile Tunisie | Blog MagTexco",
+    "meta_description": "Découvrez l'industrie textile en Tunisie, les tendances de la mode durable et pourquoi les marques mondiales choisissent la Tunisie pour la production textile.",
+    "meta_keywords": "blog textile, actualités fabrication tunisie, usine textile tunisie, textile tunisie",
+    "back_to_list": "Retour aux analyses",
+    "share": "Partager cette analyse",
+    "cta_title": "Passez à la vitesse supérieure",
+    "cta_subtitle": "Découvrez comment notre expertise textile en Tunisie peut sublimer la prochaine collection de votre marque.",
+    "cta_contact": "Consulter nos spécialistes",
+    "categories": {
+      "Industry Insights": "Analyses Industrielles",
+      "Craftsmanship": "Artisanat",
+      "Trade": "Commerce",
+      "Business Strategy": "Stratégie Commerciale"
+    },
+    "authors": {
+      "MagTexco Team": "Équipe Éditoriale MagTexco",
+      "Artisanal Dept": "Maîtres Artisans",
+      "Logistics Expert": "Expert Supply Chain",
+      "Industry Analyst": "Analyste Industriel"
+    }
+  },
   "collections": {
-    "title": "Nos Collections",
-    "subtitle": "Découvrez notre sélection de vêtements haut de gamme, chacun fabriqué avec une attention méticuleuse aux détails",
+    "title": "Nos Collections Expertes",
+    "subtitle": "Capacités de fabrication polyvalentes pour le paysage de la mode moderne",
     "items": [
       {
-        "title": "Prêt-à-porter Féminin",
-        "description": "Styles élégants et modernes"
+        "slug": "shirts",
+        "title": "Chemises Premium",
+        "description": "Des vêtements de travail de précision aux styles décontractés en lin, nos chemises définissent l'élégance moderne."
       },
       {
-        "title": "Prêt-à-porter Masculin",
-        "description": "Pièces sophistiquées et intemporelles"
+        "slug": "t-shirts&tops",
+        "title": "Hauts Durables",
+        "description": "T-shirts premium et basiques de luxe confectionnés dans le meilleur coton égyptien biologique."
       },
       {
-        "title": "Vêtements pour Enfants",
-        "description": "Modèles confortables et durables"
+        "slug": "shorts-skirts",
+        "title": "Bas Ajustés",
+        "description": "Shorts polyvalents et jupes artisanales conçus pour un ajustement parfait et un style méditerranéen sans effort."
       },
       {
-        "title": "Collections Personnalisées",
-        "description": "Votre vision, concrétisée"
+        "slug": "dresses",
+        "title": "Robes Exquises",
+        "description": "Silhouettes sophistiquées pour chaque occasion, alliant finitions à la main traditionnelles et design moderne."
+      },
+      {
+        "slug": "jackets-coats",
+        "title": "Vêtements d'Extérieur",
+        "description": "Vestes techniques et manteaux en mélange de laine dotés de coupes sophistiquées et de matériaux performants."
       }
     ]
+  },
+  "collection_details": {
+    "shirts": {
+      "title": "Chemises",
+      "description": "Méticuleusement confectionnées avec des tissus haute densité et des finitions artisanales, nos chemises offrent l'équilibre parfait entre structure et confort.",
+      "men": [
+        { "name": "Chemise Oxford en Soie", "description": "Une chemise en soie haut de gamme à manches longues avec un éclat subtil, offrant un look raffiné et sophistiqué.", "image": "product-men-silk" },
+        { "name": "Chemise d'Été en Lin", "description": "Chemise en viscose douce et légère avec un excellent drapé, parfaite pour un confort tout au long de la journée.", "image": "product-men-viscose" },
+        { "name": "Chemise Classique à Motifs", "description": "Une chemise bien structurée présentant un motif intemporel pour un style professionnel moderne.", "image": "SH09" },
+        { "name": "Chemise Décontractée", "description": "Une chemise polyvalente en mélange de coton avec une coupe décontractée, idéale pour les occasions chic-décontractées.", "image": "menshirt2" },
+        { "name": "Chemise en Coton Égyptien", "description": "Une chemise en coton blanc haute densité avec un col net et une finition premium.", "image": "product-men-cotton" }
+      ],
+      "women": [
+        { "name": "Chemisier en Soie", "description": "Un chemisier raffiné en soie fluide, coupé pour une silhouette gracieuse et élégante.", "image": "shirt3" },
+        { "name": "Chemise Classique en Popeline", "description": "Des lignes nettes en coton égyptien frais, offrant un look propre et professionnel.", "image": "shirt1" },
+        { "name": "Chemise en Lin Décontractée", "description": "Un style sans effort pour le week-end, confectionné dans un mélange de lin léger de qualité supérieure.", "image": "shirt2" },
+        { "name": "Chemise Tailleur Élégante", "description": "Une chemise magnifiquement structurée qui combine savoir-faire traditionnel et coupe moderne.", "image": "shirt4" }
+      ]
+    },
+    "t-shirts&tops": {
+      "title": "T-Shirts & Hauts",
+      "description": "Nos T-shirts et hauts légers sont plus que de simples basiques. Nous utilisons des tissus premium et des coutures raffinées pour créer des pièces durables.",
+      "men": [
+        { "name": "T-Shirt Col Rond Essentiel", "description": "Un T-shirt en coton de poids supérieur avec une coupe parfaite et une encolure durable pour un usage quotidien.", "image": "menshirt1" },
+        { "name": "T-Shirt en Jersey Coupe Relax", "description": "T-shirt en jersey au toucher doux conçu pour un confort maximal et un look urbain contemporain.", "image": "menshirt22" },
+        { "name": "Haut de Performance Athlétique", "description": "Un haut respirant qui évacue l'humidité, adapté aux modes de vie actifs et aux vêtements décontractés haut de gamme.", "image": "menshirt3" }
+      ],
+      "women": [
+        { "name": "T-shirt Ajusté Classique", "description": "Parfaitement taillé pour une silhouette épurée, fabriqué à partir du meilleur coton biologique.", "image": "tshirt1" },
+        { "name": "T-shirt Boyfriend Oversize", "description": "Confort décontracté en jersey doux, offrant un style moderne et sans effort.", "image": "tshirt2" },
+        { "name": "Col Rond Côtelé", "description": "Finition texturée pour un look moderne, offrant à la fois confort et style sophistiqué.", "image": "tshirt3" }
+      ]
+    },
+    "shorts-skirts": {
+      "title": "Shorts & Jupes",
+      "description": "Découvrez notre gamme de shorts et jupes haut de gamme, des chinos en coton ajustés aux jupes midi plissées, conçus pour le confort.",
+      "men": [
+        { "name": "Short Chino Ajusté", "description": "Short classique longueur genou en sergé de coton durable avec une finition propre et structurée.", "image": "short" },
+        { "name": "Short de Marche en Lin", "description": "Short léger et respirant, parfait pour les sorties estivales et les week-ends détendus.", "image": "shortman2" },
+        { "name": "Short de Performance Active", "description": "Short flexible et confortable conçu pour la liberté de mouvement et un style athlétique décontracté.", "image": "shortman3" }
+      ],
+      "women": [
+        { "name": "Jupe à Motifs Artisanale", "description": "Une pièce unique mettant en valeur les influences du tissage traditionnel tunisien dans une coupe moderne et élégante.", "image": "manouchstyle1" },
+        { "name": "Short Ajusté Taille Haute", "description": "Short flatteur à taille haute avec une coupe ajustée, alliant élégance méditerranéenne et confort.", "image": "manouchstyle2" },
+        { "name": "Short en Coton Moderne", "description": "Short en coton à la coupe nette conçu pour un look estival poli mais décontracté.", "image": "shortWomen2" },
+        { "name": "Jupe Trapèze en Coton", "description": "Une jupe féminine au mouvement gracieux, confectionnée dans un tissu léger de qualité supérieure.", "image": "skirt2" }
+      ]
+    },
+    "dresses": {
+      "title": "Robes",
+      "description": "Nos robes sont au cœur de notre savoir-faire, avec des motifs complexes, des matériaux premium et des silhouettes qui subliment celle qui les porte.",
+      "men": [],
+      "women": [
+        { "name": "Robe Portefeuille en Soie", "description": "Élégance fluide en pure soie de mûrier, avec une silhouette sophistiquée pour les tenues de soirée.", "image": "dress1" },
+        { "name": "Robe d'Été Brodée", "description": "Coton léger avec broderie artisanale, parfait pour un look de journée raffiné.", "image": "dress2" },
+        { "name": "Robe de Soirée Plissée", "description": "Mouvement sophistiqué et style longueur sol, confectionnée pour les occasions spéciales.", "image": "dress3" },
+        { "name": "Robe Midi à Imprimé Floral", "description": "Motifs vibrants sur un tissu doux de qualité supérieure, offrant une esthétique gracieuse et féminine.", "image": "dress4" },
+        { "name": "Robe de Jour en Coton Raffinée", "description": "Une robe en coton respirante et élégante, parfaite pour une élégance sans effort en journée.", "image": "productWomenCotton" },
+        { "name": "Robe de Soirée en Viscose Élégante", "description": "Une robe luxueuse avec un beau drapé et une finition vibrante pour les célébrations formelles.", "image": "productWomenViscose" }
+      ]
+    },
+    "jackets-coats": {
+      "title": "Vestes & Manteaux",
+      "description": "Vêtements d'extérieur savamment taillés conçus pour protéger et impressionner, utilisant des tissus haute performance.",
+      "men": [],
+      "women": [
+        { "name": "Manteau de Mode Structuré", "description": "Vêtement d'extérieur sophistiqué aux lignes épurées et matériaux en mélange de laine premium pour l'hiver.", "image": "womenCoats" },
+        { "name": "Veste de Mode Bouclé", "description": "Un manteau élégant conçu pour la chaleur et une silhouette polie par temps froid.", "image": "womenCoats2" },
+        { "name": "Blazer en Lin Décontracté", "description": "Manteau isolé et élégant conçu pour une chaleur extrême sans compromettre l'élégance.", "image": "MANTEAU_1" },
+        { "name": "Manteau en Laine Classique", "description": "Une pièce de superposition intemporelle avec une coupe raffinée, adaptée aux tenues professionnelles et formelles.", "image": "MANTEAU_2" },
+        { "name": "Veste Utilitaire Moderne", "description": "Une veste contemporaine avec des détails fonctionnels et une silhouette structurée moderne et élégante.", "image": "H25" },
+        { "name": "Manteau de Transition Raffiné", "description": "Un manteau polyvalent avec une coupe ajustée, parfait pour passer d'une saison à l'autre avec style.", "image": "coat1" }
+      ]
+    }
   },
   "products": {
     "title": "Nos Produits",
@@ -93,7 +213,7 @@
       },
       {
         "title": "Designs Innovants",
-        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des designs et des finitions de vêtements frais et uniques for the global fashion market."
+        "description": "Notre équipe de designers experts reste à la pointe des tendances, proposant des designs et des finitions de vêtements frais et uniques pour le marché mondial de la mode."
       },
       {
         "title": "Pratiques Durables",
@@ -123,7 +243,7 @@
       },
       {
         "title": "Excellence Certifiée",
-        "description": "Fabrication certifiée GOTS, OEKO-TEX et Commerce Équitable"
+        "description": "GOTS, GRS, ISO 9001, ISO 14001, BSCI et Commerce Équitable"
       }
     ]
   },
@@ -157,6 +277,10 @@
     "form_message_label": "Message",
     "form_message_placeholder": "Votre Message",
     "form_submit_button": "Envoyer le Message",
+    "form_success_title": "Message Envoyé !",
+    "form_success_message": "Votre message a été envoyé avec succès. Nous vous répondrons bientôt !",
+    "form_error_title": "Échec de l'Envoi",
+    "form_error_message": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer plus tard.",
     "whatsapp_title": "Réponse Rapide sur WhatsApp",
     "whatsapp_subtitle": "Obtenez des réponses instantanées à vos questions. Nous sommes là pour vous aider.",
     "whatsapp_button": "Discuter sur WhatsApp",
@@ -176,7 +300,7 @@
       },
       "email": {
         "label": "E-mail",
-        "placeholder": "Entrez votre adresse e-mail",
+        "placeholder": "Entrez votre e-mail",
         "invalid": "Veuillez entrer une adresse e-mail valide."
       },
       "phone": {
@@ -185,9 +309,9 @@
         "min": "Le numéro de téléphone doit comporter au moins 10 caractères."
       },
       "positionApplied": {
-        "label": "Poste souhaité",
-        "placeholder": "Ex: Ingénieur Logiciel, Designer Textile",
-        "min": "Le poste souhaité doit comporter au moins 2 caractères."
+        "label": "Poste sollicité",
+        "placeholder": "ex: Ingénieur logiciel, Designer textile",
+        "min": "Le poste sollicité doit comporter au moins 2 caractères."
       },
       "yearsOfExperience": {
         "label": "Années d'expérience",
@@ -195,46 +319,55 @@
         "min": "Veuillez entrer un nombre valide."
       },
       "cv": {
-        "label": "CV / Curriculum Vitae"
+        "label": "CV / Résumé"
       },
       "submit": "Soumettre la candidature",
       "success": {
-        "title": "Candidature envoyée !",
-        "message": "Votre candidature a été envoyée avec succès. Nous vous recontacterons bientôt !"
+        "title": "Candidature Envoyée !",
+        "message": "Votre candidature a été envoyée avec succès. Nous vous répondrons bientôt !"
       },
       "error": {
-        "title": "Échec de la soumission",
+        "title": "Échec de l'Envoi",
         "message": "Une erreur s'est produite lors de l'envoi de votre candidature. Veuillez réessayer plus tard."
       }
     }
   },
   "about": {
-    "title": "La Tradition Rencontre l'Innovation",
-    "image_alt": "Un artisan qualifié travaillant sur une machine à coudre dans notre usine tunisienne, mettant en valeur notre savoir-faire dans la confection de vêtements",
-    "paragraph1": "Depuis plus de trois décennies, nous sommes à la pointe de la confection de vêtements, alliant un savoir-faire ancestral à une technologie de pointe.",
-    "paragraph2": "Notre aventure a commencé avec une vision simple : créer des vêtements qui inspirent les designers et ravissent les consommateurs finaux. Aujourd'hui, nous collaborons avec les plus grandes marques de mode du monde entier, fournissant des vêtements de première qualité qui établissent de nouvelles normes en matière de qualité et d'innovation.",
-    "paragraph3": "Chaque vêtement que nous créons porte notre engagement envers l'excellence. De la sélection des matériaux au contrôle qualité final, nous nous assurons que chaque pièce répond à nos normes rigoureuses.",
+    "title": "MagTexco : L'Avenir du Textile en Tunisie",
+    "image_alt": "Fabrication textile de pointe dans notre usine textile en Tunisie",
+    "paragraph1": "Avec plus de trois décennies d'héritage industriel, MagTexco est devenu une pierre angulaire du secteur textile en Tunisie. Établie avec des racines profondes dans la fabrication mondiale, notre usine de Sahline est aujourd'hui un hub technologique pour les marques de mode internationales haut de gamme.",
+    "paragraph2": "En tant qu'usine textile en Tunisie socialement responsable, nous privilégions les pratiques de travail éthiques et l'approvisionnement durable. Notre usine textile en Tunisie est conçue pour gérer des designs complexes—des foulards en soie de luxe aux vêtements techniques—tout en respectant les normes de qualité européennes les plus strictes.",
+    "paragraph3": "Nous ne nous contentons pas de fabriquer ; nous co-créons. Notre équipe d'experts travaille en étroite collaboration avec vos designers pour optimiser la transition du croquis au rayon, garantissant que vos collections sont livrées avec précision, agilité et rapidité.",
     "stats": {
-      "experience": "Plusieurs années d'expérience en Chine, récemment étendue à la Tunisie",
-      "partners": "Marques Partenaires",
-      "quality": "L'excellence à chaque point"
+      "experience": "30+ ans d'excellence manufacturière",
+      "partners": "Marques Partenaires Mondiales",
+      "quality": "Contrôle Qualité Sans Concession"
     }
   },
   "about_factory": {
     "title": "🏭 À propos de notre usine",
-    "intro": "Notre processus de production est divisé en deux étapes principales : la Phase de Collection et la Phase de Production, chacune gérée avec soin pour garantir qualité et précision.",
-    "certifications": "Notre usine est fière d'être certifiée ISO 9001, ISO 14001, GOTS et GRS, ce qui reflète notre engagement envers la qualité, la responsabilité environnementale et la production durable.",
+    "intro": "Notre processus de production est divisé en deux étapes principales : la Phase de Collection et la Phase de Production, chacune soigneusement gérée pour garantir qualité et précision.",
+    "certifications": "Notre usine est fière d'être certifiée ISO 9001, ISO 14001, GOTS et GRS, reflétant notre engagement envers la qualité, la responsabilité environnementale et la production durable.",
     "collection_phase_title": "🧵 Phase de Collection",
     "collection_phase": {
       "phase1": "PHASE 1 — Réception du dossier technique et création du patron.",
-      "phase2": "PHASE 2 — Sourcing des tissus et accessoires, confection des prototypes.",
-      "phase3": "PHASE 3 — Mise au point technique et répétitions (SMS) avant production."
+      "phase2": "PHASE 2 — Sourcing des tissus et accessoires, fabrication du prototype.",
+      "phase3": "PHASE 3 — Ajustements techniques et répétitions (SMS) avant la production."
     },
     "production_phase_title": "⚙️ Phase de Production",
     "production_phase": {
       "phase1": "PHASE 1 — Préparation technique et têtes de série (TDS).",
-      "phase2": "PHASE 2 — Coupe, confection, lavage et finitions.",
-      "phase3": "PHASE 3 — Exportation et livraison des produits finis."
+      "phase2": "PHASE 2 — Coupe, couture, lavage et finition.",
+      "phase3": "PHASE 3 — Export et livraison des produits finis."
+    },
+    "detailed_expertise": {
+      "title": "Excellence Industrielle et Nearshoring Méditerranéen",
+      "p1": "MagTexco est à l'avant-garde de la révolution du 'Textile Tunisie', offrant une alternative stratégique à la fabrication lointaine. Notre usine textile à Sahline n'est pas seulement un site de production ; c'est un centre d'innovation technique où l'artisanat traditionnel rencontre l'industrie 4.0. Nous nous spécialisons dans la confection de vêtements de haute complexité, gérant tout, des chemisiers en soie délicats aux vêtements d'extérieur techniques multicouches avec une précision clinique.",
+      "p2": "En choisissant un fabricant de vêtements en Tunisie, les marques mondiales bénéficient d'un avantage de 'Time-to-Market' inégalé. Notre proximité géographique avec l'Europe permet une livraison de porte à porte en moins de 72 heures, réduisant considérablement les risques d'inventaire et l'empreinte carbone. Notre chaîne d'approvisionnement repose sur la transparence, utilisant des systèmes ERP avancés pour suivre chaque point, de la réception des matières premières à l'exportation finale.",
+      "p3": "La qualité est notre mandat principal. Chaque ligne de production est supervisée par une équipe d'assurance qualité dédiée qui effectue des inspections en ligne et des audits finaux AQL 2.5. Notre engagement envers la durabilité se reflète dans nos certifications ISO 14001 et GOTS, garantissant que vos collections sont non seulement magnifiques, mais aussi produites de manière éthique et respectueuse de l'environnement."
     }
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
   }
 }

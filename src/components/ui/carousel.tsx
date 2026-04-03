@@ -98,6 +98,7 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
       api.on("select", onSelect);
 
       return () => {
+        api?.off("reInit", onSelect);
         api?.off("select", onSelect);
       };
     }, [api, onSelect]);
@@ -174,6 +175,7 @@ const CarouselPrevious = React.forwardRef<HTMLButtonElement, React.ComponentProp
         ref={ref}
         variant={variant}
         size={size}
+        type="button"
         className={cn(
           "absolute h-8 w-8 rounded-full",
           orientation === "horizontal"
@@ -202,6 +204,7 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
         ref={ref}
         variant={variant}
         size={size}
+        type="button"
         className={cn(
           "absolute h-8 w-8 rounded-full",
           orientation === "horizontal"

@@ -67,110 +67,110 @@ const RecruitmentPage = () => {
         keywords="magtexco careers, clothing factory jobs tunisia, textile industry employment"
       />
       <Navigation />
-      <div className="container py-24 text-center">
-        <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
-          {t("recruitment.title")}
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground">
-          {t("recruitment.message")}
-        </p>
-        <div className="mx-auto mt-12 w-full max-w-2xl">
-          <Card className="bg-white/50 dark:bg-black/50 backdrop-blur-lg">
-            <CardHeader>
-              <CardTitle>{t("recruitment.form.title")}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form
-                onSubmit={handleSubmit}
-                className="space-y-8"
-                encType="multipart/form-data"
-              >
-                <div className="grid gap-2">
-                  <Label htmlFor="fullName">
-                    {t("recruitment.form.fullName.label")}
-                  </Label>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    placeholder={t("recruitment.form.fullName.placeholder")}
-                    ref={fullNameInputRef}
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="email">
-                    {t("recruitment.form.email.label")}
-                  </Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder={t("recruitment.form.email.placeholder")}
-                    ref={emailInputRef}
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="phone">
-                    {t("recruitment.form.phone.label")}
-                  </Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    placeholder={t("recruitment.form.phone.placeholder")}
-                    ref={phoneInputRef}
-                    minLength={9}
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="positionApplied">
-                    {t("recruitment.form.positionApplied.label")}
-                  </Label>
-                  <Input
-                    id="positionApplied"
-                    name="positionApplied"
-                    placeholder={t(
-                      "recruitment.form.positionApplied.placeholder"
-                    )}
-                    ref={positionAppliedInputRef}
-                  />
-                </div>
-                <div className="grid gap-2">
-                  <Label htmlFor="yearsOfExperience">
-                    {t("recruitment.form.yearsOfExperience.label")}
-                  </Label>
-                  <Input
-                    id="yearsOfExperience"
-                    type="number"
-                    name="yearsOfExperience"
-                    placeholder={t(
-                      "recruitment.form.yearsOfExperience.placeholder"
-                    )}
-                    ref={yearsOfExperienceInputRef}
-                  />
-                </div>
-                {/* <div className="grid gap-2">
-                  <Label htmlFor="cv">{t("recruitment.form.cv.label")}</Label>
-                  <Input id="cv" type="file" name="cv" ref={cvInputRef} />
-                </div> */}
-                <p className="mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
-                  <Trans i18nKey="recruitment.hrContact" />{" "}
-                  <Phone className="h-4 w-4 inline" />{" "}
-                  <span className="font-bold">21655248423</span>
-                </p>
-
-                <Button
-                  type="submit"
-                  variant="gold"
-                  size="lg"
-                  disabled={state.submitting}
+      <main>
+        <div className="container py-24 text-center">
+          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+            {t("recruitment.title")}
+          </h1>
+          <p className="mt-6 text-lg text-muted-foreground">
+            {t("recruitment.message")}
+          </p>
+          <div className="mx-auto mt-12 w-full max-w-2xl">
+            <Card className="bg-white/50 dark:bg-black/50 backdrop-blur-lg">
+              <CardHeader className="text-center">
+                <h2 className="text-2xl font-bold tracking-tight text-charcoal">
+                  {t("recruitment.form.title")}
+                </h2>
+              </CardHeader>
+              <CardContent>
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-8"
+                  encType="multipart/form-data"
                 >
-                  {t("recruitment.form.submit")}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
+                  <div className="grid gap-2">
+                    <Label htmlFor="fullName">
+                      {t("recruitment.form.fullName.label")}
+                    </Label>
+                    <Input
+                      id="fullName"
+                      name="fullName"
+                      placeholder={t("recruitment.form.fullName.placeholder")}
+                      ref={fullNameInputRef}
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="email">
+                      {t("recruitment.form.email.label")}
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      name="email"
+                      placeholder={t("recruitment.form.email.placeholder")}
+                      ref={emailInputRef}
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="phone">
+                      {t("recruitment.form.phone.label")}
+                    </Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      placeholder={t("recruitment.form.phone.placeholder")}
+                      ref={phoneInputRef}
+                      minLength={9}
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="positionApplied">
+                      {t("recruitment.form.positionApplied.label")}
+                    </Label>
+                    <Input
+                      id="positionApplied"
+                      name="positionApplied"
+                      placeholder={t(
+                        "recruitment.form.positionApplied.placeholder"
+                      )}
+                      ref={positionAppliedInputRef}
+                    />
+                  </div>
+                  <div className="grid gap-2">
+                    <Label htmlFor="yearsOfExperience">
+                      {t("recruitment.form.yearsOfExperience.label")}
+                    </Label>
+                    <Input
+                      id="yearsOfExperience"
+                      type="number"
+                      name="yearsOfExperience"
+                      placeholder={t(
+                        "recruitment.form.yearsOfExperience.placeholder"
+                      )}
+                      ref={yearsOfExperienceInputRef}
+                    />
+                  </div>
+                  {/* <div className="grid gap-2">
+                    <Label htmlFor="cv">{t("recruitment.form.cv.label")}</Label>
+                    <Input id="cv" type="file" name="cv" ref={cvInputRef} />
+                  </div> */}
+
+
+                  <Button
+                    type="submit"
+                    variant="gold"
+                    size="lg"
+                    disabled={state.submitting}
+                  >
+                    {t("recruitment.form.submit")}
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
+      </main>
       <footer className="border-t bg-cream py-12">
         <div className="container">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
