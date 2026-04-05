@@ -1370,6 +1370,9 @@ video {
 .mt-auto {
   margin-top: auto;
 }
+.mt-3 {
+  margin-top: 0.75rem;
+}
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -1532,6 +1535,9 @@ video {
 }
 .h-svh {
   height: 100svh;
+}
+.h-\[60vh\] {
+  height: 60vh;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -2236,6 +2242,9 @@ video {
 }
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+.bg-gold-dark {
+  background-color: hsl(var(--gold-dark));
 }
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
@@ -4129,6 +4138,10 @@ All colors MUST be HSL.
 
   .sm\:max-w-sm {
     max-width: 24rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {

@@ -43,7 +43,7 @@ const Collections = () => {
                   )}
                   <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full transition-transform duration-500 group-hover:translate-y-0 bg-gradient-to-t from-charcoal/80 to-transparent">
-                     <span className="text-white text-sm font-medium tracking-wider uppercase">{t('hero.explore_collections')}</span>
+                    <span className="text-white text-sm font-medium tracking-wider uppercase">{t('hero.explore_collections')}</span>
                   </div>
                 </div>
                 <div className="space-y-3">

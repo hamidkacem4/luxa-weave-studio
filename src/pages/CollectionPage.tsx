@@ -5,12 +5,12 @@ import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Meta from "@/components/Meta";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
 } from "@/components/ui/carousel";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
@@ -21,10 +21,10 @@ import Footer from "@/components/Footer";
 const CollectionPage = () => {
   const { slug, locale } = useParams<{ slug: string; locale: string }>();
   const { t } = useTranslation();
-  
+
   // Get static data (images) from our new data file
   const staticData = collectionsData[slug || ""];
-  
+
   // Get text data from translations (for multi-language support)
   const title = t(`collection_details.${slug}.title`);
   const description = t(`collection_details.${slug}.description`);
@@ -147,7 +147,7 @@ const CollectionPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Meta 
+      <Meta
         title={`${title} | MagTexco`}
         description={description}
         keywords={`textile production, ${title}, MagTexco, Tunisian garment factory`}
@@ -155,13 +155,13 @@ const CollectionPage = () => {
         customSchema={collectionSchema}
       />
       <Navigation />
-      
+
       <main>
         {/* Hero Section with Background Image */}
         <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <Image 
-              src={staticData.bannerImage} 
+            <Image
+              src={staticData.bannerImage}
               alt={title}
               fill
               className="object-cover"
@@ -169,9 +169,9 @@ const CollectionPage = () => {
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
-          
+
           <div className="container relative z-10 text-center text-white fade-in-up">
-             <Link href={`/${locale}/#collections`}
+            <Link href={`/${locale}/#collections`}
               className="inline-flex items-center text-sm font-medium text-white/80 hover:text-white transition-colors mb-6"
             >
               <ChevronLeft className="mr-1 h-4 w-4" />
@@ -211,7 +211,7 @@ const CollectionPage = () => {
             </Tabs>
           </div>
         </div>
-        
+
         {/* CTA Section */}
         <section className="bg-charcoal text-white py-20">
           <div className="container text-center">
