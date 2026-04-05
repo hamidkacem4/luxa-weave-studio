@@ -1,5 +1,8 @@
+"use client";
 import { useTranslation } from "react-i18next";
-import { Link, useParams, Navigate } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { useParams, notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import Navigation from "@/components/Navigation";
 import Meta from "@/components/Meta";
@@ -12,23 +15,27 @@ import { motion } from "framer-motion";
 
 const BlogPostPage = () => {
   const { t } = useTranslation();
-  const { lang = "en", slug } = useParams<{ lang: string; slug: string }>();
+  const { locale = "en", slug } = useParams<{ locale: string; slug: string }>();
 
   const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
-    return <Navigate to={`/${lang}/404`} replace />;
+    notFound();
+    return null;
   }
 
   const translations = post.translations || {};
-  const content = translations[lang as 'en'|'fr'|'ko'] || translations["en"];
+  const content = translations[locale as 'en'|'fr'|'ko'] || translations["en"];
 
   // Related posts (excluding current)
   const relatedPosts = blogPosts.filter(p => p.id !== post.id).slice(0, 2);
 
   const baseUrl = "https://magtexco.com";
-  const postUrl = `${baseUrl}/${lang}/blog/${slug}`;
-  const postImage = post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`;
+  const postUrl = `${baseUrl}/${locale}/blog/${slug}`;
+  
+  // Safe image URL handling for both string and Next.js static asset objects
+  const rawImage = typeof post.image === 'string' ? post.image : (post.image as any)?.src || "";
+  const postImage = rawImage.startsWith('http') ? rawImage : `${baseUrl}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
 
   const blogSchema = {
     "@type": "BlogPosting",
@@ -50,8 +57,23 @@ const BlogPostPage = () => {
     "publisher": {
       "@id": `${baseUrl}/#organization`
     },
-    "inLanguage": lang,
+    "inLanguage": locale,
     "keywords": content.keywords
+  };
+
+  const handleShare = (platform: string) => {
+    const shareUrl = encodeURIComponent(postUrl);
+    
+    let url = '';
+    if (platform === 'Facebook') {
+      url = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    } else if (platform === 'LinkedIn') {
+      url = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+    }
+    
+    if (url) {
+      window.open(url, '_blank', 'width=600,height=400');
+    }
   };
 
   return (
@@ -60,7 +82,7 @@ const BlogPostPage = () => {
         title={content.seoTitle}
         description={content.metaDescription}
         keywords={content.keywords}
-        image={post.image.startsWith('http') ? post.image : `https://magtexco.com${post.image}`}
+        image={post.image}
         customSchema={blogSchema}
       />
       
@@ -79,12 +101,17 @@ const BlogPostPage = () => {
           {/* Hero Header */}
           <header className="relative pt-32 pb-20 bg-charcoal text-white overflow-hidden">
             <div className="absolute inset-0 opacity-20 pointer-events-none">
-              <img src={post.image} className="w-full h-full object-cover blur-sm" alt="" />
+              <Image 
+                src={post.image} 
+                className="object-cover blur-sm" 
+                alt={content.title} 
+                fill
+                priority
+              />
             </div>
             
             <div className="container px-4 mx-auto relative z-10">
-              <Link 
-                to={`/${lang}/blog`} 
+              <Link href={`/${locale}/blog`} 
                 className="inline-flex items-center text-gold hover:text-white transition-colors mb-12 group font-bold uppercase tracking-widest text-sm"
               >
                 <ArrowLeft className="mr-3 w-5 h-5 transition-transform group-hover:-translate-x-2" />
@@ -99,7 +126,7 @@ const BlogPostPage = () => {
                   <div className="flex items-center gap-4 text-white/60 font-medium">
                     <span className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+                      {new Date(post.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}
                     </span>
                     <span className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -139,8 +166,13 @@ const BlogPostPage = () => {
                     <span className="font-bold uppercase tracking-widest text-sm text-charcoal">Share this insight</span>
                   </div>
                   <div className="flex gap-3">
-                    {['LinkedIn', 'Twitter', 'Facebook'].map(plat => (
-                      <Button key={plat} variant="outline" className="rounded-full hover:bg-gold hover:text-charcoal transition-all font-bold">
+                    {['LinkedIn', 'Facebook'].map(plat => (
+                      <Button 
+                        key={plat} 
+                        variant="outline" 
+                        className="rounded-full hover:bg-gold hover:text-charcoal transition-all font-bold"
+                        onClick={() => handleShare(plat)}
+                      >
                         {plat}
                       </Button>
                     ))}
@@ -155,9 +187,9 @@ const BlogPostPage = () => {
                     <h2 className="text-2xl font-bold mb-8 text-charcoal">Related Articles</h2>
                     <div className="space-y-10">
                       {relatedPosts.map(p => {
-                        const pContent = p.translations[lang as 'en'|'fr'|'ko'] || p.translations["en"];
+                        const pContent = p.translations[locale as 'en'|'fr'|'ko'] || p.translations["en"];
                         return (
-                          <Link key={p.id} to={`/${lang}/blog/${p.slug}`} className="group block">
+                          <Link key={p.id} href={`/${locale}/blog/${p.slug}`} className="group block">
                             <Badge variant="secondary" className="mb-3 bg-cream text-gold-dark font-bold border-none uppercase tracking-widest text-[10px]">
                               {p.category}
                             </Badge>
@@ -176,7 +208,7 @@ const BlogPostPage = () => {
                       Leverage our 30+ years of expertise in the Tunisian textile industry.
                     </p>
                     <Button asChild className="w-full bg-charcoal hover:bg-white hover:text-charcoal text-white font-bold py-6 rounded-xl transition-all">
-                      <Link to={`/${lang}/contact#contact-form`}>Get in Touch</Link>
+                      <Link href={`/${locale}/contact#contact-form`}>Get in Touch</Link>
                     </Button>
                   </div>
                 </div>

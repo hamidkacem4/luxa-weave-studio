@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import productMenViscose from "@/assets/product-men-viscose.jpg";
 import productMenSilk from "@/assets/product-men-silk.jpg";
 import productMenCotton from "@/assets/product-men-cotton.jpg";
@@ -60,14 +61,16 @@ const Products = () => {
               className="group fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted rounded-sm">
-                <img
-                  src={currentProductImages[index]}
-                  alt={`A model wearing a ${product.title}`}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              </div>
+      <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted rounded-sm">
+        <Image
+          src={currentProductImages[index]}
+          alt={`A model wearing a ${product.title}`}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <h3 className="text-2xl font-semibold">{product.title}</h3>

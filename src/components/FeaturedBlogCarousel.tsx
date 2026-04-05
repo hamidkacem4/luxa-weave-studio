@@ -1,5 +1,7 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import Link from "next/link";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 import { BlogPost } from '@/data/blogPosts';
 import { 
   Carousel, 
@@ -19,7 +21,7 @@ interface FeaturedBlogCarouselProps {
 }
 
 const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) => {
-  const { lang = "en" } = useParams();
+  const { locale = "en" } = useParams();
   const { t } = useTranslation();
 
   const plugin = React.useRef(
@@ -37,14 +39,17 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
       >
         <CarouselContent>
           {posts.map((post) => {
-            const content = post.translations[lang as 'en'|'fr'|'ko'] || post.translations['en'];
+            const content = post.translations[locale as 'en'|'fr'|'ko'] || post.translations['en'];
             return (
               <CarouselItem key={post.id} className="basis-full">
                 <div className="relative h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl mx-1 md:mx-2">
-                  <img 
+                  <Image 
                     src={post.image} 
                     alt={content.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                    sizes="100vw"
+                    priority={post.id === posts[0]?.id}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
                   
@@ -56,7 +61,7 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
                         </Badge>
                         <span className="flex items-center gap-2 text-xs md:text-sm font-medium text-white/80">
                           <Calendar className="w-3.5 h-3.5 md:w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })}
+                          {new Date(post.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}
                         </span>
                       </div>
                       
@@ -69,7 +74,7 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
                       </p>
                       
                       <Button asChild size="lg" className="bg-white hover:bg-gold text-charcoal font-bold px-6 py-5 md:px-8 md:py-6 rounded-full transition-all group/btn text-sm md:text-base">
-                        <Link to={`/${lang}/blog/${post.slug}`} className="flex items-center gap-2">
+                        <Link href={`/${locale}/blog/${post.slug}`} className="flex items-center gap-2">
                           Read Featured Story
                           <ArrowRight className="w-4 h-4 md:w-5 h-5 transition-transform group-hover/btn:translate-x-2" />
                         </Link>

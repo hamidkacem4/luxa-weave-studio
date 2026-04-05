@@ -1,5 +1,8 @@
+"use client";
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import Navigation from "@/components/Navigation";
 import Meta from "@/components/Meta";
@@ -11,9 +14,9 @@ import FeaturedBlogCarousel from "@/components/FeaturedBlogCarousel";
 
 const BlogListPage = () => {
   const { t } = useTranslation();
-  const { lang = "en" } = useParams();
+  const { locale = "en" } = useParams();
   const baseUrl = "https://magtexco.com";
-  const blogUrl = `${baseUrl}/${lang}/blog`;
+  const blogUrl = `${baseUrl}/${locale}/blog`;
 
   const blogSchema = {
     "@type": "Blog",
@@ -24,16 +27,17 @@ const BlogListPage = () => {
     "publisher": {
       "@id": `${baseUrl}/#organization`
     },
-    "inLanguage": lang,
+    "inLanguage": locale,
     "blogPost": blogPosts.map((post) => {
-      const content = post.translations[lang as 'en'|'fr'|'ko'] || post.translations["en"];
+      const content = post.translations[locale as 'en'|'fr'|'ko'] || post.translations["en"];
+      const rawImage = typeof post.image === 'string' ? post.image : (post.image as any)?.src || "";
       return {
         "@type": "BlogPosting",
         "headline": content.title,
-        "url": `${baseUrl}/${lang}/blog/${post.slug}`,
+        "url": `${baseUrl}/${locale}/blog/${post.slug}`,
         "datePublished": post.date,
         "description": content.excerpt,
-        "image": post.image.startsWith('http') ? post.image : `${baseUrl}${post.image}`
+        "image": rawImage.startsWith('http') ? rawImage : `${baseUrl}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`
       };
     })
   };
@@ -79,7 +83,7 @@ const BlogListPage = () => {
           {/* Grid Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {regularPosts.map((post, index) => {
-              const content = post.translations[lang as 'en'|'fr'|'ko'] || post.translations["en"];
+              const content = post.translations[locale as 'en'|'fr'|'ko'] || post.translations["en"];
               
               return (
                 <motion.article 
@@ -90,14 +94,15 @@ const BlogListPage = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group flex flex-col bg-white rounded-[2.5rem] overflow-hidden shadow-soft hover:shadow-xl transition-all duration-500 border border-cream/50"
                 >
-                  <Link to={`/${lang}/blog/${post.slug}`} className="relative h-72 overflow-hidden">
-                    <img
+                  <Link href={`/${locale}/blog/${post.slug}`} className="relative h-72 overflow-hidden">
+                    <Image
                       src={post.image}
                       alt={content.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute top-6 left-6">
+                    <div className="absolute top-6 left-6 z-10">
                       <Badge className="bg-white/90 backdrop-blur-md text-charcoal font-bold border-none shadow-sm px-4 py-1.5">
                         {t(`blog.categories.${post.category}`, post.category)}
                       </Badge>
@@ -108,7 +113,7 @@ const BlogListPage = () => {
                     <div className="flex items-center gap-4 text-xs font-bold text-gold-dark uppercase tracking-widest mb-6">
                       <span className="flex items-center gap-1.5">
                         <Calendar className="w-3.5 h-3.5" />
-                        {new Date(post.date).toLocaleDateString(lang, { month: 'short', day: 'numeric', year: 'numeric' })}
+                        {new Date(post.date).toLocaleDateString(locale, { month: 'short', day: 'numeric', year: 'numeric' })}
                       </span>
                       <span className="flex items-center gap-1.5 text-muted-foreground/60">
                         <Clock className="w-3.5 h-3.5" />
@@ -117,7 +122,7 @@ const BlogListPage = () => {
                     </div>
                     
                     <h2 className="text-2xl font-bold mb-6 leading-tight group-hover:text-gold-dark transition-colors line-clamp-2">
-                      <Link to={`/${lang}/blog/${post.slug}`}>
+                      <Link href={`/${locale}/blog/${post.slug}`}>
                         {content.title}
                       </Link>
                     </h2>
@@ -127,9 +132,8 @@ const BlogListPage = () => {
                     </p>
                     
                     <div className="mt-auto">
-                      <Link 
-                        to={`/${lang}/blog/${post.slug}`} 
-                        className="inline-flex items-center font-bold text-charcoal group/link hover:text-gold-dark transition-colors"
+                      <Link href={`/${locale}/blog/${post.slug}`} 
+                         className="inline-flex items-center font-bold text-charcoal group/link hover:text-gold-dark transition-colors"
                       >
                         Read Article
                         <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-2" />

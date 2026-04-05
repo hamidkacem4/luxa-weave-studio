@@ -1,3 +1,4 @@
+"use client";
 import Meta from "@/components/Meta";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";

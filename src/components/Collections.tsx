@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import { collectionsData } from "@/data/collectionsData";
 
 const Collections = () => {
@@ -26,16 +27,18 @@ const Collections = () => {
             return (
               <Link
                 key={item.slug}
-                to={`/${i18n.language}/collections/${item.slug}`}
+                href={`/${i18n.language}/collections/${item.slug}`}
                 className="group fade-in-up cursor-pointer"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
                 <div className="relative mb-6 aspect-[3/4] overflow-hidden bg-muted shadow-sm transition-all duration-500 group-hover:shadow-xl">
                   {bannerImage && (
-                    <img
+                    <Image
                       src={bannerImage}
                       alt={`A model wearing ${item.title} from our collection`}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
                     />
                   )}
                   <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />

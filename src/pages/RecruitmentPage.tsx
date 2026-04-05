@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 import Meta from "@/components/Meta";
 import Navigation from "@/components/Navigation";

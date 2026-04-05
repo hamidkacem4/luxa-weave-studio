@@ -66,12 +66,12 @@ import bannerJacketsCoats from "@/assets/MANTEAU_1.jpg";
 export interface Product {
   nameKey: string;
   descriptionKey: string;
-  image: string;
+  image: any;
 }
 
 export interface Collection {
   slug: string;
-  bannerImage: string;
+  bannerImage: any;
   men: Product[];
   women: Product[];
 }

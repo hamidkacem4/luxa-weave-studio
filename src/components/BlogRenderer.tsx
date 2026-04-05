@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
+import Image from "next/image";
 import { Button } from '@/components/ui/button';
 import { ContentBlock } from '@/data/blogPosts';
 import { motion } from 'framer-motion';
@@ -48,12 +49,24 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ blocks }) => {
                 viewport={{ once: true }}
                 className="my-12 rounded-[2rem] overflow-hidden shadow-2xl border border-cream bg-neutral-50 p-4 md:p-8"
               >
-                <img 
-                  src={block.src} 
-                  alt={block.alt} 
-                  loading="lazy"
-                  className="w-full h-auto rounded-2xl shadow-sm" 
-                />
+                <div className="relative w-full h-auto">
+                   {/* If it's a string (URL), we use standard img or Image with fill. 
+                       If it's a static image object (from imports), next/image handles width/height automatically. */}
+                   {typeof block.src === 'string' ? (
+                     <img 
+                       src={block.src} 
+                       alt={block.alt} 
+                       loading="lazy"
+                       className="w-full h-auto rounded-2xl shadow-sm" 
+                     />
+                   ) : (
+                     <Image 
+                       src={block.src} 
+                       alt={block.alt} 
+                       className="w-full h-auto rounded-2xl shadow-sm" 
+                     />
+                   )}
+                </div>
                 {block.caption && (
                   <figcaption className="mt-4 text-center text-sm text-muted-foreground italic font-medium">
                     {block.caption}
@@ -76,7 +89,11 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ blocks }) => {
                   <h3 className="text-3xl md:text-4xl font-bold mb-4">{block.title}</h3>
                   <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">{block.subtitle}</p>
                   <Button asChild size="lg" className="bg-gold hover:bg-white text-charcoal font-bold px-12 py-8 rounded-full text-xl shadow-xl transition-all">
-                    <Link to={block.link}>{block.buttonText}</Link>
+                    {block.link ? (
+                      <Link href={block.link}>{block.buttonText}</Link>
+                    ) : (
+                      <span>{block.buttonText}</span>
+                    )}
                   </Button>
                 </div>
               </motion.section>

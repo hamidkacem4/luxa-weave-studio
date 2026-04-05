@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { teamMembers } from "@/data/teamMembers";
 import { Phone, Mail } from "lucide-react";
@@ -30,10 +31,12 @@ const TeamSection = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative aspect-[4/5] overflow-hidden">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                    <div className="flex gap-4 justify-center">

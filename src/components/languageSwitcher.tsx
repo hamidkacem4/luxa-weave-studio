@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from "next/link";
 import { Button } from '@/components/ui/button';
 import { Globe } from 'lucide-react';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
@@ -20,7 +20,7 @@ const LanguageSwitcher = () => {
       <DropdownMenuContent>
         {languages.map((lang) => (
           <DropdownMenuItem key={lang.code} asChild>
-            <Link to={`/${lang.code}`}>{lang.name}</Link>
+            <Link href={`/${lang.code}`}>{lang.name}</Link>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

@@ -1,6 +1,7 @@
-import { Helmet } from "react-helmet-async";
+"use client";
+import Head from "next/head";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
+import { usePathname } from "next/navigation";
 
 type MetaProps = {
   title: string;
@@ -12,15 +13,24 @@ type MetaProps = {
 
 const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) => {
   const { i18n } = useTranslation();
-  const location = useLocation();
+  const pathname = usePathname() ?? "/";
 
   const languages = ["en", "fr", "ko"];
   const baseUrl = "https://magtexco.com";
-  const canonicalUrl = `${baseUrl}${location.pathname}`;
-  const displayImage = image || `${baseUrl}/og-image.jpg`;
+  const canonicalUrl = `${baseUrl}${pathname}`;
+  
+  // Handle Next.js static asset object or string URL
+  const imageUrl = typeof image === 'string' 
+    ? image 
+    : (image && (image as any).src ? (image as any).src : null);
+    
+  let displayImage = imageUrl || `${baseUrl}/og-image.jpg`;
+  if (displayImage && !displayImage.startsWith('http')) {
+    displayImage = `${baseUrl}${displayImage.startsWith('/') ? '' : '/'}${displayImage}`;
+  }
 
   // Breadcrumb Schema
-  const pathnames = location.pathname.split("/").filter((x) => x);
+  const pathnames = pathname.split("/").filter((x) => x);
   const breadcrumbList = {
     "@type": "BreadcrumbList",
     "@id": `${canonicalUrl}#breadcrumb`,
@@ -40,8 +50,8 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
     ]
   };
 
-  const isContactPage = location.pathname.includes("contact");
-  const isAboutPage = location.pathname.includes("about") || location.pathname.includes("factory");
+  const isContactPage = pathname.includes("contact");
+  const isAboutPage = pathname.includes("about") || pathname.includes("factory");
 
   const schemaData = {
     "@context": "https://schema.org",
@@ -72,7 +82,8 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
         },
         "image": { "@id": `${baseUrl}/#logo` },
         "sameAs": [
-          "https://www.facebook.com/profile.php?id=61570008207516"
+          "https://www.facebook.com/profile.php?id=61570008207516",
+          "https://www.linkedin.com/company/magtexco-the-factory"
         ],
         "contactPoint": [
           {
@@ -147,7 +158,7 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
   };
 
   return (
-    <Helmet>
+    <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -168,25 +179,36 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={displayImage} />
 
-      {languages.map((lang) => (
-        <link
-          key={lang}
-          rel="alternate"
-          hrefLang={lang}
-          href={`${baseUrl}/${lang}`}
-        />
-      ))}
+      {languages.map((lang) => {
+        // Construct the localized URL for the current path
+        const pathParts = pathname.split('/').filter(Boolean);
+        if (pathParts.length > 0 && languages.includes(pathParts[0])) {
+          pathParts[0] = lang;
+        } else {
+          pathParts.unshift(lang);
+        }
+        const localizedPath = `/${pathParts.join('/')}`;
+        
+        return (
+          <link
+            key={lang}
+            rel="alternate"
+            hrefLang={lang}
+            href={`${baseUrl}${localizedPath}`}
+          />
+        );
+      })}
       <link
         rel="alternate"
         hrefLang="x-default"
-        href={`${baseUrl}/en`}
+        href={`${baseUrl}/en${pathname === '/' || pathname === '/en' ? '' : (pathname.startsWith('/en') ? pathname.slice(3) : pathname)}`}
       />
       
       {/* Schema.org JSON-LD */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>
-    </Helmet>
+    </Head>
   );
 };
 

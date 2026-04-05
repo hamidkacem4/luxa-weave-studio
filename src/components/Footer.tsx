@@ -1,9 +1,10 @@
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useParams } from "next/navigation";
 
 const Footer = () => {
   const { t } = useTranslation();
-  const { lang = "en" } = useParams();
+  const { locale = "en" } = useParams();
 
   return (
     <footer className="border-t bg-cream py-12">
@@ -29,16 +30,16 @@ const Footer = () => {
           </div>
           
           <div className="flex gap-8 text-sm font-semibold text-charcoal/60">
-            <Link to={`/${lang}/`} className="transition-colors hover:text-gold-dark">
+            <Link href={`/${locale}/`} className="transition-colors hover:text-gold-dark">
               {t("nav.home")}
             </Link>
-            <Link to={`/${lang}/blog`} className="transition-colors hover:text-gold-dark">
+            <Link href={`/${locale}/blog`} className="transition-colors hover:text-gold-dark">
               {t("nav.blog")}
             </Link>
-            <Link to={`/${lang}/contact`} className="transition-colors hover:text-gold-dark">
+            <Link href={`/${locale}/contact`} className="transition-colors hover:text-gold-dark">
               {t("nav.contact")}
             </Link>
-            <Link to={`/${lang}/recruitment`} className="transition-colors hover:text-gold-dark">
+            <Link href={`/${locale}/recruitment`} className="transition-colors hover:text-gold-dark">
               {t("nav.recruitment")}
             </Link>
           </div>

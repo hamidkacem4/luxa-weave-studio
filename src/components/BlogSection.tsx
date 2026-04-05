@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Tag } from "lucide-react";
@@ -8,7 +10,7 @@ import { motion } from "framer-motion";
 
 const BlogSection = () => {
   const { t } = useTranslation();
-  const { lang = "en" } = useParams();
+  const { locale = "en" } = useParams();
 
   // Get the 3 most recent posts
   const recentPosts = blogPosts.slice(0, 3);
@@ -35,7 +37,7 @@ const BlogSection = () => {
             </p>
           </div>
           <Button asChild variant="link" size="lg" className="group text-gold-dark hover:text-gold transition-colors p-0 h-auto font-bold text-lg">
-            <Link to={`/${lang}/blog`} className="flex items-center gap-2">
+            <Link href={`/${locale}/blog`} className="flex items-center gap-2">
               {t("blog.view_all", "View All Articles")}
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
             </Link>
@@ -46,7 +48,7 @@ const BlogSection = () => {
           {recentPosts.map((post, index) => {
             // Added safety check to prevent crash if translations is missing
             const translations = post.translations || {};
-            const content = translations[lang as 'en'|'fr'|'ko'] || translations["en"] || { title: "Article", excerpt: "", content: "" };
+            const content = translations[locale as 'en'|'fr'|'ko'] || translations["en"] || { title: "Article", excerpt: "", content: "" };
             const isEven = index % 2 === 0;
             
             return (
@@ -58,16 +60,17 @@ const BlogSection = () => {
                 transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
                 className="group flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-soft hover-lift min-h-[400px]"
               >
-                <Link 
-                  to={`/${lang}/blog/${post.slug}`} 
-                  className={`relative block w-full md:w-1/2 overflow-hidden ${!isEven ? 'md:order-last' : ''}`}
+                <Link href={`/${locale}/blog/${post.slug}`} 
+                   className={`relative block w-full md:w-1/2 overflow-hidden ${!isEven ? 'md:order-last' : ''}`}
                 >
-                  <img
+                  <Image
                     src={post.image}
                     alt={content.title}
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute top-6 left-6">
+                  <div className="absolute top-6 left-6 z-10">
                     <Badge className="bg-charcoal/80 backdrop-blur-md text-white border-none px-4 py-1.5 flex items-center gap-2">
                       <Tag className="w-3.5 h-3.5" />
                       {t(`blog.categories.${post.category}`, post.category)}
@@ -80,7 +83,7 @@ const BlogSection = () => {
                   <div className="flex items-center gap-2 text-sm font-semibold text-gold-dark mb-6">
                     <Calendar className="w-4 h-4" />
                     <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString(lang, { 
+                      {new Date(post.date).toLocaleDateString(locale, { 
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 
@@ -89,7 +92,7 @@ const BlogSection = () => {
                   </div>
                   
                   <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight group-hover:text-gold-dark transition-colors duration-300">
-                    <Link to={`/${lang}/blog/${post.slug}`}>
+                    <Link href={`/${locale}/blog/${post.slug}`}>
                       {content.title}
                     </Link>
                   </h3>
@@ -98,8 +101,7 @@ const BlogSection = () => {
                     {content.excerpt}
                   </p>
                   
-                  <Link 
-                    to={`/${lang}/blog/${post.slug}`} 
+                  <Link href={`/${locale}/blog/${post.slug}`} 
                     className="inline-flex items-center font-bold text-charcoal group/link hover:text-gold-dark transition-colors text-lg"
                   >
                     <span className="relative">

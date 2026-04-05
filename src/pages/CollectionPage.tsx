@@ -1,4 +1,7 @@
-import { useParams, Link } from "react-router-dom";
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import Navigation from "@/components/Navigation";
 import Meta from "@/components/Meta";
@@ -16,7 +19,7 @@ import { collectionsData, Product } from "@/data/collectionsData";
 import Footer from "@/components/Footer";
 
 const CollectionPage = () => {
-  const { slug, lang } = useParams<{ slug: string; lang: string }>();
+  const { slug, locale } = useParams<{ slug: string; locale: string }>();
   const { t } = useTranslation();
   
   // Get static data (images) from our new data file
@@ -31,7 +34,7 @@ const CollectionPage = () => {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Collection Not Found</h1>
-          <Link to={`/${lang}/`}>
+          <Link href={`/${locale}/`}>
             <Button variant="outline">Back to Home</Button>
           </Link>
         </div>
@@ -51,11 +54,13 @@ const CollectionPage = () => {
         {products.map((product, index) => (
           <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
             <div className="group overflow-hidden rounded-lg bg-background border border-border/40 shadow-sm transition-all duration-300 hover:shadow-md">
-              <div className="aspect-[3/4] overflow-hidden bg-muted">
-                <img
+              <div className="aspect-[3/4] overflow-hidden bg-muted relative">
+                <Image
                   src={product.image}
                   alt={t(product.descriptionKey)}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <div className="p-6">
@@ -81,7 +86,7 @@ const CollectionPage = () => {
   );
 
   const baseUrl = "https://magtexco.com";
-  const collectionUrl = `${baseUrl}/${lang}/collections/${slug}`;
+  const collectionUrl = `${baseUrl}/${locale}/collections/${slug}`;
 
   const collectionSchema = {
     "@type": "CollectionPage",
@@ -103,7 +108,7 @@ const CollectionPage = () => {
             "@type": "Product",
             "name": t(p.nameKey),
             "description": t(p.descriptionKey),
-            "image": p.image.startsWith('http') ? p.image : `${baseUrl}${p.image}`,
+            "image": (typeof p.image === 'string' ? p.image : p.image.src).startsWith('http') ? (typeof p.image === 'string' ? p.image : p.image.src) : `${baseUrl}${typeof p.image === 'string' ? p.image : p.image.src}`,
             "brand": {
               "@id": `${baseUrl}/#organization`
             },
@@ -123,7 +128,7 @@ const CollectionPage = () => {
             "@type": "Product",
             "name": t(p.nameKey),
             "description": t(p.descriptionKey),
-            "image": p.image.startsWith('http') ? p.image : `${baseUrl}${p.image}`,
+            "image": (typeof p.image === 'string' ? p.image : p.image.src).startsWith('http') ? (typeof p.image === 'string' ? p.image : p.image.src) : `${baseUrl}${typeof p.image === 'string' ? p.image : p.image.src}`,
             "brand": {
               "@id": `${baseUrl}/#organization`
             },
@@ -146,7 +151,7 @@ const CollectionPage = () => {
         title={`${title} | MagTexco`}
         description={description}
         keywords={`textile production, ${title}, MagTexco, Tunisian garment factory`}
-        image={staticData.bannerImage.startsWith('http') ? staticData.bannerImage : `https://magtexco.com${staticData.bannerImage}`}
+        image={staticData.bannerImage}
         customSchema={collectionSchema}
       />
       <Navigation />
@@ -155,17 +160,18 @@ const CollectionPage = () => {
         {/* Hero Section with Background Image */}
         <section className="relative h-[45vh] md:h-[55vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src={staticData.bannerImage} 
               alt={title}
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-black/50" />
           </div>
           
           <div className="container relative z-10 text-center text-white fade-in-up">
-             <Link 
-              to={`/${lang}/#collections`}
+             <Link href={`/${locale}/#collections`}
               className="inline-flex items-center text-sm font-medium text-white/80 hover:text-white transition-colors mb-6"
             >
               <ChevronLeft className="mr-1 h-4 w-4" />
@@ -215,7 +221,7 @@ const CollectionPage = () => {
             <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
               {t('blog.cta_subtitle')}
             </p>
-            <Link to={`/${lang}/contact`}>
+            <Link href={`/${locale}/contact`}>
               <Button variant="gold" size="lg" className="min-w-[200px]">
                 {t('blog.cta_contact')}
               </Button>

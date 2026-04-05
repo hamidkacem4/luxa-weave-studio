@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -24,26 +23,26 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 flex h-full items-center justify-center">
-        <div className="text-center fade-in-up">
-          <div className="overflow-hidden">
+        <div className="text-center fade-in-up w-full">
+          <div className="overflow-hidden px-4 md:px-0">
             <h1
-              className="mb-6 text-6xl font-bold leading-tight tracking-tight lg:text-7xl"
+              className="mb-6 text-4xl md:text-6xl font-bold leading-[1.15] tracking-tight lg:text-7xl"
             >
               {t('hero.title')}
             </h1>
           </div>
-          <p className="mb-8 text-xl text-muted-foreground font-light">
+          <p className="mb-6 md:mb-8 px-4 md:px-0 text-lg md:text-xl text-muted-foreground font-light">
             {t('hero.subtitle')}
           </p>
-          <p className="mb-8 text-lg text-muted-foreground/80 font-light max-w-2xl mx-auto">
+          <p className="mb-8 px-4 md:px-0 text-base md:text-lg text-muted-foreground/80 font-light max-w-2xl mx-auto leading-relaxed">
             {t('hero.description')}
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="gold" size="lg" onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-6 md:px-0 w-full max-w-md mx-auto sm:max-w-none">
+            <Button variant="gold" size="lg" className="w-full sm:w-auto" onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}>
               {t('hero.explore_collections')}
             </Button>
-            <Link to={`/${i18n.language}/contact#contact-form`}>
-              <Button variant="outline" size="lg" className="bg-background/80 backdrop-blur-sm">
+            <Link href={`/${i18n.language}/contact#contact-form`} className="w-full sm:w-auto block">
+              <Button variant="outline" size="lg" className="w-full bg-background/80 backdrop-blur-sm">
                 {t('hero.contact_us')}
               </Button>
             </Link>
@@ -51,15 +50,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Carousel Controls (for future implementation) */}
-      <div className="absolute bottom-8 right-8 z-20 flex gap-2">
-        <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white text-white transition-all hover:bg-white/10">
-          <ChevronLeft className="h-5 w-5" />
-        </button>
-        <button className="flex h-12 w-12 items-center justify-center rounded-full border border-white text-white transition-all hover:bg-white/10">
-          <ChevronRight className="h-5 w-5" />
-        </button>
-      </div>
     </section>
   );
 };

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
@@ -23,7 +24,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 
 const TextileTunisiePage: React.FC = () => {
@@ -72,10 +74,13 @@ const TextileTunisiePage: React.FC = () => {
         {/* HERO SECTION */}
         <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
+            <Image 
               src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773751221/hero-textile_lq8f9n.jpg" 
               alt="Usine textile Tunisie production haute technologie"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
             />
             <div className="absolute inset-0 bg-charcoal/70 backdrop-blur-[2px]" />
           </div>
@@ -97,7 +102,7 @@ const TextileTunisiePage: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Button size="lg" className="bg-gold hover:bg-white text-charcoal font-bold px-10 py-8 rounded-full transition-all text-lg shadow-xl" asChild>
-                  <Link to={`/${lang}/contact#contact-form`}>Démarrer votre production</Link>
+                  <Link href={`/${lang}/contact#contact-form`}>Démarrer votre production</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 font-bold px-10 py-8 rounded-full transition-all text-lg" asChild>
                   <a href="#avantages">Découvrir nos atouts</a>
@@ -174,11 +179,13 @@ const TextileTunisiePage: React.FC = () => {
                 </ul>
               </motion.div>
               <motion.div {...slideInRight} className="lg:w-1/2 relative">
-                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl">
-                  <img 
+                <div className="relative rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/3]">
+                  <Image 
                     src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773753214/Gemini_Generated_Image_1052q81052q81052_omjuuc.png" 
                     alt="Processus de qualité fabricant textile Tunisie"
-                    className="w-full h-auto"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-gold/10 rounded-full blur-3xl -z-10" />
@@ -219,8 +226,12 @@ const TextileTunisiePage: React.FC = () => {
               </motion.div>
               <motion.div {...slideInRight} className="lg:w-1/2">
                 <div className="grid grid-cols-2 gap-4">
-                  <img src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773750088/Gemini_Generated_Image_bzbqqabzbqqabzbq_fcw2vs.png" alt="Textile Tunisie détail" className="rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500" />
-                  <img src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773750750/ChatGPT_Image_Mar_17_2026_01_32_10_PM_h6vofq.png" alt="Confection textile Tunisie" className="rounded-3xl shadow-xl mt-12 hover:scale-105 transition-transform duration-500" />
+                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-500">
+                    <Image src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773750088/Gemini_Generated_Image_bzbqqabzbqqabzbq_fcw2vs.png" alt="Textile Tunisie détail" fill className="object-cover" />
+                  </div>
+                  <div className="relative aspect-square rounded-3xl overflow-hidden shadow-xl mt-12 hover:scale-105 transition-transform duration-500">
+                    <Image src="https://res.cloudinary.com/duqbe1hoq/image/upload/v1773750750/ChatGPT_Image_Mar_17_2026_01_32_10_PM_h6vofq.png" alt="Confection textile Tunisie" fill className="object-cover" />
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -252,7 +263,7 @@ const TextileTunisiePage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-charcoal">{type.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">{type.desc}</p>
-                  <Link to={`/${lang}/contact`} className="inline-flex items-center text-gold-dark font-bold hover:gap-3 transition-all">
+                  <Link href={`/${lang}/contact`} className="inline-flex items-center text-gold-dark font-bold hover:gap-3 transition-all">
                     En savoir plus <ChevronRight className="w-5 h-5" />
                   </Link>
                 </motion.div>
@@ -394,7 +405,7 @@ const TextileTunisiePage: React.FC = () => {
                 Contactez nos experts aujourd'hui pour une étude gratuite de votre projet et découvrez la puissance du textile tunisien.
               </p>
               <Button size="lg" className="bg-gold hover:bg-white text-charcoal font-bold px-12 py-8 rounded-full text-xl shadow-xl transition-all" asChild>
-                <Link to={`/${lang}/contact`}>Obtenir un devis gratuit</Link>
+                <Link href={`/${lang}/contact`}>Obtenir un devis gratuit</Link>
               </Button>
             </motion.div>
           </div>

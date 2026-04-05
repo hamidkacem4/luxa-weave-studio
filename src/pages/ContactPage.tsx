@@ -1,3 +1,4 @@
+"use client";
 import Contact from "@/components/Contact";
 import Meta from "@/components/Meta";
 import Navigation from "@/components/Navigation";

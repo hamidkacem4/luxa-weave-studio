@@ -1,23 +1,24 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpApi from 'i18next-http-backend';
+
+// Directly import translation files to ensure server-side availability for SSR/SEO
+import enTranslation from '../public/locales/en/translation.json';
+import frTranslation from '../public/locales/fr/translation.json';
+import koTranslation from '../public/locales/ko/translation.json';
+
+const resources = {
+  en: { translation: enTranslation },
+  fr: { translation: frTranslation },
+  ko: { translation: koTranslation }
+};
 
 // initialize i18next
 i18n
-  .use(HttpApi)
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    resources,
     supportedLngs: ['en', 'fr', 'ko'],
     fallbackLng: 'en',
-    detection: {
-      order: ['path', 'cookie', 'htmlTag', 'localStorage', 'subdomain'],
-      caches: ['cookie'],
-    },
-    backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json?v=1.1',
-    },
     react: {
       useSuspense: false,
     },

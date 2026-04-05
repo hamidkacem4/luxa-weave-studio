@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import aboutImage from "@/assets/about-craftsmanship.jpg";
 
 const About = () => {
@@ -11,10 +12,12 @@ const About = () => {
           {/* Image */}
           <div className="fade-in order-2 lg:order-1">
             <div className="relative aspect-[16/9] overflow-hidden rounded-sm">
-              <img
+              <Image
                 src={aboutImage}
                 alt={t('about.image_alt')}
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

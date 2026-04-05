@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Leaf, Recycle, Heart, Award } from "lucide-react";
+import Image from "next/image";
 import sustainabilityImage from "@/assets/sustainability.jpg";
 
 const featureIcons = [Leaf, Recycle, Heart, Award];
@@ -24,10 +25,12 @@ const Sustainability = () => {
         {/* Hero Image */}
         <div className="mb-16 fade-in">
           <div className="relative aspect-[21/9] overflow-hidden rounded-sm">
-            <img
+            <Image
               src={sustainabilityImage}
               alt="A view of a sustainable cotton field, which is one of the organic materials we use in our Tunisian textile factory."
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="100vw"
             />
           </div>
         </div>
