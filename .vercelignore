@@ -1,0 +1,3 @@
+# Prevent accidental deployment of the old Vite static bundle.
+dist
+index.html
