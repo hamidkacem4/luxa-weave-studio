@@ -15,13 +15,17 @@ import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Autoplay from 'embla-carousel-autoplay';
+import { normalizeLocale } from "@/lib/locale";
+import { formatDate } from "@/lib/formatDate";
+import { localizedPath } from "@/lib/seo";
 
 interface FeaturedBlogCarouselProps {
   posts: BlogPost[];
 }
 
 const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) => {
-  const { locale = "en" } = useParams();
+  const params = (useParams() ?? {}) as { locale?: string };
+  const locale = normalizeLocale(params.locale);
   const { t } = useTranslation();
 
   const plugin = React.useRef(
@@ -29,7 +33,7 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
   );
 
   return (
-    <div className="relative mb-24 group/carousel">
+    <div className="group/carousel relative mb-16 sm:mb-24">
       <Carousel 
         opts={{ loop: true, align: "start" }} 
         plugins={[plugin.current]}
@@ -39,10 +43,11 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
       >
         <CarouselContent>
           {posts.map((post) => {
-            const content = post.translations[locale as 'en'|'fr'|'ko'] || post.translations['en'];
+            const content = post.translations[locale as 'en'|'fr'|'ko'|'it'] || post.translations['en'];
+            const postPath = localizedPath(locale, `/blog/${post.slug}`);
             return (
               <CarouselItem key={post.id} className="basis-full">
-                <div className="relative h-[500px] md:h-[600px] rounded-[2rem] md:rounded-[3rem] overflow-hidden group shadow-2xl mx-1 md:mx-2">
+                <div className="group relative mx-1 h-[420px] overflow-hidden rounded-[2rem] shadow-2xl sm:h-[500px] md:mx-2 md:h-[600px] md:rounded-[3rem]">
                   <Image 
                     src={post.image} 
                     alt={content.title}
@@ -53,19 +58,19 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
                   
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-20 text-white">
+                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white sm:p-8 md:p-20">
                     <div className="max-w-3xl">
-                      <div className="flex items-center gap-4 mb-4 md:mb-6">
+                      <div className="mb-4 flex flex-wrap items-center gap-3 md:mb-6 md:gap-4">
                         <Badge className="bg-gold text-charcoal font-bold px-3 py-0.5 md:px-4 md:py-1 uppercase tracking-widest border-none text-[10px] md:text-xs">
                           {t(`blog.categories.${post.category}`, post.category)}
                         </Badge>
-                        <span className="flex items-center gap-2 text-xs md:text-sm font-medium text-white/80">
                           <Calendar className="w-3.5 h-3.5 md:w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString(locale, { year: 'numeric', month: 'long', day: 'numeric' })}
-                        </span>
+                          <time dateTime={post.date} suppressHydrationWarning>
+                            {formatDate(post.date, locale)}
+                          </time>
                       </div>
                       
-                      <h2 className="text-3xl md:text-6xl font-bold mb-6 md:mb-8 leading-[1.1] tracking-tight">
+                      <h2 className="mb-5 text-2xl font-bold leading-[1.1] tracking-tight sm:text-3xl md:mb-8 md:text-6xl">
                         {content.title}
                       </h2>
                       
@@ -73,9 +78,9 @@ const FeaturedBlogCarousel: React.FC<FeaturedBlogCarouselProps> = ({ posts }) =>
                         {content.excerpt}
                       </p>
                       
-                      <Button asChild size="lg" className="bg-white hover:bg-gold text-charcoal font-bold px-6 py-5 md:px-8 md:py-6 rounded-full transition-all group/btn text-sm md:text-base">
-                        <Link href={`/${locale}/blog/${post.slug}`} className="flex items-center gap-2">
-                          Read Featured Story
+                      <Button asChild size="lg" className="group/btn w-full rounded-full bg-white px-6 py-5 text-sm font-bold text-charcoal transition-all hover:bg-gold sm:w-auto md:px-8 md:py-6 md:text-base">
+                        <Link href={postPath} className="flex items-center gap-2">
+                          {t("blog.read_featured", "Read Featured Story")}
                           <ArrowRight className="w-4 h-4 md:w-5 h-5 transition-transform group-hover/btn:translate-x-2" />
                         </Link>
                       </Button>

@@ -42,6 +42,8 @@
     "meta_keywords": "textile blog, tunisia manufacturing news, clothing manufacturer tunisia, garment factory tunisia",
     "back_to_list": "Back to Insights",
     "share": "Share This Insight",
+    "author_label": "Authored By",
+    "related_articles": "Related Articles",
     "cta_title": "Scale Your Production Today",
     "cta_subtitle": "Discover how our Tunisian manufacturing expertise can elevate your brand's next collection.",
     "cta_contact": "Consult Our Specialists",
@@ -286,6 +288,129 @@
     "whatsapp_button": "Chat on WhatsApp",
     "watch_video_button": "Watch Video"
   },
+  "textile_tunisie": {
+    "meta": {
+      "title": "Textile Manufacturer in Tunisia | MAGTEXCO",
+      "description": "MagTexco is a textile manufacturer in Tunisia specializing in custom apparel production, certified quality and export to Europe.",
+      "keywords": [
+        "textile tunisia",
+        "clothing manufacturer tunisia",
+        "apparel factory tunisia",
+        "sustainable manufacturing tunisia"
+      ]
+    },
+    "hero": {
+      "title": "Textile Manufacturer in Tunisia",
+      "subtitle": "Expertise, production and export to Europe",
+      "description": "MAGTEXCO designs and produces made-to-order textile collections in Tunisia, combining certified quality with optimized logistics.",
+      "cta_quote": "Request a quote",
+      "cta_home": "Back to home"
+    },
+    "intro": {
+      "title": "About MAGTEXCO",
+      "p1": "MAGTEXCO is a textile manufacturer in Tunisia recognized for its apparel production and export to Europe.",
+      "p2": "Our factory in Sahline combines experienced teams and modern facilities to meet the expectations of French, Italian and German markets."
+    },
+    "capacities": {
+      "title": "Production Capacity",
+      "description": "Our textile production capabilities in Tunisia are built to deliver volume, responsiveness and quality across ready-to-wear and technical collections.",
+      "bullets": [
+        "Production up to 150,000 units per month.",
+        "CAD-assisted cutting processes for maximum precision.",
+        "Mixed production ability for women's, men's, children's garments and accessories.",
+        "In-line quality control at every production station."
+      ]
+    },
+    "services": {
+      "title": "Our services: cutting, sewing, finishing",
+      "description": "MAGTEXCO offers a complete range of textile services to support your collections with quality and traceability.",
+      "items": [
+        {
+          "title": "Cutting",
+          "description": "Software-assisted cutting and automated equipment for precise patterns." 
+        },
+        {
+          "title": "Sewing",
+          "description": "Careful sewing by qualified operators with special attention to finishing." 
+        },
+        {
+          "title": "Finishing",
+          "description": "Pressing, labeling, packaging and final inspection for ready-to-sell delivery." 
+        }
+      ]
+    },
+    "export": {
+      "title": "Export to Europe: France, Italy, Germany",
+      "description": "Our logistics are designed for European export with sharp attention to each market's requirements.",
+      "countries": [
+        {
+          "title": "France",
+          "description": "Fast delivery, geographic proximity and adherence to French fashion standards." 
+        },
+        {
+          "title": "Italy",
+          "description": "High-end expertise and compliance with Italian quality and design standards." 
+        },
+        {
+          "title": "Germany",
+          "description": "Rigorous processes and compliance with German expectations for sustainable collections." 
+        }
+      ]
+    },
+    "quality": {
+      "title": "Quality and Certifications",
+      "description": "MAGTEXCO relies on international certifications to ensure quality, environmental responsibility and social compliance.",
+      "certifications": [
+        "ISO 9001 - quality management",
+        "ISO 14001 - environmental management",
+        "GOTS - certified organic textile",
+        "BSCI - ethical trade"
+      ]
+    },
+    "why": {
+      "title": "Why choose Tunisia",
+      "description": "Tunisia is a strategic textile destination with expertise, controlled costs and Europe-ready infrastructure.",
+      "items": [
+        {
+          "title": "Proximity",
+          "description": "Fast transport to Europe and shorter delivery times." 
+        },
+        {
+          "title": "Flexibility",
+          "description": "Ability to manage small and large production runs." 
+        },
+        {
+          "title": "Quality",
+          "description": "Controlled manufacturing processes and recognized certifications." 
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact and quote request",
+      "description": "To start your textile project in Tunisia, contact MAGTEXCO. We offer complete solutions for manufacturing, export and brand support.",
+      "phone_label": "Call us for a personalized project study:",
+      "button": "Contact MAGTEXCO",
+      "phone_number": "+216 95 518 870",
+      "send_request": "Or send a request online:"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Why choose a textile manufacturer in Tunisia?",
+          "answer": "Tunisia combines proximity to Europe, local textile expertise and international certifications. MAGTEXCO delivers fast lead times, quality production and tailored logistics." 
+        },
+        {
+          "question": "What are your production lead times?",
+          "answer": "Our production lead times range from 4 to 8 weeks depending on complexity, with expedited options for urgent orders." 
+        },
+        {
+          "question": "Do you work with Europe?",
+          "answer": "Yes, MAGTEXCO exports primarily to France, Italy and Germany and meets European market requirements." 
+        }
+      ]
+    }
+  },
   "recruitment": {
     "title": "Join our team",
     "message": "We are always looking for talented individuals to join our team. Please check back later for open positions.",
@@ -368,6 +493,8 @@
     }
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "created_by": "This website was created by",
+    "textile_tunisie": "Textile Tunisia"
   }
 }

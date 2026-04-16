@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,29 +9,37 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Tag } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { normalizeLocale } from "@/lib/locale";
+import { formatDate } from "@/lib/formatDate";
+import { localizedPath } from "@/lib/seo";
 
-const BlogSection = () => {
+type BlogSectionProps = {
+  locale?: string;
+};
+
+const BlogSection = ({ locale: propLocale }: BlogSectionProps) => {
   const { t } = useTranslation();
-  const { locale = "en" } = useParams();
+  const params = (useParams() ?? {}) as { locale?: string };
+  const locale = normalizeLocale(propLocale || params.locale);
 
   // Get the 3 most recent posts
   const recentPosts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="py-24 bg-cream/30 overflow-hidden">
+    <section id="blog" className="overflow-hidden bg-cream/30 py-16 sm:py-20 lg:py-24">
       <div className="container px-4 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+          className="mb-10 flex flex-col items-start justify-between gap-6 sm:mb-16 md:flex-row md:items-end"
         >
           <div className="max-w-2xl">
             <Badge variant="outline" className="mb-4 border-gold text-gold-dark uppercase tracking-widest px-4 py-1">
               {t("blog.badge", "Knowledge Hub")}
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-charcoal">
+            <h2 className="mb-4 text-3xl font-bold text-charcoal sm:text-4xl md:text-5xl">
               {t("blog.section_title", "Industry Insights & News")}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -37,7 +47,7 @@ const BlogSection = () => {
             </p>
           </div>
           <Button asChild variant="link" size="lg" className="group text-gold-dark hover:text-gold transition-colors p-0 h-auto font-bold text-lg">
-            <Link href={`/${locale}/blog`} className="flex items-center gap-2">
+            <Link href={localizedPath(locale, "/blog")} className="flex items-center gap-2">
               {t("blog.view_all", "View All Articles")}
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" />
             </Link>
@@ -48,7 +58,7 @@ const BlogSection = () => {
           {recentPosts.map((post, index) => {
             // Added safety check to prevent crash if translations is missing
             const translations = post.translations || {};
-            const content = translations[locale as 'en'|'fr'|'ko'] || translations["en"] || { title: "Article", excerpt: "", content: "" };
+            const content = translations[locale as 'en'|'fr'|'ko'|'it'] || translations["en"] || { title: "Article", excerpt: "", content: "" };
             const isEven = index % 2 === 0;
             
             return (
@@ -58,10 +68,10 @@ const BlogSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, type: "spring", bounce: 0.2 }}
-                className="group flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-soft hover-lift min-h-[400px]"
+                className="group flex min-h-[400px] flex-col overflow-hidden rounded-3xl bg-white shadow-soft hover-lift md:flex-row"
               >
-                <Link href={`/${locale}/blog/${post.slug}`} 
-                   className={`relative block w-full md:w-1/2 overflow-hidden ${!isEven ? 'md:order-last' : ''}`}
+                <Link href={localizedPath(locale, `/blog/${post.slug}`)} 
+                   className={`relative block min-h-[260px] w-full overflow-hidden md:min-h-0 md:w-1/2 ${!isEven ? 'md:order-last' : ''}`}
                 >
                   <Image
                     src={post.image}
@@ -79,20 +89,16 @@ const BlogSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </Link>
                 
-                <div className="w-full md:w-1/2 p-10 md:p-12 flex flex-col justify-center">
+                <div className="flex w-full flex-col justify-center p-6 sm:p-8 md:w-1/2 md:p-12">
                   <div className="flex items-center gap-2 text-sm font-semibold text-gold-dark mb-6">
                     <Calendar className="w-4 h-4" />
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString(locale, { 
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}
+                    <time dateTime={post.date} suppressHydrationWarning>
+                      {formatDate(post.date, locale)}
                     </time>
                   </div>
                   
-                  <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight group-hover:text-gold-dark transition-colors duration-300">
-                    <Link href={`/${locale}/blog/${post.slug}`}>
+                  <h3 className="mb-6 text-2xl font-bold leading-tight transition-colors duration-300 group-hover:text-gold-dark sm:text-3xl md:text-4xl">
+                    <Link href={localizedPath(locale, `/blog/${post.slug}`)}>
                       {content.title}
                     </Link>
                   </h3>
@@ -101,7 +107,7 @@ const BlogSection = () => {
                     {content.excerpt}
                   </p>
                   
-                  <Link href={`/${locale}/blog/${post.slug}`} 
+                  <Link href={localizedPath(locale, `/blog/${post.slug}`)} 
                     className="inline-flex items-center font-bold text-charcoal group/link hover:text-gold-dark transition-colors text-lg"
                   >
                     <span className="relative">

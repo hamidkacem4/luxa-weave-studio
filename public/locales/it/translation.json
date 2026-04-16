@@ -1,0 +1,530 @@
+{
+  "meta": {
+    "title": "MagTexco | Confezione e produzione tessile in Tunisia",
+    "description": "MagTexco affianca i brand con confezione di alta gamma, sviluppo prodotto e produzione tessile in Tunisia.",
+    "keywords": "fabbrica tessile Tunisia, tessile Tunisia, produttore abbigliamento Tunisia, industria tessile mediterranea, produzione tessile sostenibile"
+  },
+  "hero": {
+    "title": "MAGTEXCO, partner per la confezione in Tunisia",
+    "subtitle": "Sviluppo prodotto, produzione ed export per i brand",
+    "description": "MagTexco affianca i brand con una confezione tessile di alta gamma in Tunisia, unendo know-how industriale, qualità certificata e logistica reattiva verso l'Europa.",
+    "explore_collections": "Esplora le Collezioni",
+    "contact_us": "Avvia il tuo progetto"
+  },
+  "top_contact_bar": {
+    "address": "Polo tecnologico e industriale, Sahline, Tunisia"
+  },
+  "nav": {
+    "logo": "MagTexco",
+    "address": "Polo tecnologico e industriale, Sahline, Tunisia",
+    "collections": "Collezioni",
+    "contact": "Contatto",
+    "home": "Home",
+    "team": "I Nostri Esperti",
+    "blog": "Osservatorio Industriale",
+    "recruitment": "Recruiting"
+  },
+  "team": {
+    "title": "Il Nostro Team Dedicato",
+    "description": "Incontra gli esperti dietro la produzione tessile di livello mondiale di MagTexco, dediti alla qualità e all'innovazione.",
+    "badge": "Esperienza"
+  },
+  "team_members": {
+    "1": {
+      "position": "Direttore Operativo",
+      "bio": "Con oltre 15 anni di esperienza nel settore tessile-abbigliamento, Najah guida le operazioni presso MagTexco e garantisce l'efficienza dell'intera catena produttiva."
+    },
+    "2": {
+      "position": "Merchandiser",
+      "bio": "Walid supervisiona lo sviluppo del prodotto, il sourcing, il pricing e il coordinamento commerciale per garantire la corretta esecuzione delle collezioni."
+    },
+    "3": {
+      "position": "Supporto IT & Sistemi",
+      "bio": "Hamid assicura l'affidabilità dell'infrastruttura digitale di MagTexco e supporta gli strumenti che facilitano la produzione e il coordinamento internazionale."
+    },
+    "4": {
+      "position": "Merchandiser",
+      "bio": "Refka segue lo sviluppo prodotto, il sourcing e la preparazione commerciale per assicurare un supporto fluido ai progetti dei clienti."
+    },
+    "5": {
+      "position": "Risorse Umane",
+      "bio": "Meryem è responsabile della gestione dei team, del reclutamento, della formazione e delle relazioni interne all'interno della fabbrica."
+    }
+  },
+  "blog": {
+    "section_title": "Tessile Tunisia: Analisi e Novità",
+    "section_subtitle": "Rimani aggiornato sulle tendenze della moda globale con l'esperienza dal cuore dell'industria tessile tunisina.",
+    "badge": "Centro di Conoscenza",
+    "view_all": "Vedi tutte le analisi",
+    "read_more": "Leggi di più",
+    "read_full": "Leggi l'articolo completo",
+    "read_featured": "Leggi la storia in evidenza",
+    "read_article": "Leggi l'articolo",
+    "page_title": "Blog MagTexco: L'Eccellenza Industriale",
+    "page_subtitle": "Analisi approfondite sull'artigianato tessile mediterraneo, i vantaggi del nearshoring e l'innovazione della catena di fornitura.",
+    "meta_title": "Produttore Tessile & Fabbrica Tessile Tunisia | Blog MagTexco",
+    "meta_description": "Scopri l'industria tessile in Tunisia, le tendenze della moda sostenibile e perché i brand globali scelgono la Tunisia per la produzione tessile.",
+    "meta_keywords": "blog tessile, news produzione tunisia, fabbrica tessile tunisia, tessile tunisie",
+    "back_to_list": "Torna alle analisi",
+    "share": "Condividi questa analisi",
+    "author_label": "Scritto da",
+    "related_articles": "Articoli correlati",
+    "cta_title": "Passa al livello successivo",
+    "cta_subtitle": "Scopri come la nostra esperienza tessile in Tunisia può valorizzare la prossima collezione del tuo brand.",
+    "cta_contact": "Consulta i nostri specialisti",
+    "categories": {
+      "Industry Insights": "Analisi Industriali",
+      "Craftsmanship": "Artigianato",
+      "Trade": "Commercio",
+      "Business Strategy": "Strategia Commerciale"
+    },
+    "authors": {
+      "MagTexco Team": "Team Editoriale MagTexco",
+      "Artisanal Dept": "Maestri Artigiani",
+      "Logistics Expert": "Esperto Supply Chain",
+      "Industry Analyst": "Analista Industriale"
+    }
+  },
+  "collections": {
+    "title": "Le Nostre Collezioni Esperte",
+    "subtitle": "Capacità produttive versatili per il panorama della moda moderna",
+    "items": [
+      {
+        "slug": "shirts",
+        "title": "Camicie Premium",
+        "description": "Dall'abbigliamento da lavoro di precisione agli stili casual in lino, le nostre camicie definiscono l'eleganza moderna."
+      },
+      {
+        "slug": "t-shirts&tops",
+        "title": "Top Sostenibili",
+        "description": "T-shirt premium e basic di lusso confezionati nel miglior cotone egiziano biologico."
+      },
+      {
+        "slug": "shorts-skirts",
+        "title": "Bottom Sartoriali",
+        "description": "Pantaloncini versatili e gonne artigianali progettati per una vestibilità perfetta e uno stile mediterraneo senza sforzo."
+      },
+      {
+        "slug": "dresses",
+        "title": "Abiti Squisiti",
+        "description": "Silhouette sofisticate per ogni occasione, coniugando finiture a mano tradizionali e design moderno."
+      },
+      {
+        "slug": "jackets-coats",
+        "title": "Capispalla",
+        "description": "Giacche tecniche e cappotti in misto lana caratterizzati da tagli sofisticati e materiali performanti."
+      }
+    ]
+  },
+  "collection_details": {
+    "shirts": {
+      "title": "Camicie",
+      "description": "Meticolosamente confezionate con tessuti ad alta densità e finiture artigianali, le nostre camicie offrono l'equilibrio perfetto tra struttura e comfort.",
+      "men": [
+        { "name": "Camicia Oxford in Seta", "description": "Una camicia in seta di alta qualità a maniche lunghe con una lucentezza sottile, per un look raffinato e sofisticato.", "image": "product-men-silk" },
+        { "name": "Camicia Estiva in Lino", "description": "Camicia in viscosa morbida e leggera con un eccellente drappeggio, perfetta per un comfort che dura tutto il giorno.", "image": "product-men-viscose" },
+        { "name": "Camicia Classica Fantasia", "description": "Una camicia ben strutturata caratterizzata da un motivo intramontabile per uno stile professionale moderno.", "image": "SH09" },
+        { "name": "Camicia Casual", "description": "Una camicia versatile in misto cotone con una vestibilità rilassata, ideale per occasioni smart-casual.", "image": "menshirt2" },
+        { "name": "Camicia in Cotone Egiziano", "description": "Una camicia in cotone bianco ad alta densità con colletto rigido e finitura premium.", "image": "product-men-cotton" }
+      ],
+      "women": [
+        { "name": "Camicetta in Seta", "description": "Una raffinata camicetta in seta fluida, tagliata per una silhouette graziosa ed elegante.", "image": "shirt3" },
+        { "name": "Camicia Classica in Popeline", "description": "Linee pulite in fresco cotone egiziano, per un look pulito e professionale.", "image": "shirt1" },
+        { "name": "Camicia in Lino Casual", "description": "Stile senza sforzo per il weekend, realizzata in misto lino leggero di qualità superiore.", "image": "shirt2" },
+        { "name": "Camicia Sartoriale Elegante", "description": "Una camicia magnificamente strutturata che unisce artigianalità tradizionale e taglio moderno.", "image": "shirt4" }
+      ]
+    },
+    "t-shirts&tops": {
+      "title": "T-Shirt & Top",
+      "description": "Le nostre T-shirt e top leggeri sono più che semplici basic. Utilizziamo tessuti premium e cuciture raffinate per creare pezzi duraturi.",
+      "men": [
+        { "name": "T-Shirt Girocollo Essential", "description": "Una T-shirt in cotone di peso superiore con vestibilità perfetta e scollatura resistente per l'uso quotidiano.", "image": "menshirt1" },
+        { "name": "T-Shirt in Jersey Relaxed Fit", "description": "T-shirt in jersey morbido al tatto progettata per il massimo comfort e un look urbano contemporaneo.", "image": "menshirt22" },
+        { "name": "Top Performance Athletic", "description": "Un top traspirante che allontana l'umidità, adatto a stili di vita attivi e abbigliamento casual di alta gamma.", "image": "menshirt3" }
+      ],
+      "women": [
+        { "name": "T-shirt Slim Classica", "description": "Tagliata perfettamente per una silhouette snella, realizzata con il miglior cotone biologico.", "image": "tshirt1" },
+        { "name": "T-shirt Boyfriend Oversize", "description": "Comfort rilassato in jersey morbido, per uno stile moderno e senza sforzo.", "image": "tshirt2" },
+        { "name": "Girocollo a Coste", "description": "Finitura testurizzata per un look moderno, che offre comfort e stile sofisticato.", "image": "tshirt3" }
+      ]
+    },
+    "shorts-skirts": {
+      "title": "Pantaloncini & Gonne",
+      "description": "Scopri la nostra gamma di pantaloncini e gonne di alta qualità, dai chino in cotone sartoriali alle gonne midi a pieghe, progettati per il comfort.",
+      "men": [
+        { "name": "Shorts Chino Slim", "description": "Classici shorts al ginocchio in twill di cotone resistente con una finitura pulita e strutturata.", "image": "short" },
+        { "name": "Shorts da Passeggio in Lino", "description": "Shorts leggeri e traspiranti, perfetti per le uscite estive e i weekend rilassati.", "image": "shortman2" },
+        { "name": "Shorts Active Performance", "description": "Shorts flessibili e comodi progettati per la libertà di movimento e uno stile atletico rilassato.", "image": "shortman3" }
+      ],
+      "women": [
+        { "name": "Gonna Artigianale Fantasia", "description": "Un pezzo unico che mette in risalto le influenze della tessitura tradizionale tunisina in un taglio moderno ed elegante.", "image": "manouchstyle1" },
+        { "name": "Shorts Sartoriali a Vita Alta", "description": "Shorts valorizzanti a vita alta con un taglio sartoriale, che uniscono eleganza mediterranea e comfort.", "image": "manouchstyle2" },
+        { "name": "Shorts in Cotone Moderni", "description": "Shorts in cotone dal taglio pulito progettati per un look estivo curato ma informale.", "image": "shortWomen2" },
+        { "name": "Gonna a Trapezio in Cotone", "description": "Una gonna femminile dal movimento grazioso, realizzata in tessuto leggero di qualità superiore.", "image": "skirt2" }
+      ]
+    },
+    "dresses": {
+      "title": "Abiti",
+      "description": "I nostri abiti sono il cuore della nostra maestria, con motivi intricati, materiali premium e silhouette che valorizzano chi li indossa.",
+      "men": [],
+      "women": [
+        { "name": "Wrap Dress in Seta", "description": "Eleganza fluida in pura seta di gelso, con una silhouette sofisticata per l'abbigliamento serale.", "image": "dress1" },
+        { "name": "Abito Estivo Ricamato", "description": "Cotone leggero con ricami artigianali, perfetto per un look da giorno raffinato.", "image": "dress2" },
+        { "name": "Abito da Sera Plissettato", "description": "Movimento sofisticato e stile lungo fino a terra, confezionato per le occasioni speciali.", "image": "dress3" },
+        { "name": "Abito Midi a Fiori", "description": "Motivi vivaci su un tessuto morbido di qualità superiore, per un'estetica graziosa e femminile.", "image": "dress4" },
+        { "name": "Abito da Giorno in Cotone Raffinato", "description": "Un abito in cotone traspirante ed elegante, perfetto per un'eleganza senza sforzo durante il giorno.", "image": "productWomenCotton" },
+        { "name": "Abito da Sera in Viscosa Elegante", "description": "Un abito lussuoso con un bel drappeggio e una finitura vibrante per celebrazioni formali.", "image": "productWomenViscose" }
+      ]
+    },
+    "jackets-coats": {
+      "title": "Giacche & Cappotti",
+      "description": "Capispalla sapientemente tagliati progettati per proteggere e impressionare, utilizzando tessuti ad alte prestazioni.",
+      "men": [],
+      "women": [
+        { "name": "Cappotto Structurato Fashion", "description": "Capospalla sofisticato con linee pulite e materiali in misto lana premium per l'inverno.", "image": "womenCoats" },
+        { "name": "Giacca Bouclé Fashion", "description": "Un cappotto elegante progettato per il calore e una silhouette curata durante il freddo.", "image": "womenCoats2" },
+        { "name": "Blazer in Lino Casual", "description": "Cappotto isolante ed elegante progettato per un calore estremo senza compromettere l'eleganza.", "image": "MANTEAU_1" },
+        { "name": "Cappotto in Lana Classico", "description": "Un pezzo senza tempo con un taglio raffinato, adatto all'abbigliamento professionale e formale.", "image": "MANTEAU_2" },
+        { "name": "Giacca Utility Moderna", "description": "Una giacca contemporanea con dettagli funzionali e una silhouette strutturata moderna ed elegante.", "image": "H25" },
+        { "name": "Cappotto di Transizione Raffinato", "description": "Un cappotto versatile con un taglio sartoriale, perfetto per passare da una stagione all'altra con stile.", "image": "coat1" }
+      ]
+    }
+  },
+  "products": {
+    "title": "I Nostri Prodotti",
+    "subtitle": "Esplora le nostre collezioni di capi moda realizzati con i materiali più pregiati",
+    "women_tab": "Donna",
+    "men_tab": "Uomo",
+    "women": [
+      {
+        "title": "Abito in Viscosa",
+        "material": "Viscosa di Qualità Superiore",
+        "description": "Silhouette fluida con movimento elegante"
+      },
+      {
+        "title": "Abito in Seta",
+        "material": "Pura Seta",
+        "description": "Sofisticazione e lusso senza tempo"
+      },
+      {
+        "title": "Abito in Cotone",
+        "material": "Cotone di Qualità Superiore",
+        "description": "Semplicità e comfort raffinati"
+      }
+    ],
+    "men": [
+      {
+        "title": "Camicia in Viscosa",
+        "material": "Viscosa di Qualità Superiore",
+        "description": "Drappeggio lussuoso con traspirabilità naturale"
+      },
+      {
+        "title": "Camicia in Seta",
+        "material": "Pura Seta",
+        "description": "Massima eleganza e consistenza liscia"
+      },
+      {
+        "title": "Camicia in Cotone",
+        "material": "Cotone Egiziano",
+        "description": "Comfort classico con una finitura impeccabile"
+      }
+    ]
+  },
+  "why_choose_us": {
+    "title": "Perché Scegliere MagTexco per le Tue Esigenze di Abbigliamento in Tunisia?",
+    "subtitle": "Scopri i valori fondamentali che ci rendono un leader nell'industria dell'abbigliamento tunisina e il partner preferito dai grandi brand di moda.",
+    "features": [
+      {
+        "title": "Qualità Senza Compromessi",
+        "description": "Come produttore leader di abbigliamento in Tunisia, selezioniamo meticolosamente i materiali migliori e applichiamo un rigoroso controllo qualità in ogni fase della produzione."
+      },
+      {
+        "title": "Design Innovativi",
+        "description": "Il nostro team di designer esperti rimane all'avanguardia delle tendenze, offrendo design e finiture di abbigliamento freschi e unici per il mercato globale della moda."
+      },
+      {
+        "title": "Pratiche Sostenibili",
+        "description": "Impegnati in una produzione eco-compatibile, siamo una scelta sostenibile nell'industria dell'abbigliamento tunisina, riducendo al minimo gli sprechi e utilizzando risorse sostenibili."
+      },
+      {
+        "title": "Partnership Affidabile",
+        "description": "Siamo orgogliosi della nostra comunicazione trasparente, delle consegne puntuali e della costruzione di relazioni durature con i nostri clienti dell'industria dell'abbigliamento."
+      }
+    ]
+  },
+  "sustainability": {
+    "title": "Approvvigionamento e Produzione Responsabili",
+    "subtitle": "Il nostro impegno per l'eccellenza va oltre la qualità: privilegiamo le pratiche etiche e la sostenibilità",
+    "features": [
+      {
+        "title": "Materiali Organici",
+        "description": "Ci approvvigioniamo di cotone biologico certificato e altri materiali sostenibili da fornitori etici."
+      },
+      {
+        "title": "Spreco Zero",
+        "description": "Il nostro processo produttivo è progettato per minimizzare gli sprechi e massimizzare l'efficienza"
+      },
+      {
+        "title": "Produzione Etica",
+        "description": "Salari equi, condizioni di lavoro sicure e rispetto dei diritti umani"
+      },
+      {
+        "title": "Eccellenza Certificata",
+        "description": "GOTS, GRS, ISO 9001, ISO 14001, BSCI e Commercio Equo"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Creiamo Insieme",
+    "subtitle": "Pronto per iniziare la tua prossima collezione? Contatta il nostro team",
+    "contact_info": [
+      {
+        "title": "Vieni a Trovarci",
+        "details": ["MAGTEXCO"],
+        "link": "https://www.google.com/maps/dir/?api=1&destination=35.72344296183206,10.744451113821503"
+      },
+      {
+        "title": "Chiamaci",
+        "details": ["+216 95 518 870"]
+      },
+      {
+        "title": "Inviaci un'Email",
+        "details": ["walid.horchani@thefactory.com.tn"]
+      }
+    ],
+    "map_title": "Mappa di Localizzazione",
+    "map_dialog_title": "La Nostra Fabbrica",
+    "map_instruction": "Clicca sul segnalino per vedere la nostra fabbrica, o clicca sulla mappa per ottenere le indicazioni stradali.",
+    "form_title": "Inviaci un Messaggio",
+    "form_subtitle": "Ti risponderemo il prima possibile.",
+    "form_name_label": "Nome",
+    "form_name_placeholder": "Il Tuo Nome",
+    "form_email_label": "Email",
+    "form_email_placeholder": "La Tua Email",
+    "form_message_label": "Messaggio",
+    "form_message_placeholder": "Il Tuo Messaggio",
+    "form_submit_button": "Invia Messaggio",
+    "form_success_title": "Messaggio Inviato!",
+    "form_success_message": "Il tuo messaggio è stato inviato con successo. Ti risponderemo presto!",
+    "form_error_title": "Invio Non Riuscito",
+    "form_error_message": "Si è verificato un errore durante l'invio del messaggio. Riprova più tardi.",
+    "whatsapp_title": "Risposta Rapida su WhatsApp",
+    "whatsapp_subtitle": "Ottieni risposte istantanee alle tue domande. Siamo qui per aiutarti.",
+    "whatsapp_button": "Chatta su WhatsApp",
+    "watch_video_button": "Guarda il Video"
+  },
+  "textile_tunisie": {
+    "meta": {
+      "title": "Tessile Tunisia | Fabbrica Tessile Tunisia | MAGTEXCO",
+      "description": "Tessile Tunisia: MagTexco è la tua fabbrica tessile in Tunisia specializzata nella confezione di alta gamma ed export. Scopri il know-how del tessile in Tunisia.",
+      "keywords": [
+        "tessile tunisia",
+        "fabbrica tessile tunisia",
+        "produttore tessile tunisia",
+        "confezione tunisia",
+        "produzione tessile tunisia",
+        "facon tessile tunisia"
+      ]
+    },
+    "hero": {
+      "title": "Tessile Tunisia: La Tua Fabbrica Tessile Tunisia di Fiducia",
+      "subtitle": "Confezione tessile di precisione ed export verso l'Europa",
+      "description": "MAGTEXCO è il leader del tessile in Tunisia. La nostra fabbrica tessile Tunisia produce collezioni su misura unendo qualità certificata e know-how industriale.",
+      "cta_quote": "Richiedi un preventivo Tessile Tunisia",
+      "cta_home": "Torna alla home"
+    },
+    "intro": {
+      "title": "Tessile Tunisia: L'Eccellenza di MAGTEXCO",
+      "p1": "MAGTEXCO si impone come riferimento essenziale del tessile in Tunisia. In quanto fabbrica tessile Tunisia leader, affianchiamo i brand internazionali.",
+      "p2": "La nostra fabbrica tessile a Sahline è il cuore pulsante del tessile Tunisia, offrendo standard europei per i mercati francese, italiano e tedesco."
+    },
+    "capacities": {
+      "title": "Capacità di produzione Tessile Tunisia",
+      "description": "Le nostre capacità di produzione tessile in Tunisia offrono volume, reattività e qualità su linee dedicate al prêt-à-porter e alle collezioni tecniche.",
+      "bullets": [
+        "Produzione tessile Tunisia fino a 150.000 unità al mese.",
+        "Taglio precisione tramite CAD nella nostra fabbrica tessile Tunisia.",
+        "Esperienza mista: moda donna, uomo e bambino in Tunisia.",
+        "Rigoroso controllo qualità secondo le norme del tessile Tunisia."
+      ]
+    },
+    "services": {
+      "title": "Fabbrica Tessile Tunisia: I Nostri Servizi Esperti",
+      "description": "Dal taglio alla finitura, MAGTEXCO definisce gli alti standard del tessile in Tunisia per le tue collezioni.",
+      "items": [
+        {
+          "title": "Taglio Tessile Tunisia",
+          "description": "Taglio assistito dal computer all'interno della nostra fabbrica tessile Tunisia per una precisione assoluta."
+        },
+        {
+          "title": "Confezione Tunisia",
+          "description": "Know-how artigianale e industriale uniti per il meglio del tessile in Tunisia."
+        },
+        {
+          "title": "Finitura Export",
+          "description": "Confezionamento premium per l'esportazione tessile Tunisia verso le boutique europee."
+        }
+      ]
+    },
+    "export": {
+      "title": "Export Tessile Tunisia verso l'Europa",
+      "description": "La tua fabbrica tessile Tunisia serve Francia, Italia e Germania con una logistica efficiente.",
+      "countries": [
+        {
+          "title": "Francia",
+          "description": "Partner privilegiato dei brand francesi che cercano il know-how tessile Tunisia."
+        },
+        {
+          "title": "Italia",
+          "description": "Qualità premium rispondente alle esigenze del lusso tramite la nostra fabbrica tessile Tunisia."
+        },
+        {
+          "title": "Germania",
+          "description": "Rigore e sostenibilità per il mercato tedesco, pilastro del tessile in Tunisia."
+        }
+      ]
+    },
+    "quality": {
+      "title": "Norme del Tessile in Tunisia",
+      "description": "MAGTEXCO garantisce una produzione tessile in Tunisia certificata ISO, GOTS e BSCI per un'etica irreprensibile.",
+      "certifications": [
+        "ISO 9001 - Qualità Tessile Tunisia",
+        "ISO 14001 - Eco-responsabilità Tunisia",
+        "GOTS - Cotone Bio certificato",
+        "BSCI - Impegno Sociale fabbrica tessile"
+      ]
+    },
+    "why": {
+      "title": "Perché scegliere una FABBRICA TESSILE TUNISIA?",
+      "description": "Il tessile Tunisia offre un vantaggio strategico: prossimità, costi contenuti ed eccellenza tecnica.",
+      "items": [
+        {
+          "title": "Prossimità Tessile Tunisia",
+          "description": "Trasporto rapido verso l'Europa e reattività della nostra fabbrica tessile Tunisia."
+        },
+        {
+          "title": "Flessibilità Produttiva",
+          "description": "Gestione agile delle serie all'interno del settore tessile in Tunisia."
+        },
+        {
+          "title": "Esperienza Riconosciuta",
+          "description": "Decenni di know-how nell'industria tessile Tunisia."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Avvia il tuo progetto Tessile Tunisia",
+      "description": "Contatta MAGTEXCO oggi stesso per la tua produzione all'interno della nostra fabbrica tessile Tunisia.",
+      "phone_label": "Il tuo esperto Tessile Tunisia al tuo ascolto:",
+      "button": "Contatta la fabbrica tessile Tunisia",
+      "phone_number": "+216 95 518 870",
+      "send_request": "Preventivo produzione tessile Tunisia online:"
+    },
+    "faq": {
+      "title": "FAQ Tessile Tunisia: Le tue domande",
+      "items": [
+        {
+          "question": "Come scegliere una fabbrica tessile in Tunisia?",
+          "answer": "Per il successo del tuo progetto tessile Tunisia, dai la preferenza a una fabbrica tessile Tunisia certificata come MAGTEXCO, che offre esperienza e prossimità logistica."
+        },
+        {
+          "question": "Quali sono i vantaggi del tessile in Tunisia?",
+          "answer": "Il tessile Tunisia permette di beneficiare di tempi brevi (Nearshoring) e di un know-how storico nella confezione di alta gamma."
+        },
+        {
+          "question": "MAGTEXCO è una fabbrica tessile certificata?",
+          "answer": "Sì, la nostra fabbrica tessile Tunisia è certificata ISO e GOTS, garantendo una produzione di qualità superiore a Sahline."
+        }
+      ]
+    },
+    "recent_insights": "Novità Tessile Tunisia",
+    "see_collections": "Scopri le nostre collezioni:",
+    "collections_link": "Le Nostre Collezioni"
+  },
+  "recruitment": {
+    "title": "Unisciti al nostro team",
+    "message": "Siamo sempre alla ricerca di persone di talento che si uniscano a noi. Torna a visitarci più tardi per le posizioni aperte.",
+    "hrContact": "se desideri contattare direttamente le risorse umane, ecco il loro numero",
+    "form": {
+      "title": "Candidati per una posizione",
+      "description": "Compila il modulo sottostante per candidarti per una posizione presso MagTexco.",
+      "fullName": {
+        "label": "Nome completo",
+        "placeholder": "Inserisci il tuo nome completo",
+        "min": "Il nome completo deve contenere almeno 2 caratteri."
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Inserisci la tua email",
+        "invalid": "Inserisci un indirizzo email valido."
+      },
+      "phone": {
+        "label": "Numero di telefono",
+        "placeholder": "Inserisci il tuo numero di telefono",
+        "min": "Il numero di telefono deve contenere almeno 10 caratteri."
+      },
+      "positionApplied": {
+        "label": "Posizione richiesta",
+        "placeholder": "es: Software Engineer, Textile Designer",
+        "min": "La posizione richiesta deve contenere almeno 2 caratteri."
+      },
+      "yearsOfExperience": {
+        "label": "Anni di esperienza",
+        "placeholder": "Inserisci i tuoi anni di esperienza",
+        "min": "Inserisci un numero valido."
+      },
+      "cv": {
+        "label": "CV / Curriculum"
+      },
+      "submit": "Dichiara la candidatura",
+      "success": {
+        "title": "Candidatura Inviata!",
+        "message": "La tua candidatura è stata inviata con successo. Ti risponderemo presto!"
+      },
+      "error": {
+        "title": "Invio Non Riuscito",
+        "message": "Si è verificato un errore durante l'invio della candidatura. Riprova più tardi."
+      }
+    }
+  },
+  "about": {
+    "title": "MagTexco: Il Futuro del Tessile in Tunisia",
+    "image_alt": "Produzione tessile all'avanguardia nella nostra fabbrica tessile in Tunisia",
+    "paragraph1": "Con oltre tre decenni di eredità industriale, MagTexco è diventata una pietra angolare del settore tessile in Tunisia. Nata con profonde radici nella produzione globale, la nostra fabbrica di Sahline è oggi un hub tecnologico per i brand di moda internazionali di alta gamma.",
+    "paragraph2": "Come fabbrica tessile in Tunisia socialmente responsabile, privilegiamo le pratiche di lavoro etiche e l'approvvigionamento sostenibile. La nostra fabbrica tessile in Tunisia è progettata per gestire design complessi — dalle sciarpe di seta di lusso ai capi tecnici — rispettando al contempo i più rigorosi standard di qualità europei.",
+    "paragraph3": "Non ci limitiamo a produrre; co-creiamo. Il nostro team di esperti lavora a stretto contatto con i tuoi designer per ottimizzare il passaggio dal bozzetto allo scaffale, garantendo che le tue collezioni siano consegnate con precisione, agilità e rapidità.",
+    "stats": {
+      "experience": "30+ anni di eccellenza manifatturiera",
+      "partners": "Brand Partner Globali",
+      "quality": "Controllo Qualità Senza Compromessi"
+    }
+  },
+  "about_factory": {
+    "title": "🏭 Riguardo la nostra fabbrica",
+    "intro": "Il nostro processo produttivo è diviso in due fasi principali: la Fase di Collezione e la Fase di Produzione, ciascuna gestita con cura per garantire qualità e precisione.",
+    "certifications": "La nostra fabbrica è orgogliosa di essere certificata ISO 9001, ISO 14001, GOTS e GRS, a riflesso del nostro impegno verso la qualità, la responsabilità ambientale e la produzione sostenibile.",
+    "collection_phase_title": "🧵 Fase di Collezione",
+    "collection_phase": {
+      "phase1": "FASE 1 — Ricezione del dossier tecnico e creazione del cartamodello.",
+      "phase2": "FASE 2 — Sourcing di tessuti e accessori, realizzazione del prototipo.",
+      "phase3": "FASE 3 — Regolazioni tecniche e ripetizioni (SMS) prima della produzione."
+    },
+    "production_phase_title": "⚙️ Fase di Produzione",
+    "production_phase": {
+      "phase1": "FASE 1 — Preparazione tecnica e campioni di produzione (TDS).",
+      "phase2": "FASE 2 — Taglio, cucito, lavaggio e finitura.",
+      "phase3": "FASE 3 — Export e consegna dei prodotti finiti."
+    },
+    "detailed_expertise": {
+      "title": "Eccellenza Industriale e Nearshoring Mediterraneo",
+      "p1": "MagTexco è all'avanguardia nella rivoluzione del 'Tessile Tunisia', offrendo un'alternativa strategica alla produzione lontana. La nostra fabbrica tessile a Sahline non è solo un sito di produzione; è un centro di innovazione tecnica dove l'artigianato tradizionale incontra l'industria 4.0. Siamo specializzati nella confezione di capi ad alta complessità, gestendo tutto, dalle delicate bluse in seta ai capi tecnici multistrato con precisione clinica.",
+      "p2": "Scegliendo un produttore di abbigliamento in Tunisia, i brand globali beneficiano di un vantaggio 'Time-to-Market' impareggiabile. La nostra vicinanza geografica all'Europa permette la consegna porta a porta in meno di 72 ore, riducendo significativamente i rischi di magazzino e l'impronta di carbonio. La nostra catena di fornitura si basa sulla trasparenza, utilizzando sistemi ERP avanzati per tracciare ogni punto, dalla ricezione delle materie prime all'esportazione finale.",
+      "p3": "La qualità è il nostro mandato principale. Ogni linea di produzione è supervisionata da un team dedicato di gestione della qualità che effettua ispezioni in linea e audit finali AQL 2.5. Il nostro impegno verso la sostenibilità si riflette nelle nostre certificazioni ISO 14001 e GOTS, garantendo che le tue collezioni non siano solo splendide, ma anche prodotte in modo etico ed eco-compatibile."
+    }
+  },
+  "footer": {
+    "rights": "Tutti i diritti riservati.",
+    "created_by": "Questo sito è stato creato da",
+    "textile_tunisie": "Tessile Tunisia"
+  }
+}

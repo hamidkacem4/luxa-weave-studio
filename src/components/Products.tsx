@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -12,7 +14,11 @@ import productWomenCotton from "@/assets/product-women-cotton.jpg";
 const menProductImages = [productMenViscose, productMenSilk, productMenCotton];
 const womenProductImages = [productWomenViscose, productWomenSilk, productWomenCotton];
 
-const Products = () => {
+type ProductsProps = {
+  locale?: string;
+};
+
+const Products = ({ locale }: ProductsProps) => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<"men" | "women">("women");
 
@@ -23,23 +29,23 @@ const Products = () => {
   const currentProductImages = activeTab === "men" ? menProductImages : womenProductImages;
 
   return (
-    <section className="py-24 bg-background">
+    <section className="bg-background py-16 sm:py-20 lg:py-24">
       <div className="container">
         {/* Section Header */}
-        <div className="mb-16 text-center fade-in-up">
-          <h2 className="mb-4 text-5xl font-bold tracking-tight">{t('products.title')}</h2>
+        <div className="mb-10 text-center fade-in-up sm:mb-16">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{t('products.title')}</h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             {t('products.subtitle')}
           </p>
         </div>
 
         {/* Category Tabs */}
-        <div className="flex justify-center gap-4 mb-12 fade-in-up">
+        <div className="mb-10 flex flex-col justify-center gap-3 fade-in-up sm:mb-12 sm:flex-row sm:gap-4">
           <Button
             variant={activeTab === "women" ? "default" : "outline"}
             size="lg"
             onClick={() => setActiveTab("women")}
-            className="min-w-[140px]"
+            className="w-full sm:w-auto sm:min-w-[140px]"
           >
             {t('products.women_tab')}
           </Button>
@@ -47,14 +53,14 @@ const Products = () => {
             variant={activeTab === "men" ? "default" : "outline"}
             size="lg"
             onClick={() => setActiveTab("men")}
-            className="min-w-[140px]"
+            className="w-full sm:w-auto sm:min-w-[140px]"
           >
             {t('products.men_tab')}
           </Button>
         </div>
 
         {/* Products Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {Array.isArray(currentProducts) && currentProducts.map((product, index) => (
             <div
               key={index}
@@ -72,9 +78,9 @@ const Products = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold">{product.title}</h3>
-                  <span className="text-sm text-gold-dark font-medium">{product.material}</span>
+                <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <h3 className="text-xl font-semibold sm:text-2xl">{product.title}</h3>
+                  <span className="text-sm font-medium text-gold-dark">{product.material}</span>
                 </div>
                 <p className="text-muted-foreground">{product.description}</p>
               </div>

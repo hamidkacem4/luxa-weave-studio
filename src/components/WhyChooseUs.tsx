@@ -1,21 +1,46 @@
-import { useTranslation } from "react-i18next";
 import { CheckCircle, Award, Leaf, HeartHandshake } from "lucide-react";
+import { getLocale } from "@/lib/seo";
+import { getTranslationValue, t } from "@/lib/i18n-utils";
+import JsonLd from "@/components/JsonLd";
 
 const featureIcons = [CheckCircle, Award, Leaf, HeartHandshake];
 
-const WhyChooseUs = () => {
-  const { t } = useTranslation();
-  const features = t('why_choose_us.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+type WhyChooseUsFeature = {
+  title: string;
+  description: string;
+};
+
+type WhyChooseUsProps = {
+  locale: string;
+};
+
+const WhyChooseUs = ({ locale }: WhyChooseUsProps) => {
+  const currentLocale = getLocale(locale);
+  const features = getTranslationValue<WhyChooseUsFeature[]>(currentLocale, "why_choose_us.features", []);
+
+  // Generate FAQ Schema based on features
+  const faqSchema = {
+    "@type": "FAQPage",
+    "mainEntity": Array.isArray(features) ? features.map(feature => ({
+      "@type": "Question",
+      "name": feature.title,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": feature.description
+      }
+    })) : []
+  };
 
   return (
-    <section className="py-24 bg-cream">
+    <section id="why-choose-us" className="scroll-mt-24 bg-cream py-16 sm:py-20 lg:py-24">
+      <JsonLd data={faqSchema} />
       <div className="container">
-        <div className="mx-auto max-w-4xl text-center mb-16">
-          <h2 className="mb-6 text-5xl font-bold tracking-tight">
-            {t('why_choose_us.title')}
+        <div className="mx-auto mb-10 max-w-4xl text-center sm:mb-16">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+            {t(currentLocale, "why_choose_us.title")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            {t('why_choose_us.subtitle')}
+            {t(currentLocale, "why_choose_us.subtitle")}
           </p>
         </div>
 
@@ -25,7 +50,7 @@ const WhyChooseUs = () => {
             return (
               <div
                 key={feature.title}
-                className="flex flex-col items-center text-center p-6 bg-background rounded-sm shadow-sm fade-in-up"
+                className="fade-in-up flex flex-col items-center rounded-sm bg-background p-5 text-center shadow-sm sm:p-6"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold-light">

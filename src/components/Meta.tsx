@@ -1,28 +1,37 @@
 "use client";
-import Head from "next/head";
-import { useTranslation } from "react-i18next";
+import type { StaticImageData } from "next/image";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  appendManagedLink,
+  appendManagedMeta,
+  appendManagedScript,
+  clearManagedHead,
+  setDocumentTitle,
+} from "@/lib/managedHead";
+import { SITE_URL } from "@/lib/site";
 
 type MetaProps = {
   title: string;
   description: string;
   keywords: string;
-  image?: string;
+  image?: string | StaticImageData;
   customSchema?: object | object[];
 };
+
+const HEAD_MANAGER = "magtexco-meta";
 
 const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) => {
   const { i18n } = useTranslation();
   const pathname = usePathname() ?? "/";
 
-  const languages = ["en", "fr", "ko"];
-  const baseUrl = "https://magtexco.com";
+  const languages = ["en", "fr", "ko", "it"];
+  const baseUrl = SITE_URL;
   const canonicalUrl = `${baseUrl}${pathname}`;
   
   // Handle Next.js static asset object or string URL
-  const imageUrl = typeof image === 'string' 
-    ? image 
-    : (image && (image as any).src ? (image as any).src : null);
+  const imageUrl = typeof image === "string" ? image : image?.src ?? null;
     
   let displayImage = imageUrl || `${baseUrl}/og-image.jpg`;
   if (displayImage && !displayImage.startsWith('http')) {
@@ -39,7 +48,7 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": `${baseUrl}/${i18n.language}`
+        "item": `${baseUrl}${i18n.language === "en" ? "/" : `/${i18n.language}`}`
       },
       ...pathnames.map((name, index) => ({
         "@type": "ListItem",
@@ -157,59 +166,70 @@ const Meta = ({ title, description, keywords, image, customSchema }: MetaProps) 
     ]
   };
 
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="MagTexco" />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={displayImage} />
+  const xDefaultPath =
+    pathname === "/" || pathname === "/en"
+      ? ""
+      : pathname.startsWith("/en")
+        ? pathname.slice(3)
+        : pathname;
+  const schemaJson = JSON.stringify(schemaData);
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={displayImage} />
+  useEffect(() => {
+    clearManagedHead(HEAD_MANAGER);
+    setDocumentTitle(title);
 
-      {languages.map((lang) => {
-        // Construct the localized URL for the current path
-        const pathParts = pathname.split('/').filter(Boolean);
-        if (pathParts.length > 0 && languages.includes(pathParts[0])) {
-          pathParts[0] = lang;
-        } else {
-          pathParts.unshift(lang);
-        }
-        const localizedPath = `/${pathParts.join('/')}`;
-        
-        return (
-          <link
-            key={lang}
-            rel="alternate"
-            hrefLang={lang}
-            href={`${baseUrl}${localizedPath}`}
-          />
-        );
-      })}
-      <link
-        rel="alternate"
-        hrefLang="x-default"
-        href={`${baseUrl}/en${pathname === '/' || pathname === '/en' ? '' : (pathname.startsWith('/en') ? pathname.slice(3) : pathname)}`}
-      />
+    appendManagedMeta(HEAD_MANAGER, { name: "description", content: description });
+    appendManagedMeta(HEAD_MANAGER, { name: "keywords", content: keywords });
+    appendManagedLink(HEAD_MANAGER, { rel: "canonical", href: canonicalUrl });
+
+    appendManagedMeta(HEAD_MANAGER, { property: "og:type", content: "website" });
+    appendManagedMeta(HEAD_MANAGER, { property: "og:url", content: canonicalUrl });
+    appendManagedMeta(HEAD_MANAGER, { property: "og:site_name", content: "MagTexco" });
+    appendManagedMeta(HEAD_MANAGER, { property: "og:title", content: title });
+    appendManagedMeta(HEAD_MANAGER, { property: "og:description", content: description });
+    appendManagedMeta(HEAD_MANAGER, { property: "og:image", content: displayImage });
+
+    appendManagedMeta(HEAD_MANAGER, { name: "twitter:card", content: "summary_large_image" });
+    appendManagedMeta(HEAD_MANAGER, { name: "twitter:url", content: canonicalUrl });
+    appendManagedMeta(HEAD_MANAGER, { name: "twitter:title", content: title });
+    appendManagedMeta(HEAD_MANAGER, { name: "twitter:description", content: description });
+    appendManagedMeta(HEAD_MANAGER, { name: "twitter:image", content: displayImage });
+
+    languages.forEach((lang) => {
+      const cleanPath = pathname.replace(/^\/(en|fr|ko|it)(?:\/|$)/, "/").replace(/\/+$/, "");
+      const finalPath = lang === "en" ? (cleanPath || "/") : `/${lang}${cleanPath}`;
       
-      {/* Schema.org JSON-LD */}
-      <script type="application/ld+json">
-        {JSON.stringify(schemaData)}
-      </script>
-    </Head>
-  );
+      appendManagedLink(HEAD_MANAGER, {
+        rel: "alternate",
+        hrefLang: lang,
+        href: `${baseUrl}${finalPath.startsWith("/") ? "" : "/"}${finalPath}`,
+      });
+    });
+
+    const cleanPathForXDefault = pathname.replace(/^\/(en|fr|ko|it)(?:\/|$)/, "/").replace(/\/+$/, "");
+    appendManagedLink(HEAD_MANAGER, {
+      rel: "alternate",
+      hrefLang: "x-default",
+      href: `${baseUrl}${cleanPathForXDefault || "/"}`,
+    });
+
+    appendManagedScript(HEAD_MANAGER, { content: schemaJson });
+
+    return () => {
+      clearManagedHead(HEAD_MANAGER);
+    };
+  }, [
+    canonicalUrl,
+    description,
+    displayImage,
+    keywords,
+    pathname,
+    schemaJson,
+    title,
+    xDefaultPath,
+  ]);
+
+  return null;
 };
 
 export default Meta;

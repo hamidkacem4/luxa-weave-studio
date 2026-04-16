@@ -76,6 +76,7 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ blocks }) => {
             );
 
           case 'cta':
+            const ctaBody = block.subtitle ?? block.text;
             return (
               <motion.section 
                 key={index}
@@ -86,8 +87,12 @@ const BlogRenderer: React.FC<BlogRendererProps> = ({ blocks }) => {
               >
                 <div className="absolute top-0 right-0 w-64 h-64 bg-gold opacity-10 blur-3xl -mr-32 -mt-32 transition-transform duration-700 group-hover:scale-110" />
                 <div className="relative z-10 text-center">
-                  <h3 className="text-3xl md:text-4xl font-bold mb-4">{block.title}</h3>
-                  <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto">{block.subtitle}</p>
+                  {block.title ? (
+                    <h3 className="mb-4 text-3xl font-bold md:text-4xl">{block.title}</h3>
+                  ) : null}
+                  {ctaBody ? (
+                    <p className="mx-auto mb-10 max-w-2xl text-lg text-white/60">{ctaBody}</p>
+                  ) : null}
                   <Button asChild size="lg" className="bg-gold hover:bg-white text-charcoal font-bold px-12 py-8 rounded-full text-xl shadow-xl transition-all">
                     {block.link ? (
                       <Link href={block.link}>{block.buttonText}</Link>

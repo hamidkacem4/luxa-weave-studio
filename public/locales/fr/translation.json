@@ -1,13 +1,13 @@
 {
   "meta": {
-    "title": "MagTexco | Usine Textile Tunisie & Leader du Textile en Tunisie",
-    "description": "MagTexco est la meilleure usine textile en Tunisie. Nous offrons une fabrication de vêtements de haute qualité et une production textile durable pour les marques de mode mondiales.",
+    "title": "MagTexco | Confection et production textile en Tunisie",
+    "description": "MagTexco accompagne les marques avec confection haut de gamme, développement produit et production textile en Tunisie.",
     "keywords": "usine textile Tunisie, textile Tunisie, fabricant de vêtements Tunisie, industrie textile méditerranée, production textile durable"
   },
   "hero": {
-    "title": "Votre Usine Textile Stratégique en Tunisie",
-    "subtitle": "L'excellence entre artisanat et performance industrielle",
-    "description": "MagTexco est une usine textile de premier plan en Tunisie, offrant une production de vêtements haut de gamme pour les marques mondiales. Découvrez l'alliance parfaite entre héritage méditerranéen et efficacité moderne.",
+    "title": "MAGTEXCO, partenaire de confection en Tunisie",
+    "subtitle": "Développement produit, production et export pour les marques",
+    "description": "MagTexco accompagne les marques avec une confection textile haut de gamme en Tunisie, alliant savoir-faire industriel, qualité certifiée et logistique réactive vers l'Europe.",
     "explore_collections": "Explorer les Collections",
     "contact_us": "Lancer votre projet"
   },
@@ -28,6 +28,28 @@
     "description": "Rencontrez les experts derrière la fabrication textile de classe mondiale de MagTexco, dédiés à la qualité et à l'innovation.",
     "badge": "Expertise"
   },
+  "team_members": {
+    "1": {
+      "position": "Directrice des opérations",
+      "bio": "Avec plus de 15 ans d'expérience dans le textile et l'habillement, Najah pilote les opérations chez MagTexco et veille à l'efficacité de toute la chaîne de production."
+    },
+    "2": {
+      "position": "Merchandiser",
+      "bio": "Walid supervise le développement produit, le sourcing, le pricing et la coordination commerciale pour garantir la bonne exécution des collections."
+    },
+    "3": {
+      "position": "Support IT & systèmes",
+      "bio": "Hamid assure la fiabilité de l'infrastructure digitale de MagTexco et soutient les outils qui facilitent la production et la coordination internationale."
+    },
+    "4": {
+      "position": "Merchandiser",
+      "bio": "Refka suit le développement produit, le sourcing et la préparation commerciale afin d'assurer un accompagnement fluide des projets clients."
+    },
+    "5": {
+      "position": "Ressources humaines",
+      "bio": "Meryem est en charge de la gestion des équipes, du recrutement, de la formation et des relations internes au sein de l'usine."
+    }
+  },
   "blog": {
     "section_title": "Textile Tunisie : Analyses et Actualités",
     "section_subtitle": "Gardez une longueur d'avance sur les tendances de la mode mondiale avec l'expertise du cœur de l'industrie textile tunisienne.",
@@ -42,6 +64,8 @@
     "meta_keywords": "blog textile, actualités fabrication tunisie, usine textile tunisie, textile tunisie",
     "back_to_list": "Retour aux analyses",
     "share": "Partager cette analyse",
+    "author_label": "Rédigé par",
+    "related_articles": "Articles liés",
     "cta_title": "Passez à la vitesse supérieure",
     "cta_subtitle": "Découvrez comment notre expertise textile en Tunisie peut sublimer la prochaine collection de votre marque.",
     "cta_contact": "Consulter nos spécialistes",
@@ -92,7 +116,7 @@
   "collection_details": {
     "shirts": {
       "title": "Chemises",
-      "description": "Méticuleusement confectionnées avec des tissus haute densité et des finitions artisanales, nos chemises offrent l'équilibre parfait entre structure et confort.",
+      "description": "Méticuleusement confectionnées avec des tissus haute densité et des finitions artisanales, nos chemises portent l'équilibre parfait entre structure et confort.",
       "men": [
         { "name": "Chemise Oxford en Soie", "description": "Une chemise en soie haut de gamme à manches longues avec un éclat subtil, offrant un look raffiné et sophistiqué.", "image": "product-men-silk" },
         { "name": "Chemise d'Été en Lin", "description": "Chemise en viscose douce et légère avec un excellent drapé, parfaite pour un confort tout au long de la journée.", "image": "product-men-viscose" },
@@ -286,6 +310,133 @@
     "whatsapp_button": "Discuter sur WhatsApp",
     "watch_video_button": "Regarder la Vidéo"
   },
+  "textile_tunisie": {
+    "meta": {
+      "title": "Textile Tunisie | Usine Textile Tunisie | MAGTEXCO",
+      "description": "Textile Tunisie : MagTexco est votre usine textile Tunisie spécialisée dans la confection haut de gamme et l'export. Découvrez le savoir-faire du textile en Tunisie.",
+      "keywords": [
+        "textile tunisie",
+        "usine textile tunisie",
+        "fabricant textile tunisie",
+        "confection tunisie",
+        "production textile tunisie",
+        "facon textile tunisie"
+      ]
+    },
+    "hero": {
+      "title": "Textile Tunisie : Votre Usine Textile Tunisie de Confiance",
+      "subtitle": "Confection textile de précision et export vers l'Europe",
+      "description": "MAGTEXCO est le leader du textile en Tunisie. Notre usine textile Tunisie produit des collections sur mesure alliant qualité certifiée et savoir-faire industriel.",
+      "cta_quote": "Demander un devis Textile Tunisie",
+      "cta_home": "Retour à l'accueil"
+    },
+    "intro": {
+      "title": "Textile Tunisie : L'excellence de MAGTEXCO",
+      "p1": "MAGTEXCO s'impose comme une référence incontournable du textile en Tunisie. En tant qu'usine textile Tunisie majeure, nous accompagnons les marques internationales.",
+      "p2": "Notre usine textile à Sahline est le cœur battant du textile Tunisie, offrant des standards européens pour les marchés français, italien et allemand."
+    },
+    "capacities": {
+      "title": "Capacités de production Textile Tunisie",
+      "description": "Nos capacités de production textile en Tunisie offrent volume, réactivité et qualité sur des lignes dédiées au prêt-à-porter et aux collections techniques.",
+      "bullets": [
+        "Production textile Tunisie jusqu'à 150 000 unités par mois.",
+        "Découpe précision par DAO dans notre usine textile Tunisie.",
+        "Expertise mixte : mode femme, homme et enfant en Tunisie.",
+        "Contrôle qualité rigoureux selon les normes du textile Tunisie."
+      ]
+    },
+    "services": {
+      "title": "Usine Textile Tunisie : Nos Services Experts",
+      "description": "De la coupe à la finition, MAGTEXCO définit les hauts standards du textile en Tunisie pour vos collections.",
+      "items": [
+        {
+          "title": "Coupe Textile Tunisie",
+          "description": "Coupe assistée par ordinateur au sein de notre usine textile Tunisie pour une précision absolue."
+        },
+        {
+          "title": "Confection Tunisie",
+          "description": "Savoir-faire artisanal et industriel réunis pour le meilleur du textile en Tunisie."
+        },
+        {
+          "title": "Finition Export",
+          "description": "Conditionnement premium pour l'exportation textile Tunisie vers les boutiques européennes."
+        }
+      ]
+    },
+    "export": {
+      "title": "Export Textile Tunisie vers l'Europe",
+      "description": "Votre usine textile Tunisie livre la France, l'Italie et l'Allemagne avec une logistique performante.",
+      "countries": [
+        {
+          "title": "France",
+          "description": "Partenaire privilégié des marques françaises cherchant le savoir-faire textile Tunisie."
+        },
+        {
+          "title": "Italie",
+          "description": "Qualité premium répondant aux exigences du luxe via notre usine textile Tunisie."
+        },
+        {
+          "title": "Allemagne",
+          "description": "Rigueur et durabilité pour le marché allemand, pilier du textile en Tunisie."
+        }
+      ]
+    },
+    "quality": {
+      "title": "Normes du Textile en Tunisie",
+      "description": "MAGTEXCO garantit une production textile en Tunisie certifiée ISO, GOTS et BSCI pour une éthique irréprochable.",
+      "certifications": [
+        "ISO 9001 - Qualité Textile Tunisie",
+        "ISO 14001 - Éco-responsabilité Tunisie",
+        "GOTS - Coton Bio certifié",
+        "BSCI - Engagement Social usine textile"
+      ]
+    },
+    "why": {
+      "title": "Pourquoi choisir une USINE TEXTILE TUNISIE ?",
+      "description": "Le textile Tunisie offre un avantage stratégique : proximité, coût maîtrisé et excellence technique.",
+      "items": [
+        {
+          "title": "Proximité Textile Tunisie",
+          "description": "Transport rapide vers l'Europe et réactivité de notre usine textile Tunisie."
+        },
+        {
+          "title": "Souplesse de Production",
+          "description": "Gestion agile des séries au sein du secteur textile en Tunisie."
+        },
+        {
+          "title": "Expertise Reconnue",
+          "description": "Des décennies de savoir-faire dans l'industrie textile Tunisie."
+        }
+      ]
+    },
+    "contact": {
+      "title": "Lancez votre projet Textile Tunisie",
+      "description": "Contactez MAGTEXCO dès aujourd'hui pour votre production au sein de notre usine textile Tunisie.",
+      "phone_label": "Votre expert Textile Tunisie à votre écoute :",
+      "button": "Contacter l'usine textile Tunisie",
+      "phone_number": "+216 95 518 870",
+      "send_request": "Devis production textile Tunisie en ligne :"
+    },
+    "faq": {
+      "title": "FAQ Textile Tunisie : Vos questions",
+      "items": [
+        {
+          "question": "Comment choisir une usine textile en Tunisie ?",
+          "answer": "Pour réussir votre projet textile Tunisie, privilégiez une usine textile Tunisie certifiée comme MAGTEXCO, offrant expertise et proximité logistique."
+        },
+        {
+          "question": "Quels sont les avantages du textile en Tunisie ?",
+          "answer": "Le textile Tunisie permet de bénéficier de délais courts (Nearshoring) et d'un savoir-faire historique en confection haut de gamme."
+        },
+        {
+          "question": "MAGTEXCO est-elle une usine textile certifiée ?",
+          "answer": "Oui, notre usine textile Tunisie est certifiée ISO et GOTS, garantissant une production de qualité supérieure à Sahline."
+        }
+      ]
+    },
+    "recent_insights": "Actualités Textile Tunisie",
+    "see_collections": "Voir nos produits Textile Tunisie :"
+  },
   "recruitment": {
     "title": "Rejoignez notre équipe",
     "message": "Nous sommes toujours à la recherche de personnes talentueuses pour rejoindre notre équipe. Veuillez revenir plus tard pour les postes vacants.",
@@ -346,7 +497,7 @@
   },
   "about_factory": {
     "title": "🏭 À propos de notre usine",
-    "intro": "Notre processus de production est divisé en deux étapes principales : la Phase de Collection et la Phase de Production, chacune soigneusement gérée pour garantir qualité et précision.",
+    "intro": "Notre processus de production est divisé en deux étapes principales : la Phase de Collection et la Phase de Production, chacune soigneusesment gérée pour garantir qualité et précision.",
     "certifications": "Notre usine est fière d'être certifiée ISO 9001, ISO 14001, GOTS et GRS, reflétant notre engagement envers la qualité, la responsabilité environnementale et la production durable.",
     "collection_phase_title": "🧵 Phase de Collection",
     "collection_phase": {
@@ -368,6 +519,8 @@
     }
   },
   "footer": {
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "created_by": "Ce site a été créé par",
+    "textile_tunisie": "Textile Tunisie"
   }
 }

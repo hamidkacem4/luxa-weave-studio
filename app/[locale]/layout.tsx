@@ -1,20 +1,17 @@
 import { ReactNode } from "react";
-import Providers from "../../src/Providers";
+import { PREFIXED_LOCALES } from "@/lib/site";
 
 export async function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'fr' }, { locale: 'ko' }];
+  return PREFIXED_LOCALES.map((locale) => ({ locale }));
 }
+
+export const dynamicParams = false;
 
 export default function LocaleLayout({
   children,
-  params: { locale }
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  return (
-    <Providers locale={locale}>
-      {children}
-    </Providers>
-  );
+  return children;
 }

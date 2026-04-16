@@ -1,4 +1,6 @@
-import { useEffect, useRef, memo } from "react";
+"use client";
+
+import { useEffect, useRef, memo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail, MessageCircle, PlayCircle, LucideIcon } from "lucide-react";
 import { useForm } from "@formspree/react";
@@ -72,7 +74,7 @@ const ContactInfoCard = memo(({ item, index }: { item: ContactInfoItem; index: n
   const Icon = CONTACT_INFO_ICONS[index];
   return (
     <div
-      className="fade-in-up text-center flex-1"
+      className="fade-in-up min-w-0 flex-1 text-center"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-gold/10">
@@ -86,12 +88,12 @@ const ContactInfoCard = memo(({ item, index }: { item: ContactInfoItem; index: n
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-muted-foreground hover:underline"
+            className="block break-words text-muted-foreground hover:underline"
           >
             {detail}
           </a>
         ) : (
-          <p key={i} className="text-muted-foreground">{detail}</p>
+          <p key={i} className="break-words text-muted-foreground">{detail}</p>
         )
       ))}
     </div>
@@ -100,10 +102,16 @@ const ContactInfoCard = memo(({ item, index }: { item: ContactInfoItem; index: n
 
 ContactInfoCard.displayName = "ContactInfoCard";
 
-const Contact = ({ isPage = false }: { isPage?: boolean }) => {
+interface ContactProps {
+  isPage?: boolean;
+  locale?: string;
+}
+
+const Contact = ({ isPage = false, locale }: ContactProps) => {
   const { t, ready } = useTranslation();
   const contactInfo = t('contact.contact_info', { returnObjects: true }) as ContactInfoItem[];
   const [state, handleSubmit] = useForm("mzznvvrw");
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   const { toast } = useToast();
 
   const nameRef = useRef<HTMLInputElement>(null);
@@ -133,14 +141,26 @@ const Contact = ({ isPage = false }: { isPage?: boolean }) => {
   const TitleTag = isPage ? 'h1' : 'h2';
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24">
       <div className="container max-w-4xl">
-        <header className="mb-16 text-center fade-in-up">
-          <TitleTag className="mb-4 text-5xl font-bold tracking-tight">{t('contact.title')}</TitleTag>
+        <header className="mb-10 text-center fade-in-up sm:mb-16">
+          <TitleTag className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">{t('contact.title')}</TitleTag>
           <p className="text-lg text-muted-foreground">{t('contact.subtitle')}</p>
+          <div className="mt-8 flex justify-center">
+            <Button variant="gold" size="lg" asChild className="gap-2">
+              <a
+                href="https://wa.me/21652049969"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="h-5 w-5" />
+                {t('contact.whatsapp_button')}
+              </a>
+            </Button>
+          </div>
         </header>
 
-        <div className="mb-12 flex flex-col md:flex-row justify-center gap-8">
+        <div className="mb-10 flex flex-col justify-center gap-6 sm:mb-12 md:flex-row md:gap-8">
           {Array.isArray(contactInfo) && contactInfo.map((item, index) => (
             <ContactInfoCard key={item.title} item={item} index={index} />
           ))}
@@ -171,16 +191,40 @@ const Contact = ({ isPage = false }: { isPage?: boolean }) => {
 
           <div className="text-center space-y-4">
             <p className="text-sm text-muted-foreground">{t('contact.map_instruction')}</p>
-            <Button variant="gold" size="lg" asChild>
-              <a href={heroVideo} target="_blank" rel="noopener noreferrer" className="gap-2">
-                <PlayCircle className="h-5 w-5" />
-                {t('contact.watch_video_button')}
-              </a>
+            <Button
+              variant="gold"
+              size="lg"
+              className="w-full gap-2 sm:w-auto"
+              onClick={() => setIsVideoOpen(true)}
+            >
+              <PlayCircle className="h-5 w-5" />
+              {t('contact.watch_video_button')}
             </Button>
           </div>
         </div>
 
-        <Card id="contact-form" className="fade-in-up my-12">
+        <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+          <DialogContent className="max-w-5xl border-0 bg-charcoal p-2 sm:p-4">
+            <DialogHeader className="px-4 pt-4 text-left sm:px-6">
+              <DialogTitle className="text-white">{t('contact.watch_video_button')}</DialogTitle>
+            </DialogHeader>
+            <div className="px-2 pb-2 sm:px-4 sm:pb-4">
+              <div className="overflow-hidden rounded-2xl bg-black shadow-2xl">
+                <video
+                  src={heroVideo}
+                  controls
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                  poster={factoryImage.src}
+                  className="aspect-video w-full"
+                />
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+
+        <Card id="contact-form" className="fade-in-up my-10 sm:my-12">
           <CardHeader>
             <CardTitle>{t('contact.form_title')}</CardTitle>
             <CardDescription>{t('contact.form_subtitle')}</CardDescription>
@@ -199,18 +243,18 @@ const Contact = ({ isPage = false }: { isPage?: boolean }) => {
                 <Label htmlFor="message">{t('contact.form_message_label')}</Label>
                 <Textarea id="message" name="message" placeholder={t('contact.form_message_placeholder')} ref={messageRef} />
               </div>
-              <Button type="submit" variant="gold" size="lg" disabled={state.submitting} className="justify-self-center mt-4">
+              <Button type="submit" variant="gold" size="lg" disabled={state.submitting} className="mt-4 w-full justify-self-center sm:w-auto">
                 {t('contact.form_submit_button')}
               </Button>
             </form>
           </CardContent>
         </Card>
 
-        <footer className="fade-in-up text-center bg-gradient-to-br from-cream to-beige rounded-sm p-12">
+        <footer className="fade-in-up rounded-sm bg-gradient-to-br from-cream to-beige p-8 text-center sm:p-12">
           <MessageCircle className="mx-auto mb-4 h-12 w-12 text-gold-dark" />
           <h3 className="mb-3 text-2xl font-semibold">{t('contact.whatsapp_title')}</h3>
           <p className="mb-6 text-muted-foreground">{t('contact.whatsapp_subtitle')}</p>
-          <Button variant="gold" size="lg" asChild>
+          <Button variant="gold" size="lg" asChild className="w-full sm:w-auto">
             <a href="https://wa.me/21652049969" target="_blank" rel="noopener noreferrer" className="gap-2">
               <MessageCircle className="h-5 w-5" />
               {t('contact.whatsapp_button')}

@@ -1,27 +1,41 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import { createInstance, type i18n as I18nInstance } from "i18next";
+import { initReactI18next } from "react-i18next";
 
-// Directly import translation files to ensure server-side availability for SSR/SEO
-import enTranslation from '../public/locales/en/translation.json';
-import frTranslation from '../public/locales/fr/translation.json';
-import koTranslation from '../public/locales/ko/translation.json';
+import enTranslation from "../public/locales/en/translation.json";
+import frTranslation from "../public/locales/fr/translation.json";
+import koTranslation from "../public/locales/ko/translation.json";
+import itTranslation from "../public/locales/it/translation.json";
+import { normalizeLocale } from "@/lib/locale";
 
 const resources = {
   en: { translation: enTranslation },
   fr: { translation: frTranslation },
-  ko: { translation: koTranslation }
+  ko: { translation: koTranslation },
+  it: { translation: itTranslation },
 };
 
-// initialize i18next
-i18n
-  .use(initReactI18next)
-  .init({
+function setupI18n(instance: I18nInstance, locale = "en") {
+  void instance.use(initReactI18next).init({
     resources,
-    supportedLngs: ['en', 'fr', 'ko'],
-    fallbackLng: 'en',
+    lng: normalizeLocale(locale),
+    supportedLngs: ["en", "fr", "ko", "it"],
+    fallbackLng: "en",
+    interpolation: {
+      escapeValue: false,
+    },
     react: {
       useSuspense: false,
     },
+    initImmediate: false,
   });
+
+  return instance;
+}
+
+export function createI18nInstance(locale: string) {
+  return setupI18n(createInstance(), locale);
+}
+
+const i18n = createI18nInstance("en");
 
 export default i18n;

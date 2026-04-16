@@ -9,7 +9,12 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: "1rem",
+        sm: "1.5rem",
+        lg: "2rem",
+        "2xl": "2rem",
+      },
       screens: {
         "2xl": "1400px",
       },
@@ -56,8 +61,9 @@ export default {
         charcoal: "hsl(var(--charcoal))",
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ["var(--font-display)", "serif"],
+        sans: ["var(--font-poppins)", "sans-serif"],
+        display: ["var(--font-display)", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

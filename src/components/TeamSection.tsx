@@ -1,32 +1,47 @@
-import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { teamMembers } from "@/data/teamMembers";
 import { Phone, Mail } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { getLocale } from "@/lib/seo";
+import { t } from "@/lib/i18n-utils";
 
-const TeamSection = () => {
-  const { t } = useTranslation();
+type TeamSectionProps = {
+  locale: string;
+};
+
+const TeamSection = ({ locale }: TeamSectionProps) => {
+  const currentLocale = getLocale(locale);
 
   return (
     <section id="team" className="py-24 bg-white overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20 fade-in-up">
           <Badge variant="outline" className="mb-4 border-gold text-gold-dark uppercase tracking-widest px-4 py-1">
-            {t("team.badge", "Expertise")}
+            {t(currentLocale, "team.badge", "Expertise")}
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-charcoal">
-            {t("team.title", "Our Dedicated Team")}
+            {t(currentLocale, "team.title", "Our Dedicated Team")}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            {t("team.description", "Meet the experts behind MagTexco's world-class textile manufacturing, dedicated to quality and innovation.")}
+            {t(currentLocale, "team.description", "Meet the experts behind MagTexco's world-class textile manufacturing, dedicated to quality and innovation.")}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-          {teamMembers.map((member, index) => (
-            <Card 
-              key={member.id} 
+          {teamMembers.map((member, index) => {
+            const position = t(
+              currentLocale,
+              `team_members.${member.id}.position`,
+              member.position,
+            );
+            const bio = member.bio
+              ? t(currentLocale, `team_members.${member.id}.bio`, member.bio)
+              : "";
+
+            return (
+            <Card
+              key={member.id}
               className="group border-none shadow-soft hover-lift overflow-hidden flex flex-col h-full bg-cream/20 fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -69,18 +84,19 @@ const TeamSection = () => {
               <CardHeader className="p-6 text-center">
                 <CardTitle className="text-xl font-bold text-charcoal mb-1">{member.name}</CardTitle>
                 <CardDescription className="text-gold-dark font-semibold tracking-wide uppercase text-xs">
-                  {member.position}
+                  {position}
                 </CardDescription>
               </CardHeader>
               <CardContent className="px-6 pb-8 text-center flex-grow">
-                {member.bio && (
+                {bio && (
                   <p className="text-sm text-muted-foreground leading-relaxed italic">
-                    "{member.bio}"
+                    "{bio}"
                   </p>
                 )}
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -4,16 +4,14 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n";
+import { createI18nInstance } from "./i18n";
+import { normalizeLocale } from "@/lib/locale";
 
 export default function Providers({ children, locale }: { children: React.ReactNode, locale: string }) {
   const [queryClient] = useState(() => new QueryClient());
-  
-  if (i18n.language !== locale) {
-    i18n.changeLanguage(locale);
-  }
+  const i18n = useMemo(() => createI18nInstance(normalizeLocale(locale)), [locale]);
 
   return (
     <QueryClientProvider client={queryClient}>

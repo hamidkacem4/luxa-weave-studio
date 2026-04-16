@@ -1,13 +1,23 @@
-import { useTranslation } from "react-i18next";
 import { Leaf, Recycle, Heart, Award } from "lucide-react";
 import Image from "next/image";
 import sustainabilityImage from "@/assets/sustainability.jpg";
+import { getLocale } from "@/lib/seo";
+import { getTranslationValue, t } from "@/lib/i18n-utils";
 
 const featureIcons = [Leaf, Recycle, Heart, Award];
 
-const Sustainability = () => {
-  const { t } = useTranslation();
-  const features = t('sustainability.features', { returnObjects: true }) as Array<{ title: string; description: string }>;
+type SustainabilityFeature = {
+  title: string;
+  description: string;
+};
+
+type SustainabilityProps = {
+  locale: string;
+};
+
+const Sustainability = ({ locale }: SustainabilityProps) => {
+  const currentLocale = getLocale(locale);
+  const features = getTranslationValue<SustainabilityFeature[]>(currentLocale, "sustainability.features", []);
 
   return (
     <section className="py-24 bg-cream">
@@ -15,10 +25,10 @@ const Sustainability = () => {
         {/* Header */}
         <div className="mb-16 text-center fade-in-up">
           <h2 className="mb-4 text-4xl md:text-5xl font-bold tracking-tight">
-            {t('sustainability.title')}
+            {t(currentLocale, "sustainability.title")}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            {t('sustainability.subtitle')}
+            {t(currentLocale, "sustainability.subtitle")}
           </p>
         </div>
 

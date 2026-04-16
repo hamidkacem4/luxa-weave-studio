@@ -8,7 +8,7 @@ import productWomenViscose from "@/assets/product-women-viscose.jpg";
 import productWomenSilk from "@/assets/product-women-silk.jpg";
 import productWomenCotton from "@/assets/product-women-cotton.jpg";
 
-import womenCoats from "@/assets/womenCoats-1.jpg";
+import womenCoats from "@/assets/womenCoats-1.webp";
 import womenCoats2 from "@/assets/womenCoats2.jpg";
 
 import shirt1 from "@/assets/shirt1.jpg";
@@ -19,12 +19,12 @@ import shirt4 from "@/assets/shirt4.jpg";
 //women shirts and tops images
 import tshirt1 from "@/assets/T-shirt1.jpg";
 import tshirt2 from "@/assets/Tshirt2.jpg";
-import tshirt3 from "@/assets/T-shirt3.jpg"; 
+import tshirt3 from "@/assets/T-shirt3.jpg";
 
 //male shirts and tops images
 
-import menshirt1 from "@/assets/tshirt1.png";   
-import menshirt22 from "@/assets/tshirtmen2.jpg";
+import menshirt1 from "@/assets/tshirt1.png";
+import menshirt4 from "@/assets/tshirtmen2.jpg";
 import menshirt3 from "@/assets/mentshirt3.jpg";
 
 
@@ -33,9 +33,8 @@ import menshirt3 from "@/assets/mentshirt3.jpg";
 
 //women shorts and skirts images
 import manouchstyle1 from "@/assets/manouch-style-1.jpg";
-import manouchstyle2 from "@/assets/E26COCB_1_ok.jpg";
+import manouchstyle2 from "@/assets/high_waisted_shorts_flat.png";
 import shortWomen2 from "@/assets/shortWomen2.jpg";
-import skirt2 from "@/assets/skirt2.jpg";
 
 //man shorts images
 import short from "@/assets/short&1.jpg";
@@ -47,18 +46,18 @@ import shortman3 from "@/assets/short3.jpg";
 
 //WOMEN JACKETS AND COATS
 import MANTEAU_1 from "@/assets/MANTEAU_1.jpg";
-import H25 from "@/assets/H25.jpg";
+import H25 from "@/assets/H25.webp";
 import MANTEAU_2 from "@/assets/MANTEAU_2.jpg";
 import coat1 from "@/assets/coat1.jpg";
 
 
 
-import dress1 from "@/assets/dress1.jpg"; 
+import dress1 from "@/assets/dress1.jpg";
 import dress2 from "@/assets/dress2.jpg";
-import dress3 from "@/assets/dress3.jpg"; 
-import dress4 from "@/assets/dress4.jpg";
+import dress3 from "@/assets/dress3.webp";
+import dress4 from "@/assets/dress4.webp";
 import bannerTshirts from "@/assets/shirt.jpg";
-import bannerShirtsTops from "@/assets/camille-cropped-long-sleeve-shirt.jpg";
+import bannerShirtsTops from "@/assets/shirt4.jpg";
 import bannerShortsSkirts from "@/assets/manouch-style-1.jpg";
 import bannerDresses from "@/assets/st-john-k11mc21-byqm-red-dress-f25-a-pdp.jpg";
 import bannerJacketsCoats from "@/assets/MANTEAU_1.jpg";
@@ -103,7 +102,7 @@ export const collectionsData: Record<string, Collection> = {
     bannerImage: bannerTshirts,
     men: [
       { nameKey: "collection_details.t-shirts&tops.men.0.name", descriptionKey: "collection_details.t-shirts&tops.men.0.description", image: menshirt1 },
-      { nameKey: "collection_details.t-shirts&tops.men.1.name", descriptionKey: "collection_details.t-shirts&tops.men.1.description", image: menshirt22 },
+      { nameKey: "collection_details.t-shirts&tops.men.1.name", descriptionKey: "collection_details.t-shirts&tops.men.1.description", image: menshirt4 },
       { nameKey: "collection_details.t-shirts&tops.men.2.name", descriptionKey: "collection_details.t-shirts&tops.men.2.description", image: menshirt3 },
     ],
     women: [
@@ -118,13 +117,12 @@ export const collectionsData: Record<string, Collection> = {
     men: [
       { nameKey: "collection_details.shorts-skirts.men.0.name", descriptionKey: "collection_details.shorts-skirts.men.0.description", image: short },
       { nameKey: "collection_details.shorts-skirts.men.1.name", descriptionKey: "collection_details.shorts-skirts.men.1.description", image: shortman2 },
-      { nameKey: "collection_details.shorts-skirts.men.2.name", descriptionKey: "collection_details.shorts-skirts.men.2.description", image: shortman3  },
+      { nameKey: "collection_details.shorts-skirts.men.2.name", descriptionKey: "collection_details.shorts-skirts.men.2.description", image: shortman3 },
     ],
     women: [
       { nameKey: "collection_details.shorts-skirts.women.0.name", descriptionKey: "collection_details.shorts-skirts.women.0.description", image: manouchstyle1 },
       { nameKey: "collection_details.shorts-skirts.women.1.name", descriptionKey: "collection_details.shorts-skirts.women.1.description", image: manouchstyle2 },
       { nameKey: "collection_details.shorts-skirts.women.2.name", descriptionKey: "collection_details.shorts-skirts.women.2.description", image: shortWomen2 },
-      { nameKey: "collection_details.shorts-skirts.women.3.name", descriptionKey: "collection_details.shorts-skirts.women.3.description", image: skirt2  },
 
     ]
   },
@@ -132,7 +130,7 @@ export const collectionsData: Record<string, Collection> = {
     slug: "dresses",
     bannerImage: bannerDresses,
     men: [
-     
+
     ],
     women: [
       { nameKey: "collection_details.dresses.women.0.name", descriptionKey: "collection_details.dresses.women.0.description", image: dress1 },
